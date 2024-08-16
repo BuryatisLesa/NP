@@ -4,6 +4,11 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     """Таблица для постов"""
+    class Meta:
+        verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'
+
+    post_id = models.BigIntegerField(primary_key=True)
     news = 'NS'
     art = 'AT'
     blank = [(news, 'новость'),
@@ -30,6 +35,11 @@ class Post(models.Model):
 
 class Author(models.Model):
     """Таблица для авторов"""
+    class Meta:
+        verbose_name = 'Автор'
+        verbose_name_plural = 'Авторы'
+
+    author_id = models.BigIntegerField(primary_key=True)
     name = models.OneToOneField('User', on_delete=models.CASCADE)
     rating = models.IntegerField(default=0)
 
@@ -55,19 +65,28 @@ class Author(models.Model):
 
 class User(User):
     """Таблица пользователей"""
-    pass
+    user_id = models.BigIntegerField(primary_key=True)
 
 
-class Category:
+class Category(models.Model):
     """Таблица категорий"""
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
+    category_id = models.BigIntegerField(primary_key=True)
     name = models.CharField(max_length=100)
     rating = models.IntegerField(default=0)
 
 
-class Comment:
+class Comment(models.Model):
     """Таблица комментарий"""
-    post_id = models.ForeignKey(Post, on_delete=None)
-    user_id = models.ForeignKey(User, on_delete=None)
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'
+    comment_id = models.BigIntegerField(primary_key=True)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
     rating = models.IntegerField(default=0)
     time = models.DateTimeField(auto_now_add=True)
@@ -75,6 +94,5 @@ class Comment:
 
 class PostCategory(models.Model):
     """Many to Many"""
-    post_id = models.ForeignKey(Post, on_delete=None)
-    category_id = models.ForeignKey(Category, on_delete=None)
-
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
