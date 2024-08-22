@@ -1,12 +1,13 @@
 {% extends 'flatpages/default.html' %}
-
+{% load custom_filters %}
+{% load custom_tags %}
 {% block title %}
 Посты
 {% endblock title %}
 
 {% block content %}
     <h1>Все новости</h1>
-    <h3> {{ time_now|date:'M d Y' }} </h3>
+    <h3> {% current_time '%b %d %Y' %} </h3>
     <h3> {{ next_posts|default_if_none:"Скоро будут новости!" }} </h3>
     {% if posts  %}
         <table>

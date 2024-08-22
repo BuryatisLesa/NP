@@ -7,15 +7,29 @@ from .models import Post
 class PostList(ListView):
     """ Вывод постов"""
     model = Post
-    ordering = 'title'
-    template_name = 'posts.html'
+    template_name = 'index.html'
     context_object_name = 'posts'
 
     def get_context_data(self, **kwargs):
-        contex = super().get_context_data(**kwargs)
-        contex['time_now'] = datetime.utcnow()
-        contex['next_posts'] = "Завтра будут новости!"
-        return contex
+        context = super().get_context_data(**kwargs)
+        context['time_now'] = datetime.utcnow()
+        context['next_posts'] = "Завтра будут новости!"
+        return context
+
+
+class NewsList(ListView):
+    """Вывод новостей"""
+    queryset = Post.objects.filter(type='NS')
+    template_name = 'news.html'
+    context_object_name = 'NEWS'
+
+
+
+class ArticleList(ListView):
+    """Вывод статьи"""
+    template_name = 'articles.html'
+    context_object_name = 'ARTS'
+    queryset = Post.objects.filter(type = 'AT')
 
 
 class PostDetail(DetailView):

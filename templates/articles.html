@@ -5,10 +5,10 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Все новости</h1>
+    <h1>Статья</h1>
     <h3> {{ time_now|date:'M d Y' }} </h3>
-    <h3> {{ next_posts|default_if_none:"Скоро будут новости!" }} </h3>
-    {% if posts  %}
+    <h3> {{ next_posts|default_if_none:"Скоро будет новая статья!" }} </h3>
+    {% if ARTS  %}
         <table>
             <tr>
                 <td>Title</td>
@@ -16,12 +16,12 @@
                 <td>Theme</td>
                 <td>Author</td>
             </tr>
-            {% for post in posts.all %}
+            {% for ART in ARTS %}
             <tr>
-                <td>{{ post.title }}</td>
-                <td>{{ post.content|truncatechars:5 }}</td>
-                <td>{{ post.category }}</td>
-                <td>{{ post.author }}</td>
+                <td>{{ ART.title }}</td>
+                <td>{{ ART.content|truncatechars:5 }}</td>
+                <td>{{ ART.category }}</td>
+                <td>{{ ART.author }}</td>
             </tr>
             {% endfor %}
         </table>
