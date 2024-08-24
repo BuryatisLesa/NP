@@ -1,32 +1,24 @@
 {% extends 'flatpages/default.html' %}
-
+{% load custom_filters %}
+{% load custom_tags %}
+{% load thumbnail %}
 {% block title %}
-Посты
+NewsPortal - Статья
 {% endblock title %}
 
 {% block content %}
-    <h1>Статья</h1>
-    <h3> {{ time_now|date:'M d Y' }} </h3>
-    <h3> {{ next_posts|default_if_none:"Скоро будет новая статья!" }} </h3>
     {% if ARTS  %}
-        <table>
-            <tr>
-                <td>Title</td>
-                <td>Content</td>
-                <td>Theme</td>
-                <td>Author</td>
-            </tr>
-            {% for ART in ARTS %}
-            <tr>
-                <td>{{ ART.title }}</td>
-                <td>{{ ART.content|truncatechars:5 }}</td>
-                <td>{{ ART.category }}</td>
-                <td>{{ ART.author }}</td>
-            </tr>
-            {% endfor %}
-        </table>
+        {% for ART in ARTS %}
+        <hr>
+            <h3>{{ ART.title }}</h3>
+            {% thumbnail ART.image "820x300" crop="center" as im %}
+                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+            {% endthumbnail %}
+            <h6>{{ ART.content }}<h6>
+
+        {% endfor %}
     {% else %}
-        <h2> Новостей нету </h2>
+        <h2> Статей нету </h2>
     {% endif %}
 
 {% endblock content %}

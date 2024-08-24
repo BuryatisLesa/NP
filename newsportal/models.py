@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 class Post(models.Model):
@@ -18,13 +19,17 @@ class Post(models.Model):
     content = models.CharField(max_length=1000)
     category = models.ManyToManyField('Category', through='PostCategory', blank=False)
     rating = models.IntegerField(default=0)
+    image = models.ImageField(upload_to='images/',null=True, blank=True)
+
+    def get_absolute_url(self):
+        return reverse('PostDetail', args=[str(self.id)])
 
     def like(self):
         self.rating += 1
         self.save()
 
     def dislike(self):
-        self.rating += 1
+        self.rating -= 1
         self.save()
 
     def preview(self):

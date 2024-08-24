@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     # add apps
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'newsportal'
+    'newsportal',
+    'sorl.thumbnail',
+    'django_filters'
 ]
 
 SITE_ID = 1
@@ -131,3 +133,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
+MEDIA_URL = '/media/'
