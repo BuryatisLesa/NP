@@ -1,0 +1,12 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+Категории
+{% endblock title %}
+
+{% block content %}
+<h1>Технические работы</h1>
+{% for category in categories %}
+<br><h2><a>{{ category.name }} : {{category.rating}}</a></h2>
+{% endfor %}
+{% endblock content %}

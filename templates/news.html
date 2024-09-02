@@ -9,12 +9,12 @@ NewsPortal - Новости
 {% block content %}
     {% if NEWS  %}
         {% for NS in NEWS %}
-        <hr>
-            <h3>{{ NS.title }}</h3>
+            <h3><a class="" id="title_id" href="/{{ NS.pk }}">{{ NS.title }}</a></h3>
             {% thumbnail NS.image "820x300" crop="center" as im %}
                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
-            <h6>{{ NS.content }}<h6>
+            <h3>{{ NS.content }}<h3>
+            <hr>
 
         {% endfor %}
     {% else %}

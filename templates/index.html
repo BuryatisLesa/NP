@@ -7,18 +7,18 @@
 {% endblock title %}
 
 {% block content %}
-   <form  action="" method="get">
-       <label class="text-field__label">{{ filterset.form.as_p }}</label>
-       <input class="text-field__input" type="submit" value="Найти" />
-   </form>
+<!--   <form  action="" method="get">-->
+<!--       <label class="text-field__label">{{ filterset.form.as_p }}</label>-->
+<!--       <input class="text-field__input" type="submit" value="Найти" />-->
+<!--   </form>-->
     {% if posts  %}
         {% for post in posts %}
-        <hr>
-            <h3><a class="link" href="/{{post.pk}}">{{ post.title }}</a></h3>
+            <h3><a class="" id="title_id" href="/{{post.pk}}">{{ post.title }}</a></h3>
             {% thumbnail post.image "820x300" crop="center" as im %}
-                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+                <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
-            <h6>{{ post.content|truncatewords:10 }}</h6>
+            <h3>{{ post.content|truncatewords:10 }}</h3>
+            <hr>
 
         {% endfor %}
     {% else %}
@@ -44,3 +44,9 @@
 {% endif %}
 
 {% endblock content %}
+
+{% block menu %}
+{% for category in categories %}
+<a class="nav-m" id="menu_cat" href='#'>{{ category.name }}</a>
+{% endfor %}
+{% endblock menu %}

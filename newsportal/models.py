@@ -4,10 +4,11 @@ from django.urls import reverse
 
 
 class Post(models.Model):
-    """Table for Posts"""
+    """Модель Постов"""
     class Meta:
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
+
     NEWS = 'NS'
     ARTICLE = 'AT'
     POST_TYPE_CHOICES = [(NEWS, 'Новость'),
@@ -16,7 +17,7 @@ class Post(models.Model):
     type = models.CharField(max_length=2, choices=POST_TYPE_CHOICES, default='NS')
     title = models.CharField(max_length=100)
     date = models.DateTimeField(auto_now_add=True)
-    content = models.CharField(max_length=1000)
+    content = models.TextField()
     category = models.ManyToManyField('Category', through='PostCategory', blank=False)
     rating = models.IntegerField(default=0)
     image = models.ImageField(upload_to='images/',null=True, blank=True)
@@ -40,7 +41,7 @@ class Post(models.Model):
 
 
 class Author(models.Model):
-    """Table for Authors"""
+    """Модель Авторов"""
     class Meta:
         verbose_name = 'Автор'
         verbose_name_plural = 'Авторы'
@@ -68,7 +69,7 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    """Tabel for Category"""
+    """Модель Категорий"""
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
@@ -102,7 +103,7 @@ class Comment(models.Model):
 
 
 class PostCategory(models.Model):
-    """Many to Many"""
+    """Модель связи между Постами и Категориями"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 

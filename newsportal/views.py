@@ -1,9 +1,9 @@
-from django.shortcuts import render
+from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
-from django.urls import reverse_lazy
+from .models import Post, Category, PostCategory
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PostList(ListView):
@@ -15,7 +15,7 @@ class PostList(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        self.filterset = PostFilter(self.request.GET,queryset)
+        self.filterset = PostFilter(self.request.GET, queryset)
         return self.filterset.qs
 
     def get_context_data(self, **kwargs):
@@ -35,7 +35,7 @@ class ArticleList(ListView):
     """Вывод статьи"""
     template_name = 'articles.html'
     context_object_name = 'ARTS'
-    queryset = Post.objects.filter(type = 'AT')
+    queryset = Post.objects.filter(type='AT')
 
 
 class PostDetail(DetailView):
@@ -45,20 +45,32 @@ class PostDetail(DetailView):
     queryset = Post.objects.all()
 
 
-class PostCreate(CreateView):
+class PostCreate(LoginRequiredMixin,CreateView):
+    """Создание постов"""
+    raise_exception = True
     model = Post
     form_class = PostForm
     template_name = 'post_edit.html'
 
 
-class PostUpdate(UpdateView):
+class PostUpdate(LoginRequiredMixin,UpdateView):
+    """Редактирование постов"""
+    raise_exception = True
     model = Post
     form_class = PostForm
     template_name = 'post_edit.html'
 
 
-class PostDelete(DeleteView):
+class PostDelete(LoginRequiredMixin,DeleteView):
+    """Удаление постов"""
+    raise_exception = True
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('HomePage')
 
+
+class CategoryList(ListView):
+    """Вывод категорий"""
+    model = Category
+    template_name = 'categories/theme.html'
+    context_object_name = 'categories'

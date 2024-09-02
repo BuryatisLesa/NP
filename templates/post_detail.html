@@ -5,11 +5,18 @@
 {% endblock title %}
 
 {% block content %}
-<h1>{{ POST_DETAIL.title }}</h1>
+<div id="title_id_detail">{{ POST_DETAIL.title }}</div>
+<div class="content_detail">
 {% thumbnail POST_DETAIL.image "1000x500" crop="center" as im %}
-<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+<img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
 {% endthumbnail %}
-<h6>{{ POST_DETAIL.content }}</h6>
-<h8>Публикация: {{ POST_DETAIL.date }}</h8><br>
-<h8>Автор: {{ POST_DETAIL.author }}</h8>
-{% endblock content %}cd
+</div>
+<div>
+    <h3>{{ POST_DETAIL.content }}</h3>
+</div>
+<br>
+<div>
+    <h3>Публикация: {{ POST_DETAIL.date }}</h3>
+    <h3>Автор: {{ POST_DETAIL.author }}</h3>
+</div>
+{% endblock content %}
