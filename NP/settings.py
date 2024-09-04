@@ -150,9 +150,10 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 MEDIA_URL = '/media/'
-LOGIN_REDIRECT_URL = "/accounts/profile"
+LOGIN_REDIRECT_URL = "profile/"
 LOOUT_REDIRECT_URL = "/"
 
+# пакет allauth
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False

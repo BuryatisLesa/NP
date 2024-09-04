@@ -1,9 +1,10 @@
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .filters import PostFilter
 from .forms import PostForm
-from .models import Post, Category, PostCategory
-from django.contrib.auth.mixins import LoginRequiredMixin
+from .models import Post, Category, PostCategory, User
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 
 
 class PostList(ListView):
@@ -21,6 +22,7 @@ class PostList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
+        context['users'] = User.objects.all()
         return context
 
 
@@ -52,6 +54,17 @@ class PostCreate(LoginRequiredMixin,CreateView):
     form_class = PostForm
     template_name = 'post_edit.html'
 
+    def create_post(request):
+        if request.method == 'POST':
+            form = PostForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.save(user=request.user)  # Передаем текущего пользователя
+                # Перенаправление или другая логика
+        else:
+            form = PostForm()
+        return render(request, 'create_post.html', {'form': form})
+
+
 
 class PostUpdate(LoginRequiredMixin,UpdateView):
     """Редактирование постов"""
@@ -74,3 +87,10 @@ class CategoryList(ListView):
     model = Category
     template_name = 'categories/theme.html'
     context_object_name = 'categories'
+
+
+class ProfileList(LoginRequiredMixin,ListView):
+    '''Профиль пользователя'''
+    template_name = 'auth/profile.html'
+    context_object_name = 'users'
+    queryset = User.objects.all()

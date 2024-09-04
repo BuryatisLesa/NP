@@ -1,0 +1,10 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+Профиль
+{% endblock title %}
+{% block content %}
+{% for user in users %}
+    {{ user.username }}
+{% endfor %}
+{{request.META.remote_user}}
+{% endblock content %}

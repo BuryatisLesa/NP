@@ -2,9 +2,20 @@
 {% block title %}
 Профиль
 {% endblock title %}
+{%  block nav %}
+<div class="user-container">
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li><a class="user">{{ user.username }}</a></li>
+        <li><a class="user" href="{% url 'account_logout' %}">Выйти</a></li>
+        {% else %}
+        <li><a class="user" href="{% url 'account_login' %}">Авторизация</a></li>
+        <li><a class="user" href="{% url 'account_signup' %}">Регистрация</a></li>
+        {% endif %}
+    </ul>
+</div>
+
+{%  endblock nav %}
 {% block content %}
-{% for user in users %}
-    {{ user.username }}
-{% endfor %}
-{{request.META.remote_user}}
+{{ author.rating }}
 {% endblock content %}

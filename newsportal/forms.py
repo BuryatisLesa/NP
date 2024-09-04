@@ -1,5 +1,5 @@
 from django import forms
-from .models import *
+from .models import Category, Author, Post, User
 from django.core.exceptions import ValidationError
 
 
@@ -19,9 +19,7 @@ class PostForm(forms.ModelForm):
             'content',
             'category',
             'image',
-            'author'
         ]
-        # widgets = {'author': forms.HiddenInput()}
 
     def clean(self):
         cleaned_data = super().clean()
@@ -41,3 +39,11 @@ class PostForm(forms.ModelForm):
             )
         return name
 
+    def save(self, commit=True, user=None):
+        post = super().save(commit=False)
+        if user:
+            post.author = Author.objects.get(user=user)
+        if commit:
+            post.save()
+            self.save_m2m()  # Для сохранения категорий и других ManyToMany полей
+        return post

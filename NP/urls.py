@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from allauth import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -45,5 +46,6 @@ urlpatterns = [
     # accounts/ social/connections/
     # accounts/ yandex/
     path('',include('newsportal.urls')),
+    # path('accounts/', include('accounts.urls'))
 
 ]

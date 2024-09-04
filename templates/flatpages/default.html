@@ -21,12 +21,18 @@
                     <li><a class="text-navigation" href="{% url 'NewsList'%}">Новость</a></li>
                 </ul>
             </div>
-            <div class="user-container">
-                <ul>
-                    <li><a class="user" href="{% url 'account_login' %}">Авторизация</a></li>
-                    <li><a class="user" href="{% url 'account_signup' %}">Регистрация</a></li>
-                </ul>
-            </div>
+            {% block nav %}
+                <div class="user-container">
+                    <ul>
+                        {% if request.user.is_authenticated %}
+                        <li><a class="user" href="{% url 'account_logout' %}">Выйти</a></li>
+                        {% else %}
+                        <li><a class="user" href="{% url 'account_login' %}">Авторизация</a></li>
+                        <li><a class="user" href="{% url 'account_signup' %}">Регистрация</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            {% endblock nav %}
         </div>
         <div class="container">
             <div class="content">

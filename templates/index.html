@@ -5,7 +5,6 @@
 {% block title %}
 Главная страница
 {% endblock title %}
-
 {% block content %}
 <!--   <form  action="" method="get">-->
 <!--       <label class="text-field__label">{{ filterset.form.as_p }}</label>-->
@@ -18,9 +17,12 @@
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
             <h3>{{ post.content|truncatewords:10 }}</h3>
+                {% for category in post.category.all %}
+                     <h4><a> Жанр: {{ category.name }}</a></h4>
+                {% endfor %}
             <hr>
-
         {% endfor %}
+
     {% else %}
         <h2> Постов нету </h2>
     {% endif %}
