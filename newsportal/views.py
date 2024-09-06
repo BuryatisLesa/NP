@@ -16,8 +16,8 @@ class PostList(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        self.filterset = PostFilter(self.request.GET, queryset)
-        return self.filterset.qs
+        self.filterset = PostFilter(self.request.GET, queryset) # передает запрос на фильтрацию данных queryset
+        return self.filterset.qs # возвращает отфильтрованные данные queryset в шаблон index.html
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -54,15 +54,10 @@ class PostCreate(LoginRequiredMixin,CreateView):
     form_class = PostForm
     template_name = 'post_edit.html'
 
-    def create_post(request):
-        if request.method == 'POST':
-            form = PostForm(request.POST, request.FILES)
-            if form.is_valid():
-                form.save(user=request.user)  # Передаем текущего пользователя
-                # Перенаправление или другая логика
-        else:
-            form = PostForm()
-        return render(request, 'create_post.html', {'form': form})
+    def form_valid(self, form):
+        # Передаем текущего пользователя в метод save формы
+        form.save(user=self.request.user)
+        return super().form_valid(form)
 
 
 

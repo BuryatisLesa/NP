@@ -25,6 +25,7 @@
                 <div class="user-container">
                     <ul>
                         {% if request.user.is_authenticated %}
+                        <li><a class="user" href="{% url 'profile' %}">Профиль</a></li>
                         <li><a class="user" href="{% url 'account_logout' %}">Выйти</a></li>
                         {% else %}
                         <li><a class="user" href="{% url 'account_login' %}">Авторизация</a></li>

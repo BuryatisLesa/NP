@@ -9,7 +9,7 @@ class PostForm(forms.ModelForm):
     content = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-create', 'placeholder': 'Текст'}))
     category = forms.ModelMultipleChoiceField(queryset=Category.objects.all(),
                                               widget=forms.CheckboxSelectMultiple(attrs={'class': 'form-create'}))
-    image = forms.ImageField()
+    image = forms.ImageField(required=False)
 
     class Meta:
         model = Post
@@ -42,8 +42,9 @@ class PostForm(forms.ModelForm):
     def save(self, commit=True, user=None):
         post = super().save(commit=False)
         if user:
-            post.author = Author.objects.get(user=user)
+            author, created = Author.objects.get_or_create(name=user) # получаем или создает автора
+            post.author = author
         if commit:
-            post.save()
+            post.save() # сохраняем пост
             self.save_m2m()  # Для сохранения категорий и других ManyToMany полей
         return post

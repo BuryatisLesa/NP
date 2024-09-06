@@ -1,10 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+# from django.db.models.signals import post_save
+# from django.dispatch import receiver
+# from django.core.exceptions import ObjectDoesNotExist
+
+
 
 
 class Post(models.Model):
     """Модель Постов"""
+
     class Meta:
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
@@ -12,7 +18,7 @@ class Post(models.Model):
     NEWS = 'NS'
     ARTICLE = 'AT'
     POST_TYPE_CHOICES = [(NEWS, 'Новость'),
-             (ARTICLE, 'Статья')]
+                         (ARTICLE, 'Статья')]
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
     type = models.CharField(max_length=2, choices=POST_TYPE_CHOICES, default='NS')
     title = models.CharField(max_length=100)
@@ -20,7 +26,7 @@ class Post(models.Model):
     content = models.TextField()
     category = models.ManyToManyField('Category', through='PostCategory', blank=False)
     rating = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='images/',null=True, blank=True)
+    image = models.ImageField(upload_to='images/', null=True, blank=True)
 
     def get_absolute_url(self):
         return reverse('PostDetail', args=[str(self.id)])
@@ -42,9 +48,11 @@ class Post(models.Model):
 
 class Author(models.Model):
     """Модель Авторов"""
+
     class Meta:
         verbose_name = 'Автор'
         verbose_name_plural = 'Авторы'
+
     name = models.OneToOneField(User, on_delete=models.CASCADE)
     rating = models.IntegerField(default=0)
 
@@ -58,8 +66,8 @@ class Author(models.Model):
         self.rating = 0
         for post in posts:
             self.rating += post.rating * 3
-            post_coments = Comment.objects.filter(post=post)
-            for post_comment in post_coments:
+            post_comments = Comment.objects.filter(post=post)
+            for post_comment in post_comments:
                 self.rating += post_comment.rating
 
         for comment in comments:
@@ -67,9 +75,9 @@ class Author(models.Model):
 
         self.save()
 
-
 class Category(models.Model):
     """Модель Категорий"""
+
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
@@ -83,9 +91,11 @@ class Category(models.Model):
 
 class Comment(models.Model):
     """Table for Comments"""
+
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
+
     comment_id = models.BigAutoField(primary_key=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)

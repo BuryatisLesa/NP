@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Создание поста</h1>
 <hr>
-<form action="" method="post">
+<form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Сохранить" />

@@ -17,9 +17,12 @@
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
             <h3>{{ post.content|truncatewords:10 }}</h3>
+                 <h4><a>Жанр:
                 {% for category in post.category.all %}
-                     <h4><a> Жанр: {{ category.name }}</a></h4>
+                     |{{ category.name }}
                 {% endfor %}
+                     </a>
+                 </h4>
             <hr>
         {% endfor %}
 
