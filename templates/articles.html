@@ -13,12 +13,29 @@ NewsPortal - Статья
             {% thumbnail ART.image "820x300" crop="center" as im %}
                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
-            <h3>{{ ART.content }}<h3>
+            <h3>{{ ART.content|truncatewords:10 }}<h3>
             <hr>
 
         {% endfor %}
     {% else %}
         <h2> Статей нету </h2>
     {% endif %}
-
+    {# Пагинация #}
+    {% if page_obj.has_previous %}
+        <a href="?page=1">1</a>
+        {% if page_obj.previous_page_number != 1 %}
+            ...
+            <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+        {% endif %}
+    {% endif %}
+{# Текущая страница #}
+    {{ page_obj.number }}
+{# Следущая страница #}
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+        {% if paginator.num_pages != page_obj.next_page_number %}
+            ...
+            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+     {% endif %}
+{% endif %}
 {% endblock content %}

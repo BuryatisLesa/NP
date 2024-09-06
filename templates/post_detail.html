@@ -19,4 +19,20 @@
     <h3>Публикация: {{ POST_DETAIL.date }}</h3>
     <h3>Автор: {{ POST_DETAIL.author }}</h3>
 </div>
+<div>
+    <h3>Комментария:</h3>
+</div>
+<div>
+    {% if comments %}
+        {% for comment in comments %}
+            {% if comment.post == POST_DETAIL %}
+                <div class="comment-user"><a href="#">{{ comment.user }}</a></div>
+                <div class="comment-text">{{ comment.text }}</div>
+                <div class="comment.time">{{ comment.time }}</div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <h4>Комментарий нету, стань первым!</h4>
+    {% endif %}
+</div>
 {% endblock content %}

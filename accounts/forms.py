@@ -2,7 +2,6 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User, Group
 from allauth.account.forms import SignupForm
-from newsportal.models import Author
 
 
 # class SignUpForm(UserCreationForm):
@@ -28,11 +27,3 @@ class CustomSignupForm(SignupForm):
         common_users = Group.objects.get(name="common users")
         user.groups.add(common_users)
         return user
-
-    # def add_author(self, request, username=None):
-    #     if request.method == 'POST':
-    #         user_form = SignupForm(request.POST)
-    #         if user_form.is_valid():
-    #             new_author = Author.objects.create(name=username)
-    #             new_author.save()
-    #

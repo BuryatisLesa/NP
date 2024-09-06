@@ -29,6 +29,7 @@
     {% else %}
         <h2> Постов нету </h2>
     {% endif %}
+<h3>
 {# Пагинация #}
     {% if page_obj.has_previous %}
         <a href="?page=1">1</a>
@@ -47,7 +48,7 @@
           <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
      {% endif %}
 {% endif %}
-
+</h3>
 {% endblock content %}
 
 {% block menu %}

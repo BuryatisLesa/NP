@@ -9,7 +9,7 @@ from django.urls import reverse
 
 
 class Post(models.Model):
-    """Модель Постов"""
+    """Посты"""
 
     class Meta:
         verbose_name = 'Пост'
@@ -47,7 +47,7 @@ class Post(models.Model):
 
 
 class Author(models.Model):
-    """Модель Авторов"""
+    """Авторы"""
 
     class Meta:
         verbose_name = 'Автор'
@@ -76,7 +76,7 @@ class Author(models.Model):
         self.save()
 
 class Category(models.Model):
-    """Модель Категорий"""
+    """Категории"""
 
     class Meta:
         verbose_name = 'Категория'
@@ -90,13 +90,12 @@ class Category(models.Model):
 
 
 class Comment(models.Model):
-    """Table for Comments"""
+    """Комментарии"""
 
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
 
-    comment_id = models.BigAutoField(primary_key=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     text = models.CharField(max_length=255)
@@ -111,7 +110,8 @@ class Comment(models.Model):
         self.rating += 1
         self.save()
 
-
+    def __str__(self):
+        return f'{self.text} => {self.post}'
 class PostCategory(models.Model):
     """Модель связи между Постами и Категориями"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
