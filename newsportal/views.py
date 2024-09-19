@@ -1,10 +1,10 @@
-from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.shortcuts import render, redirect
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .filters import PostFilter
-from .forms import PostForm
-from .models import Post, Category, PostCategory, User, Comment
-from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from .forms import PostForm, CommentForm
+from .models import Post, Category, PostCategory, Author, Comment, User
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class PostList(ListView):
@@ -16,13 +16,12 @@ class PostList(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        self.filterset = PostFilter(self.request.GET, queryset) # передает запрос на фильтрацию данных queryset
-        return self.filterset.qs # возвращает отфильтрованные данные queryset в шаблон index.html
+        self.filterset = PostFilter(self.request.GET, queryset)
+        return self.filterset.qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
-        context['users'] = User.objects.all()
         return context
 
 
@@ -42,21 +41,35 @@ class ArticleList(ListView):
     paginate_by = 5
 
 
-class PostDetail(DetailView):
+class PostDetail(DetailView, CreateView):
     """Вывод отдельных постов"""
     template_name = 'post_detail.html'
     context_object_name = 'POST_DETAIL'
     queryset = Post.objects.all()
+    form_class = CommentForm # форма для создание комментарий под постом
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs) # переопределяем метод
-        context['comments'] = Comment.objects.all()
+        context = super().get_context_data(**kwargs)
+        context['comments'] = Comment.objects.filter(post=self.get_object())
         return context
+
+    def form_valid(self, form):
+        # Валидация формы комментария
+        comment = form.save(commit=False)
+        comment.user = self.request.user
+        comment.post = self.get_object()
+        comment.save()
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        # Перенаправление после создание комментария на страничку поста
+        return reverse('PostDetail', kwargs={'pk': self.get_object().pk})
+
+
 
 
 class PostCreate(LoginRequiredMixin,CreateView):
     """Создание постов"""
-    # permission_required = ('newsportal.add_post')
     raise_exception = True
     model = Post
     form_class = PostForm
@@ -68,10 +81,8 @@ class PostCreate(LoginRequiredMixin,CreateView):
         return super().form_valid(form)
 
 
-
 class PostUpdate(LoginRequiredMixin,UpdateView):
     """Редактирование постов"""
-    # permission_required = ('newsportal.change_post')
     raise_exception = True
     model = Post
     form_class = PostForm
@@ -80,7 +91,6 @@ class PostUpdate(LoginRequiredMixin,UpdateView):
 
 class PostDelete(LoginRequiredMixin,DeleteView):
     """Удаление постов"""
-    # permission_required = ('newsportal.delete_post')
     raise_exception = True
     model = Post
     template_name = 'post_delete.html'
@@ -94,11 +104,13 @@ class CategoryList(ListView):
     context_object_name = 'categories'
 
 
-class ProfileList(LoginRequiredMixin,ListView):
-    '''Профиль пользователя'''
-    raise_exception = True
-    template_name = 'auth/profile.html'
-    context_object_name = 'users'
+class ProfileList(ListView):
     queryset = User.objects.all()
+    template_name = "auth/profile.html"
 
 
+def getComment(self, request):
+    author = request.GET['user.username']
+    text = request.GET['text']
+    comment = author + ' ' + text
+    return render(self.request, 'showResult.html', {'comment' : comment})

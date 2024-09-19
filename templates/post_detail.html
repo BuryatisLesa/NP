@@ -34,5 +34,10 @@
     {% else %}
         <h4>Комментарий нету, стань первым!</h4>
     {% endif %}
+    <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Сохранить" />
+    </form>
 </div>
 {% endblock content %}

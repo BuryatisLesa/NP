@@ -1,11 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
-# from django.db.models.signals import post_save
-# from django.dispatch import receiver
-# from django.core.exceptions import ObjectDoesNotExist
-
-
 
 
 class Post(models.Model):
@@ -112,6 +107,8 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'{self.text} => {self.post}'
+
+
 class PostCategory(models.Model):
     """Модель связи между Постами и Категориями"""
     post = models.ForeignKey(Post, on_delete=models.CASCADE)

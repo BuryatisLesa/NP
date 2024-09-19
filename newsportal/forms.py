@@ -1,9 +1,10 @@
 from django import forms
-from .models import Category, Author, Post, User
+from .models import Category, Author, Post, User, Comment
 from django.core.exceptions import ValidationError
 
 
 class PostForm(forms.ModelForm):
+    """Форма для создание постов"""
     title = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-create', 'placeholder':'Заголовок'}))
     type = forms.ChoiceField(widget=forms.RadioSelect(attrs={'class': 'form-create'}), choices=Post.POST_TYPE_CHOICES)
     content = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-create', 'placeholder': 'Текст'}))
@@ -13,13 +14,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = [
-            'title',
-            'type',
-            'content',
-            'category',
-            'image',
-        ]
+        fields = ['title','type','content','category','image']
 
     def clean(self):
         cleaned_data = super().clean()
@@ -40,6 +35,7 @@ class PostForm(forms.ModelForm):
         return name
 
     def save(self, commit=True, user=None):
+        # метод для сохранение постов БД view => form
         post = super().save(commit=False)
         if user:
             author, created = Author.objects.get_or_create(name=user) # получаем или создает автора
@@ -48,3 +44,30 @@ class PostForm(forms.ModelForm):
             post.save() # сохраняем пост
             self.save_m2m()  # Для сохранения категорий и других ManyToMany полей
         return post
+
+
+class CommentForm(forms.ModelForm):
+    """Форма для создание коментарий к отдельным постам => PostDetail"""
+
+    text = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-create', 'placeholder': 'Текст'}))
+
+    class Meta:
+        model = Comment
+        fields = ['text']
+
+    def save(self, commit=True, user=None, post=None):
+        comment = super().save(commit=False)
+
+        if user is not None:
+            author_comment, author_created = Author.objects.get_or_create(name=user)
+            comment.author_comment = author_comment
+
+        if post is not None:
+            comment.post = post
+
+        if commit:
+            comment.save() # сохраняем пост
+            self.save_m2m()  # Для сохранения категорий и других ManyToMany полей
+        return comment
+
+

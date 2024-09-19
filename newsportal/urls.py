@@ -1,4 +1,5 @@
 from django.urls import path
+from . import views
 from .views import (PostList,
                     NewsList,
                     PostCreate,
@@ -7,7 +8,8 @@ from .views import (PostList,
                     PostUpdate,
                     PostDelete,
                     CategoryList,
-                    ProfileList)
+                    ProfileList,
+                    getComment)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,6 +26,7 @@ urlpatterns = [
     path('<int:pk>/delete/',PostDelete.as_view(), name='PostDelete'),
     path('categories/', CategoryList.as_view(), name='CategoryList'),
     path('accounts/login/profile/', ProfileList.as_view(), name='profile'),
+    path('showResult/', views.getComment)
 
 ]
 
