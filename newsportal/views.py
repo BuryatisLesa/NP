@@ -3,8 +3,11 @@ from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .filters import PostFilter
 from .forms import PostForm, CommentForm
-from .models import Post, Category, PostCategory, Author, Comment, User
+from .models import Post, Category, PostCategory, Author, Comment, User, Subscription
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_protect
+from django.db.models import Exists, OuterRef
 
 
 class PostList(ListView):
@@ -22,6 +25,7 @@ class PostList(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
+        context['categories'] = Category.objects.all()
         return context
 
 
@@ -32,6 +36,11 @@ class NewsList(ListView):
     context_object_name = 'NEWS'
     paginate_by = 5
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
 
 class ArticleList(ListView):
     """Вывод статьи"""
@@ -39,6 +48,11 @@ class ArticleList(ListView):
     context_object_name = 'ARTS'
     queryset = Post.objects.filter(type='AT')
     paginate_by = 5
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
 
 
 class PostDetail(DetailView, CreateView):
@@ -51,6 +65,7 @@ class PostDetail(DetailView, CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comments'] = Comment.objects.filter(post=self.get_object())
+        context['categories'] = Category.objects.all()
         return context
 
     def form_valid(self, form):
@@ -66,8 +81,6 @@ class PostDetail(DetailView, CreateView):
         return reverse('PostDetail', kwargs={'pk': self.get_object().pk})
 
 
-
-
 class PostCreate(LoginRequiredMixin,CreateView):
     """Создание постов"""
     raise_exception = True
@@ -80,6 +93,11 @@ class PostCreate(LoginRequiredMixin,CreateView):
         form.save(user=self.request.user)
         return super().form_valid(form)
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
 
 class PostUpdate(LoginRequiredMixin,UpdateView):
     """Редактирование постов"""
@@ -87,6 +105,11 @@ class PostUpdate(LoginRequiredMixin,UpdateView):
     model = Post
     form_class = PostForm
     template_name = 'post_edit.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
 
 
 class PostDelete(LoginRequiredMixin,DeleteView):
@@ -96,6 +119,11 @@ class PostDelete(LoginRequiredMixin,DeleteView):
     template_name = 'post_delete.html'
     success_url = reverse_lazy('HomePage')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
 
 class CategoryList(ListView):
     """Вывод категорий"""
@@ -103,14 +131,39 @@ class CategoryList(ListView):
     template_name = 'categories/theme.html'
     context_object_name = 'categories'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+
 
 class ProfileList(ListView):
     queryset = User.objects.all()
     template_name = "auth/profile.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
 
-def getComment(self, request):
-    author = request.GET['user.username']
-    text = request.GET['text']
-    comment = author + ' ' + text
-    return render(self.request, 'showResult.html', {'comment' : comment})
+class CategoryDetail(DetailView):
+    template_name = 'category_detail.html'
+    context_object_name = 'CATEGORY_DETAIL'
+    queryset = Category.objects.all()
+
+
+
+@login_required
+@csrf_protect
+def subscriptions(request):
+    '''Метод для подписание на определенные категории, а также удаление подписки на категории'''
+    if request.method == 'POST':
+        category_id = request.POST.get('category_id')
+        category = Category.objects.get(id=category_id)
+        action = request.POST.get('action')
+        if action == 'subscribe':
+            Subscription.objects.create(user=request.user, category=category)
+        elif action  == 'unsubscribe':
+            Subscription.objects.filter(user=request.user, category=category).delete()
+    categories_with_subscriprions = Category.objects.annotate(user_subscribed = Exists(Subscription.objects.filter(user=request.user, category = OuterRef('pk'),))).order_by('name')
+    return render(request, 'subscriptions.html', {'categories':categories_with_subscriprions})
