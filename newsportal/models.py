@@ -1,6 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from slugify import slugify
+from time import time
+
+
+def gen_slug(string):
+    finally_slug = slugify(string, allow_unicode=False,)
+    return finally_slug + '-' + str(int(time()))
 
 
 class Post(models.Model):
@@ -16,15 +23,20 @@ class Post(models.Model):
                          (ARTICLE, 'Статья')]
     author = models.ForeignKey('Author', on_delete=models.CASCADE)
     type = models.CharField(max_length=2, choices=POST_TYPE_CHOICES, default='NS')
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=150)
     date = models.DateTimeField(auto_now_add=True)
     content = models.TextField()
     category = models.ManyToManyField('Category', through='PostCategory', blank=False)
     rating = models.IntegerField(default=0)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
+
+    def save(self, *args, **kwargs):
+        self.slug = gen_slug(self.title)
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
-        return reverse('PostDetail', args=[str(self.id)])
+        return reverse('PostDetail', kwargs={'slug': self.slug})
 
     def like(self):
         self.rating += 1
@@ -51,6 +63,7 @@ class Author(models.Model):
     name = models.OneToOneField(User, on_delete=models.CASCADE)
     rating = models.IntegerField(default=0)
 
+
     def __str__(self):
         return f'{User.objects.get(pk=self.name.pk)}'
 
@@ -70,6 +83,7 @@ class Author(models.Model):
 
         self.save()
 
+
 class Category(models.Model):
     """Категории"""
 
@@ -79,9 +93,31 @@ class Category(models.Model):
 
     name = models.CharField(max_length=100)
     rating = models.IntegerField(default=0)
+    descriptions = models.TextField(default='Описание пока нету')
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
 
     def __str__(self):
         return f'{self.name}'
+    
+    def get_absolute_url(self):
+        return reverse('CategoryDetail', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        self.slug = gen_slug(self.name)
+        super().save(*args, **kwargs)
+
+
+class Subscription(models.Model):
+    '''Подписки на посты категорий'''
+    class Meta:
+        verbose_name = 'Подписка'
+        verbose_name_plural = 'Подписки'
+
+    user = models.ForeignKey(to=User, on_delete=models.CASCADE, related_name='subscriptions')
+    category = models.ForeignKey(to=Category, on_delete=models.CASCADE, related_name='subscriptions')
+
+    def __str__(self):
+        return f'{self.user}({self.category})'
 
 
 class Comment(models.Model):
@@ -102,7 +138,7 @@ class Comment(models.Model):
         self.save()
 
     def dislike(self):
-        self.rating += 1
+        self.rating -= 1
         self.save()
 
     def __str__(self):
