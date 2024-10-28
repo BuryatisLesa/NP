@@ -13,7 +13,7 @@ NewsPortal - Статья
             {% thumbnail ART.image "820x300" crop="center" as im %}
                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
-            <h3>{{ ART.content|truncatewords:10 }}<h3>
+            <h3>{{ ART.content|truncatewords:10 }}</h3>
             <hr>
 
         {% endfor %}
@@ -39,3 +39,14 @@ NewsPortal - Статья
      {% endif %}
 {% endif %}
 {% endblock content %}
+{% block side %}
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in categories %}
+        <ul class="ul-category">
+            <li>{{ category.name }}<br>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+{% endblock side %}

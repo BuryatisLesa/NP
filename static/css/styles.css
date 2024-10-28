@@ -59,13 +59,51 @@ li {
 }
 
 
-.content {
+/* .content {
   background-color: rgb(40, 12, 104);
   border-radius: 20px;
   text-decoration: none;
   width: auto;
+} */
+
+.side-left {
+  background-color: rgb(40, 12, 104);
+  border-radius: 20px;
+  text-decoration: none;
+  width: 20%;
+  margin-left: 20px;
+  margin-right: 50px
 }
 
+
+.list-category {
+  text-decoration: none;
+  color: yellow;
+  margin-bottom: 10px;
+  
+}
+
+.title-category {
+  font-size: 30px;
+  color: chocolate;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.url-category {
+  text-decoration: none;
+  color: yellow;
+}
+.side-right {
+  background-color: rgb(40, 12, 104);
+  border-radius: 20px;
+  text-decoration: none;
+  width: 70%;
+}
+
+.ul-category {
+  margin: auto;
+  padding-left: 0px;
+}
 h3,
 h4 {
   color: aliceblue;

@@ -3,9 +3,20 @@
 {% block content %}
 <h1>Создание поста</h1>
 <hr>
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Сохранить" />
 </form>
 {% endblock content %}
+{% block side %}
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in categories %}
+        <ul class="ul-category">
+            <li>{{ category.name }}<br>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+{% endblock side %}

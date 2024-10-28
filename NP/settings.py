@@ -39,15 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # add apps
     'django.contrib.sites',
-    'django.contrib.flatpages',
-    'newsportal',
-    'sorl.thumbnail',
-    'django_filters',
-
+    'django.contrib.flatpages', # Пакет плоских страничек
+    'newsportal', # Приложение NewsPortal/AnimeNews
+    'sorl.thumbnail', # Пакет для редактирование картинок
+    'django_filters', # Пакет для фильтрации данных в джанго
+    #Пакет - allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
+    'accounts',
+    'profile_user'
 ]
 
 SITE_ID = 1
@@ -158,15 +160,21 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+#mandatory — не пускать пользователя на сайт до момента подтверждения почты;
+#optional — сообщение о подтверждении почты будет отправлено, но пользователь может залогиниться на сайте без подтверждения почты.
+#https://docs.allauth.org/en/latest/account/configuration.html
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 # email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "anim.news@yandex.ru"
-EMAIL_HOST_PASSWORD = "animenews1504"
+EMAIL_HOST_PASSWORD = "jzfjrtppxabamvrk"
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 DEFAULT_FROM_EMAIL = "anim.news@yandex.ru"
+SERVER_EMAIL = "anim.news@yandex.ru"
+MANAGERS = (('AnimeNews', 'anim.news.@yandex.ru'), ('example', 'example@yandex.ru'))

@@ -50,9 +50,14 @@
 {% endif %}
 </h3>
 {% endblock content %}
-
-{% block menu %}
-{% for category in categories %}
-<a class="nav-m" id="menu_cat" href='#'>{{ category.name }}</a>
-{% endfor %}
-{% endblock menu %}
+{% block side %}
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in categories %}
+        <ul class="ul-category">
+            <li><a class="url-category" href="#">{{ category.name }}<br></a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+{% endblock side %}

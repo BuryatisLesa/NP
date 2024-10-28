@@ -41,3 +41,14 @@
     </form>
 </div>
 {% endblock content %}
+{% block side %}
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in categories %}
+        <ul class="ul-category">
+            <li>{{ category.name }}<br>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+{% endblock side %}
