@@ -3,6 +3,9 @@ body {
   height: auto;
   margin: 0;
   width: 100%;
+  background: white url('/media/images/devushka_trava_gorod_213102_3840x2160.jpg');
+  background-size: auto ;
+  background-repeat: repeat;
 }
 
 .container-nav {
@@ -58,16 +61,8 @@ li {
   justify-content: center;
 }
 
-
-/* .content {
-  background-color: rgb(40, 12, 104);
-  border-radius: 20px;
-  text-decoration: none;
-  width: auto;
-} */
-
 .side-left {
-  background-color: rgb(40, 12, 104);
+  background-color: rgb(40, 12, 104, 0.5);
   border-radius: 20px;
   text-decoration: none;
   width: 20%;
@@ -101,7 +96,7 @@ li {
   color: yellow;
 }
 .side-right {
-  background-color: rgb(40, 12, 104);
+  background-color: rgb(40, 12, 104, 0.5);
   border-radius: 20px;
   text-decoration: none;
   width: 70%;
@@ -111,21 +106,30 @@ li {
   margin: auto;
   padding-left: 0px;
 }
-h3,
-h4 {
-  color: aliceblue;
+
+.title_post {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
 }
 
-#title_id {
+.title_text {
   text-decoration: none;
   font-size: 30px;
   color: yellow;
 }
-#title_id_detail {
+
+.content_post {
   text-decoration: none;
-  font-size: 30px;
-  color: yellow;
-  padding-top: 30px
+  font-size: 25px;
+  color: white;
+}
+.categories_post {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: chocolate;
 }
 .footer-container {
   display: flex;
@@ -149,4 +153,58 @@ hr {
 .post-content {
   margin-left: 100px;
   margin-right: 100px;
+}
+
+.title_detail {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+  text-decoration: none;
+  font-size: 30px;
+  color: yellow;
+}
+
+.content_detail {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 50px;
+  color: white;
+}
+
+.created_date_author {
+  color: orange;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.created_date {
+  margin-bottom: 20px;
+  float: left;
+}
+
+.block_comment {
+  display: flex;
+  flex-direction: column;
+}
+.comment_user {
+  background-color: rgb(40, 12, 104, 0.8);
+  padding-top: 20px;
+}
+.text_user {
+  text-decoration: none;
+  color:orange;
+  font-size: 20px;
+  font-weight: 600;
+}
+.comment_text {
+  background-color: rgb(40, 12, 104, 0.8);
+}
+.text_comment {
+  text-decoration: none;
+  color:rgb(0, 255, 149);
+  font-size: 20px;
+  font-weight: 600;
+}
+.comment_time {
+  background-color: rgb(40, 12, 104, 0.8);
 }

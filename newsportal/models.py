@@ -6,36 +6,39 @@ from time import time
 
 
 def gen_slug(string):
-    finally_slug = slugify(string, allow_unicode=False,)
-    return finally_slug + '-' + str(int(time()))
+    '''метод для создание слага для постов и категорий, и т.д.'''
+    finally_slug = slugify(string, allow_unicode=False,) # функция по генерации слага
+    return finally_slug + '-' + str(int(time())) # финальный слага + время создания
 
 
 class Post(models.Model):
     """Посты"""
 
     class Meta:
-        verbose_name = 'Пост'
-        verbose_name_plural = 'Посты'
+        verbose_name = 'Пост' # мета данные ед.ч.
+        verbose_name_plural = 'Посты' # мета данные мн.ч
 
-    NEWS = 'NS'
-    ARTICLE = 'AT'
+    NEWS = 'NS' # переменная типа новостей
+    ARTICLE = 'AT' # переменная типа статей
     POST_TYPE_CHOICES = [(NEWS, 'Новость'),
                          (ARTICLE, 'Статья')]
-    author = models.ForeignKey('Author', on_delete=models.CASCADE)
-    type = models.CharField(max_length=2, choices=POST_TYPE_CHOICES, default='NS')
-    title = models.CharField(max_length=150)
-    date = models.DateTimeField(auto_now_add=True)
-    content = models.TextField()
-    category = models.ManyToManyField('Category', through='PostCategory', blank=False)
-    rating = models.IntegerField(default=0)
-    image = models.ImageField(upload_to='images/', null=True, blank=True)
-    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
+    author = models.ForeignKey('Author', on_delete=models.CASCADE) # столбец авторов
+    type = models.CharField(max_length=2, choices=POST_TYPE_CHOICES, default='NS') # столбец типа поста
+    title = models.CharField(max_length=150) # столбец заголовка поста
+    date = models.DateTimeField(auto_now_add=True) # столбец для даты создания поста
+    content = models.TextField() # столбец содержащий контент для поста
+    category = models.ManyToManyField('Category', through='PostCategory', blank=False) # категории поста
+    rating = models.IntegerField(default=0) # рейтинг поста
+    image = models.ImageField(upload_to='images/', null=True, blank=True) # картинка поста
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL") # созданный слаг для поста на основе заголовка
 
     def save(self, *args, **kwargs):
+        '''сохранение слага в БД'''
         self.slug = gen_slug(self.title)
         super().save(*args, **kwargs)
 
     def get_absolute_url(self):
+        '''абсолютная ссылка на пост при использование в проекте'''
         return reverse('PostDetail', kwargs={'slug': self.slug})
 
     def like(self):
@@ -57,31 +60,32 @@ class Author(models.Model):
     """Авторы"""
 
     class Meta:
-        verbose_name = 'Автор'
-        verbose_name_plural = 'Авторы'
+        verbose_name = 'Автор' # мета данные ед.ч
+        verbose_name_plural = 'Авторы' # мета данные мн.ч
 
-    name = models.OneToOneField(User, on_delete=models.CASCADE)
-    rating = models.IntegerField(default=0)
+    name = models.OneToOneField(User, on_delete=models.CASCADE) # столбец с никнеймом автора
+    rating = models.IntegerField(default=0) # столбец для подсчёта рейтинга автора на основе его постов и комментарий
 
 
     def __str__(self):
         return f'{User.objects.get(pk=self.name.pk)}'
 
     def update_rating(self):
-        posts = Post.objects.filter(author_id=self.pk)
-        comments = Comment.objects.filter(user=self.name)
+        '''обновление и суммирование рейтинга'''
+        posts = Post.objects.filter(author_id=self.pk) # фильтрация постов созданным автором
+        comments = Comment.objects.filter(user=self.name) # фильтрация комментарий под постом
 
         self.rating = 0
-        for post in posts:
-            self.rating += post.rating * 3
-            post_comments = Comment.objects.filter(post=post)
-            for post_comment in post_comments:
-                self.rating += post_comment.rating
+        for post in posts: # цикл постов
+            self.rating += post.rating * 3 # лайки собранные поставми * 3
+            post_comments = Comment.objects.filter(post=post) # фильтрация комментарий для каждого поста
+            for post_comment in post_comments: # цикл комментарий под каждым постом
+                self.rating += post_comment.rating # суммирование лайков комментарий
 
-        for comment in comments:
-            self.rating += comment.rating
+        for comment in comments: # цикл комментарий оставленым автором
+            self.rating += comment.rating # суммирование комментарий 
 
-        self.save()
+        self.save() # сохранение рейтинга в БД
 
 
 class Category(models.Model):

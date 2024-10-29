@@ -12,17 +12,16 @@
 <!--   </form>-->
     {% if posts  %}
         {% for post in posts %}
-            <h3><a class="" id="title_id" href="/{{post.slug}}">{{ post.title }}</a></h3>
+            <div class="title_post"><a class="title_text" href="/{{post.slug}}">{{ post.title }}</a></div>
             {% thumbnail post.image "820x300" crop="center" as im %}
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
-            <h3>{{ post.content|truncatewords:10 }}</h3>
-                 <h4><a>Жанр:
+            <div class="content_post">{{ post.content|truncatewords:10 }}</div>
+                 <div class="categories_post"><a>Жанр:
                 {% for category in post.category.all %}
                      |{{ category.name }}
-                {% endfor %}
+                {% endfor %}</div>
                      </a>
-                 </h4>
             <hr>
         {% endfor %}
 

@@ -1,34 +1,34 @@
 {% extends 'flatpages/default.html' %}
 {% load thumbnail %}
 {% block title %}
-{{ post.title }}
+{{ POST_DETAIL.title }}
 {% endblock title %}
 
 {% block content %}
-<div id="title_id_detail">{{ POST_DETAIL.title }}</div>
-<div class="content_detail">
+<div class='title_detail'>{{ POST_DETAIL.title }}</div>
+<div>
 {% thumbnail POST_DETAIL.image "1000x500" crop="center" as im %}
 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
 {% endthumbnail %}
 </div>
-<div class="post-content">
+<div class="content_detail">
     <h3>{{ POST_DETAIL.content }}</h3>
 </div>
 <br>
-<div>
-    <h3>Публикация: {{ POST_DETAIL.date }}</h3>
-    <h3>Автор: {{ POST_DETAIL.author }}</h3>
+<div class="created_date_author">
+    <div class="created_date"><a class="text_created_date">Публикация: {{ POST_DETAIL.date }}</a></div>
+    <div class="author"><a class="url_author">Автор: {{ POST_DETAIL.author }}</a></div>
 </div>
-<div>
+<div class="comments_post">
     <h3>Комментария:</h3>
 </div>
-<div>
+<div class="block_comment">
     {% if comments %}
         {% for comment in comments %}
             {% if comment.post == POST_DETAIL %}
-                <div class="comment-user"><a href="#">{{ comment.user }}</a></div>
-                <div class="comment-text">{{ comment.text }}</div>
-                <div class="comment.time">{{ comment.time }}</div>
+                <div class="comment_user"><a class="text_user" href="#">{{ comment.user }} написал:</a></div>
+                <div class="comment_text"><p class="text_comment">{{ comment.text }}</p></div>
+                <div class="comment_time"><p class="text_time"> Отправлено: {{ comment.time }}</p></div>
             {% endif %}
         {% endfor %}
     {% else %}
@@ -39,18 +39,17 @@
     {{ form.as_p }}
     <input type="submit" value="Сохранить" />
     </form>
-    <h4><a>Жанр:
-        {% for category in categories %}
-             |{{ category.category }}
-        {% endfor %}
-             </a>
-         </h4>
 </div>
+<div class="categories_post"><a>Жанр:
+    {% for category in categories %}
+         |{{ category.category }}
+    {% endfor %}
+</a></div>
 {% endblock content %}
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
-        {% for category in categories %}
+        {% for category in list_categories %}
         <ul class="ul-category">
             <li>{{ category.name }}<br>
             </li>

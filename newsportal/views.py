@@ -138,6 +138,7 @@ class CategoryList(ListView):
 
 
 class ProfileList(ListView):
+    '''Данные пользователя для отображение в профиле'''
     queryset = User.objects.all()
     template_name = "auth/profile.html"
 
@@ -171,7 +172,8 @@ def subscriptions(request):
 def post_detail(request, slug):
     """Метод для получение и отправки данных на страничке поста"""
     post = Post.objects.get(slug=slug) # Данные поста взятые по slug
-    categories = PostCategory.objects.filter(post=post) # Данные категорий этого поста отфильтрованные с помощью filter(post=post)
+    categories_post = PostCategory.objects.filter(post=post) # Данные категорий этого поста отфильтрованные с помощью filter(post=post)
+    list_categories = Category.objects.all()
     if request.method == 'POST': # Отправление данных на сервер
         form = CommentForm(request.POST) # Сохранение данных в переменной
         if form.is_valid(): # Проверка данных
@@ -187,6 +189,7 @@ def post_detail(request, slug):
         'POST_DETAIL': post,
         'comments' : comments,
         'form':form,
-        'categories': categories
+        'categories': categories_post,
+        'list_categories':list_categories
     }
     return render(request, 'post_detail.html', context)
