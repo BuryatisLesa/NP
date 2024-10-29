@@ -12,7 +12,7 @@
 <!--   </form>-->
     {% if posts  %}
         {% for post in posts %}
-            <h3><a class="" id="title_id" href="/{{post.pk}}">{{ post.title }}</a></h3>
+            <h3><a class="" id="title_id" href="/{{post.slug}}">{{ post.title }}</a></h3>
             {% thumbnail post.image "820x300" crop="center" as im %}
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}

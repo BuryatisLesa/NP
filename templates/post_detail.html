@@ -11,7 +11,7 @@
 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
 {% endthumbnail %}
 </div>
-<div>
+<div class="post-content">
     <h3>{{ POST_DETAIL.content }}</h3>
 </div>
 <br>
@@ -39,6 +39,12 @@
     {{ form.as_p }}
     <input type="submit" value="Сохранить" />
     </form>
+    <h4><a>Жанр:
+        {% for category in categories %}
+             |{{ category.category }}
+        {% endfor %}
+             </a>
+         </h4>
 </div>
 {% endblock content %}
 {% block side %}

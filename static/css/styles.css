@@ -89,6 +89,13 @@ li {
   margin-bottom: 50px;
   margin-top: 20px;
 }
+.category-descriptions {
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: white;
+
+}
 .url-category {
   text-decoration: none;
   color: yellow;
@@ -138,3 +145,8 @@ hr {
   background: rgb(7, 221, 157);
   border-radius: 20px;
 } 
+
+.post-content {
+  margin-left: 100px;
+  margin-right: 100px;
+}

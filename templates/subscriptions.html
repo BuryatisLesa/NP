@@ -3,6 +3,22 @@
 {% block title %}
 Subscriptions
 {% endblock title %}
+{%  block nav %}
+<div class="user-container">
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li><a class="user" href="{% url 'PostCreate' %}">| Создать пост</a></li>
+        <li><a class="user" href="{% url 'subscriptions' %}">| Подписки</a></li>
+        <li><a class="user">| {{ user.username }} |</a></li>
+        <li><a class="user" href="{% url 'account_email' %}">Настройки | Email  |</a></li>
+        <li><a class="user" href="{% url 'account_logout' %}">Выйти</a></li>
+        {% else %}
+        <li><a class="user" href="{% url 'account_login' %}">Авторизация</a></li>
+        <li><a class="user" href="{% url 'account_signup' %}">Регистрация</a></li>
+        {% endif %}
+    </ul>
+</div>
+{%  endblock nav %}
 
 {% block content %}
     {% for category in categories  %}

@@ -9,7 +9,7 @@ NewsPortal - Статья
 {% block content %}
     {% if ARTS  %}
         {% for ART in ARTS %}
-            <h3><a class="" id="title_id" href="/{{ ART.pk }}">{{ ART.title }}</a></h3>
+            <h3><a class="" id="title_id" href="/{{ ART.slug }}">{{ ART.title }}</a></h3>
             {% thumbnail ART.image "820x300" crop="center" as im %}
                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}

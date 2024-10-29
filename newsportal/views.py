@@ -55,30 +55,30 @@ class ArticleList(ListView):
         return context
 
 
-class PostDetail(DetailView, CreateView):
-    """Вывод отдельных постов"""
-    template_name = 'post_detail.html'
-    context_object_name = 'POST_DETAIL'
-    queryset = Post.objects.all()
-    form_class = CommentForm # форма для создание комментарий под постом
+# class PostDetail(DetailView, CreateView):
+#     """Вывод отдельных постов"""
+#     template_name = 'post_detail.html'
+#     context_object_name = 'POST_DETAIL'
+#     queryset = Post.objects.all()
+#     form_class = CommentForm # форма для создание комментарий под постом
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['comments'] = Comment.objects.filter(post=self.get_object())
-        context['categories'] = Category.objects.all()
-        return context
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['comments'] = Comment.objects.filter(post=self.get_object())
+#         context['categories'] = Category.objects.all()
+#         return context
 
-    def form_valid(self, form):
-        # Валидация формы комментария
-        comment = form.save(commit=False)
-        comment.user = self.request.user
-        comment.post = self.get_object()
-        comment.save()
-        return super().form_valid(form)
+#     def form_valid(self, form):
+#         # Валидация формы комментария
+#         comment = form.save(commit=False)
+#         comment.user = self.request.user
+#         comment.post = self.get_object()
+#         comment.save()
+#         return super().form_valid(form)
 
-    def get_success_url(self):
-        # Перенаправление после создание комментария на страничку поста
-        return reverse('PostDetail', kwargs={'pk': self.get_object().pk})
+#     def get_success_url(self):
+#         # Перенаправление после создание комментария на страничку поста
+#         return reverse('PostDetail', kwargs={'pk': self.get_object().pk})
 
 
 class PostCreate(LoginRequiredMixin,CreateView):
@@ -167,3 +167,26 @@ def subscriptions(request):
             Subscription.objects.filter(user=request.user, category=category).delete()
     categories_with_subscriprions = Category.objects.annotate(user_subscribed = Exists(Subscription.objects.filter(user=request.user, category = OuterRef('pk'),))).order_by('name')
     return render(request, 'subscriptions.html', {'categories':categories_with_subscriprions})
+
+def post_detail(request, slug):
+    """Метод для получение и отправки данных на страничке поста"""
+    post = Post.objects.get(slug=slug) # Данные поста взятые по slug
+    categories = PostCategory.objects.filter(post=post) # Данные категорий этого поста отфильтрованные с помощью filter(post=post)
+    if request.method == 'POST': # Отправление данных на сервер
+        form = CommentForm(request.POST) # Сохранение данных в переменной
+        if form.is_valid(): # Проверка данных
+            comment = form.save(commit=False) # Сохранение
+            comment.user = request.user # Передача данных об авторе комментария
+            comment.post = post # Передача содержание комментарий
+            comment.save() # Сохранение данных в БД
+            return redirect('PostDetail', slug=slug) # Перенаправление на url=PostDetail
+    else:
+        form = CommentForm() # Отправка пустой формы
+    comments = Comment.objects.filter(post=post) # Фильтрация данных по посту
+    context = {
+        'POST_DETAIL': post,
+        'comments' : comments,
+        'form':form,
+        'categories': categories
+    }
+    return render(request, 'post_detail.html', context)

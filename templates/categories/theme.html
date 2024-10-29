@@ -5,9 +5,19 @@
 {% endblock title %}
 
 {% block content %}
-<h1>Технические работы</h1>
 {% for category in categories %}
-<br><h2><a>{{ category.name }} : {{category.rating}}</a></h2>
-{{category.descriptions}}
+<br><div class="title-category"><h2><a>{{ category.name }} : {{category.rating}}</a></h2></div>
+<div class="category-descriptions">{{category.descriptions}}</div>
 {% endfor %}
 {% endblock content %}
+{% block side %}
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in categories %}
+        <ul class="ul-category">
+            <li><a class="url-category" href="#">{{ category.name }}<br></a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+{% endblock side %}
