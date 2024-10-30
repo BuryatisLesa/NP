@@ -9,11 +9,15 @@ NewsPortal - Статья
 {% block content %}
     {% if ARTS  %}
         {% for ART in ARTS %}
-            <h3><a class="" id="title_id" href="/{{ ART.slug }}">{{ ART.title }}</a></h3>
+            <div class="title_post"><a class="title_text" href="/{{ ART.slug }}">{{ ART.title }}</a></div>
             {% thumbnail ART.image "820x300" crop="center" as im %}
                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
-            <h3>{{ ART.content|truncatewords:10 }}</h3>
+            <div class="content_post">{{ ART.content|truncatewords:10 }}</div>
+            <div class="categories_post"><a>Жанр:
+                {% for category in ART.category.all %}
+                     |{{ category.name }}
+                {% endfor %}</div>
             <hr>
 
         {% endfor %}
@@ -42,7 +46,7 @@ NewsPortal - Статья
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
-        {% for category in categories %}
+        {% for category in list_categories %}
         <ul class="ul-category">
             <li>{{ category.name }}<br>
             </li>

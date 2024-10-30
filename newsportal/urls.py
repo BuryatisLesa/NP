@@ -1,9 +1,9 @@
 from django.urls import path
 from . import views
-from .views import (PostList,
-                    NewsList,
+from .views import (post_list,
+                    news_list,
                     PostCreate,
-                    ArticleList,
+                    article_list,
                     PostUpdate,
                     PostDelete,
                     CategoryList,
@@ -15,11 +15,11 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', PostList.as_view(), name='HomePage'),
+    path('', views.post_list, name='HomePage'),
     path('<slug:slug>', views.post_detail, name='PostDetail'),
-    path('news/', NewsList.as_view(), name='NewsList'),
+    path('news/', views.news_list, name='NewsList'),
     path('news/<slug:slug>', views.post_detail, name='NewsDetail'),
-    path('articles/', ArticleList.as_view(), name='ArticlesList'),
+    path('articles/', views.article_list, name='ArticlesList'),
     path('articles/<slug:slug>', views.post_detail, name='ArticlesDetail'),
     path('create/',PostCreate.as_view(), name='PostCreate'),
     path('<slug:slug>/update/',PostUpdate.as_view(), name='PostUpdate'),
@@ -27,7 +27,6 @@ urlpatterns = [
     path('categories/', CategoryList.as_view(), name='CategoryList'),
     path('accounts/login/profile/', ProfileList.as_view(), name='profile'),
     path('subscriptions/', subscriptions, name='subscriptions'),
-
 ]
 
 if settings.DEBUG:
