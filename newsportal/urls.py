@@ -9,7 +9,8 @@ from .views import (post_list,
                     CategoryList,
                     ProfileList,
                     subscriptions,
-                    post_detail)
+                    post_detail,
+                    category_detail)
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,7 +27,8 @@ urlpatterns = [
     path('<slug:slug>/delete/',PostDelete.as_view(), name='PostDelete'),
     path('categories/', CategoryList.as_view(), name='CategoryList'),
     path('accounts/login/profile/', ProfileList.as_view(), name='profile'),
-    path('subscriptions/', subscriptions, name='subscriptions'),
+    path('subscriptions/', views.subscriptions, name='subscriptions'),
+    path('categories/<slug:slug>',views.category_detail, name='CategoryDetail')
 ]
 
 if settings.DEBUG:

@@ -99,6 +99,7 @@ class Category(models.Model):
     rating = models.IntegerField(default=0)
     descriptions = models.TextField(default='Описание пока нету')
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
+    subscribers = models.ManyToManyField(User, blank=True, related_name="categories")
 
     def __str__(self):
         return f'{self.name}'
@@ -159,4 +160,4 @@ class PostCategory(models.Model):
         verbose_name_plural = 'Посты/Категории'
 
     def __str__(self):
-        return f'{self.post}'
+        return f'{self.post}, {self.category.name}'

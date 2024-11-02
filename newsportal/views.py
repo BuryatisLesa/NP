@@ -12,7 +12,7 @@ from django.core.paginator import Paginator
 
 def post_list(request):
     '''метод для вывода списка постов, категорий фильтрация и пагинация их'''
-    posts = Post.objects.all() # queryset модели Post, выводит все имеющие посты в БД
+    posts = Post.objects.all().order_by('-date') # queryset модели Post, выводит все имеющие посты в БД
     categories = Category.objects.all() # queryset модели Category, выводит все имеющие категории
     filterset = PostFilter(request.GET, queryset=posts) # экземпляр класса PostFilter, получает данные для фильтрации queryset = posts
     filtered_posts = filterset.qs # queryset отфильтрованные данные
@@ -55,7 +55,7 @@ def post_detail(request, slug):
 
 def news_list(request):
     '''метод для вывода постов с типом NS'''
-    news = Post.objects.filter(type='NS') # отфильтрованные queryset по типу NS
+    news = Post.objects.filter(type='NS').order_by('-date') # отфильтрованные queryset по типу NS
     categories = Category.objects.all() # queryset модели Category
     paginator = Paginator(news, 10) # пагинация
     page_number = request.GET.get('page') # получение номера страницы
@@ -69,7 +69,7 @@ def news_list(request):
 
 def article_list(request):
     '''метод для вывода постов по типу AT'''
-    article = Post.objects.filter(type='AT') # отфильтрованные queryset по типу AT
+    article = Post.objects.filter(type='AT').order_by('-date') # отфильтрованные queryset по типу AT
     list_categories = Category.objects.all() # queryset модели Category
     paginator = Paginator(article, 10) # пагинация
     page_number = request.GET.get('page') # получение номера страницы
@@ -163,3 +163,12 @@ def subscriptions(request):
     return render(request, 'subscriptions.html', {'categories':categories_with_subscriprions})
 
 
+def category_detail(request, slug):
+    category = Category.objects.get(slug=slug)
+    category_posts = Post.objects.filter(category=category)
+    
+    context = {
+        'filtered_posts_category': category_posts,
+        'category': category
+    }
+    return render(request,'category_detail.html', context)

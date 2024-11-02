@@ -6,7 +6,7 @@
 
 {% block content %}
 {% for category in categories %}
-<br><div class="title-category"><h2><a>{{ category.name }} : {{category.rating}}</a></h2></div>
+<br><div class="title-category"><h2><a href="{{category.slug}}">{{ category.name }} : {{category.rating}}</a></h2></div>
 <div class="category-descriptions">{{category.descriptions}}</div>
 {% endfor %}
 {% endblock content %}

@@ -3,4 +3,8 @@
 {%endblock title%}
 {%block content%}
 Категория
+<h2>{{category.name}}</h2><br>
+{% for post in filtered_posts_category %}
+    <div class="post_title"><a class="title_text">{{post.title}}</a></div><hr>
+{% endfor %}
 {%endblock content%}
