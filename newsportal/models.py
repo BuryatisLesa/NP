@@ -27,7 +27,7 @@ class Post(models.Model):
     title = models.CharField(max_length=150) # столбец заголовка поста
     date = models.DateTimeField(auto_now_add=True) # столбец для даты создания поста
     content = models.TextField() # столбец содержащий контент для поста
-    category = models.ManyToManyField('Category', through='PostCategory', blank=False) # категории поста
+    category = models.ManyToManyField('Category', through='PostCategory', blank=False, related_name='posts') # категории поста
     rating = models.IntegerField(default=0) # рейтинг поста
     image = models.ImageField(upload_to='images/', null=True, blank=True) # картинка поста
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL") # созданный слаг для поста на основе заголовка
@@ -53,7 +53,7 @@ class Post(models.Model):
         return f'{self.content[:124]}...'
 
     def __str__(self):
-        return f'{self.title}, {self.category}, {self.type}'
+        return f'{self.title}, {self.category.all()}, {self.type}'
 
 
 class Author(models.Model):

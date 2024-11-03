@@ -44,12 +44,13 @@ INSTALLED_APPS = [
     'sorl.thumbnail', # Пакет для редактирование картинок
     'django_filters', # Пакет для фильтрации данных в джанго
     #Пакет - allauth
-    'allauth',
+    'allauth', # работа с регистрацией/авторизацией
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
     'accounts',
-    'profile_user'
+    'profile_user',
+    "django_apscheduler",
 ]
 
 SITE_ID = 1
@@ -166,8 +167,8 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 # email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "anim.news@yandex.ru"
