@@ -167,8 +167,8 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_FORMS = {"signup": "accounts.forms.CustomSignupForm"}
 # email
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "anim.news@yandex.ru"
@@ -179,3 +179,18 @@ EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = "anim.news@yandex.ru"
 SERVER_EMAIL = "anim.news@yandex.ru"
 MANAGERS = (('AnimeNews', 'anim.news.@yandex.ru'), ('example', 'example@yandex.ru'))
+
+# redis/celery
+
+# указывает на URL брокера сообщений (Redis). По умолчанию он находится на порту 6379.
+CELERY_BROKER_URL = 'redis://localhost:6379'
+# указывает на хранилище результатов выполнения задач.
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+# допустимый формат данных.
+CELERY_ACCEPT_CONTENT = ['application/json']
+# метод сериализации задач.
+CELERY_TASK_SERIALIZER = 'json'
+# метод сериализации результатов.
+CELERY_RESULT_SERIALIZER = 'json'
+
+broker_connection_retry_on_startup = True

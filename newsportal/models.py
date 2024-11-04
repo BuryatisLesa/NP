@@ -98,7 +98,7 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     rating = models.IntegerField(default=0)
     descriptions = models.TextField(default='Описание пока нету')
-    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
+    slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="UR")
     subscribers = models.ManyToManyField(User, blank=True, related_name="categories")
 
     def __str__(self):

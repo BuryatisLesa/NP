@@ -10,8 +10,10 @@ from django_apscheduler.jobstores import DjangoJobStore
 from django_apscheduler.models import DjangoJobExecution
 from datetime import timedelta
 from django.utils import timezone
-from newsportal.models import PostCategory, Post
+
 from django.core.mail import EmailMultiAlternatives
+
+from NP.newsportal.models import Post
 
 logger = logging.getLogger(__name__)
 
@@ -31,7 +33,6 @@ def send_week_posts():
         emails = User.objects.filter(
             subscriptions__category__in=post.category.all()
         ).values_list('email', flat=True)
-        print(f'{emails}******************************************')
         # Преобразуем QuerySet в список
         email_list = list(emails)
 

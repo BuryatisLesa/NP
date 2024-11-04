@@ -46,6 +46,7 @@ urlpatterns = [
     # accounts/ social/connections/
     # accounts/ yandex/
     path('',include('newsportal.urls')),
+    path('board/',include('board.urls')),
     # path('accounts/', include('accounts.urls'))
 
 ]
