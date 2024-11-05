@@ -66,6 +66,10 @@ MIDDLEWARE = [
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
         # allauth
     "allauth.account.middleware.AccountMiddleware",
+    # кэширование сайта
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'NP.urls'
@@ -192,5 +196,20 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 # метод сериализации результатов.
 CELERY_RESULT_SERIALIZER = 'json'
+# системное кэширование
+# кэширование одной страницы
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
+    }
+}
+# для кэширование всего сайта
+# CACHES = {
+#     'default': {
+#         'TIMEOUT': 60, # добавляем стандартное время ожидания в минуту (по умолчанию это 5 минут — 300 секунд)
+#         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+#         'LOCATION': os.path.join(BASE_DIR, 'cache_files'), 
+#     }
+# }
 
-broker_connection_retry_on_startup = True

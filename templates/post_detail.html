@@ -47,6 +47,9 @@
     {% endfor %}
 </a></div>
 {% endblock content %}
+{# Кэширование side #}
+{% load cache %}
+{% cache 600 side %}
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
@@ -58,3 +61,4 @@
         {% endfor %}
     </div>
 {% endblock side %}
+{% endcache %}

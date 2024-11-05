@@ -1,9 +1,9 @@
-from django.contrib.auth.models import User
-from django.core.mail import EmailMultiAlternatives
-from django.db.models.signals import m2m_changed, post_save
+# from django.contrib.auth.models import User
+# from django.core.mail import EmailMultiAlternatives
+from django.db.models.signals import post_save
 from django.dispatch import receiver
 from .tasks import send_new_post_notification
-from .models import PostCategory, Post
+from .models import Post
 
 
 # @receiver(m2m_changed, sender=PostCategory)

@@ -6,6 +6,7 @@ from .models import Post, PostCategory
 from django.contrib.auth.models import User
 from django.utils import timezone
 
+
 @shared_task
 def send_new_post_notification(post_id):
     '''метод для отправки уведомление о создание нового поста'''
@@ -21,10 +22,11 @@ def send_new_post_notification(post_id):
         for cat in category:
             subject = f'Новый пост в категории {cat.name}'
 
-
         # Генерируем текстовое и HTML-содержание
         text_content = f'Новый пост: {post.title}\n\nСсылка: http://127.0.0.1:8000{post.get_absolute_url()}'
-        html_content = (f'Новый пост: {post.title}<br>'f'<a href="http://127.0.0.1:8000{post.get_absolute_url()}">'f'Ссылка на пост</a>')
+        html_content = (
+            f'Новый пост: {post.title}<br>'f'<a href="http://127.0.0.1:8000{
+                post.get_absolute_url()}">'f'Ссылка на пост</a>')
 
         for category in categories:
             # сбор всех подписчиков данной категории
@@ -41,6 +43,7 @@ def send_new_post_notification(post_id):
         # Логика обработки, если пост не найден (например, удалить задачу)
         pass
 
+
 @shared_task
 def weekly_send_posts():
     # Текущее время
@@ -49,11 +52,13 @@ def weekly_send_posts():
     week_ago = now_time - timedelta(days=7)
 
     # Отфильтрованный queryset с постами за последние 7 дней
-    recent_posts = Post.objects.filter(date__range=(week_ago, now_time)).prefetch_related('category')
+    recent_posts = Post.objects.filter(date__range=(
+        week_ago, now_time)).prefetch_related('category')
 
     # Проходим по всем постам
     for post in recent_posts:
-        # Получаем список адресов электронной почты подписчиков на категории поста
+        # Получаем список адресов
+        # электронной почты подписчиков на категории поста
         emails = User.objects.filter(
             subscriptions__category__in=post.category.all()
         ).values_list('email', flat=True)

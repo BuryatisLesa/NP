@@ -12,7 +12,7 @@
 <!--   </form>-->
     {% if posts  %}
         {% for post in posts %}
-            <div class="title_post"><a class="title_text" href="/{{post.slug}}">{{ post.title }}</a></div>
+            <div class="title_post"><a class="title_text" href="/{{post.pk}}/{{post.slug}}">{{ post.title }}</a></div>
             {% thumbnail post.image "820x300" crop="center" as im %}
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
@@ -49,6 +49,9 @@
 {% endif %}
 </h3>
 {% endblock content %}
+{# Кэширование side #}
+{% load cache %}
+{% cache 600 side %}
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
@@ -60,3 +63,4 @@
         {% endfor %}
     </div>
 {% endblock side %}
+{% endcache %}

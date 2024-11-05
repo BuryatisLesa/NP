@@ -1,5 +1,5 @@
 from django_filters import FilterSet, DateTimeFilter
-from .models import *
+from .models import Post
 from django.forms import DateTimeInput
 
 
@@ -21,5 +21,5 @@ class PostFilter(FilterSet):
         }
 
     label = {
-        'title':'Заголовок'
+        'title': 'Заголовок'
     }
