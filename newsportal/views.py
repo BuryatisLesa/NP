@@ -191,8 +191,10 @@ def subscriptions(request):
         category = Category.objects.get(id=category_id)
         action = request.POST.get('action')
         if action == 'subscribe':
+            # создается запись в БД при нажатие на кнопку
             Subscription.objects.create(user=request.user, category=category)
         elif action == 'unsubscribe':
+            # удаляется запись при нажатие кнопки из БД
             Subscription.objects.filter(
                 user=request.user, category=category).delete()
     categories_with_subscriprions = Category.objects.annotate(
