@@ -25,7 +25,8 @@ def send_week_posts():
     week_ago = now_time - timedelta(days=7)
 
     # Отфильтрованный queryset с постами за последние 7 дней
-    recent_posts = Post.objects.filter(date__range=(week_ago, now_time)).prefetch_related('category')
+    recent_posts = Post.objects.filter(
+        date__range=(week_ago, now_time)).prefetch_related('category')
 
     # Проходим по всем постам
     for post in recent_posts:

@@ -1,0 +1,4849 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-08-19T04:30:00.221Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Name",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-08-19T04:43:32.501Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Name",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-08-19T04:43:56.460Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Post object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-08-19T04:45:27.765Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Category object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-08-19T04:52:18.366Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "PostCategory object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-08-19T04:55:03.282Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Anime",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-08-19T04:55:17.429Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Ван пис",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-08-19T12:29:26.908Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Ghost",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-08-19T12:29:41.676Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "Ghost",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-08-19T12:29:51.640Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "Comment object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-08-19T13:12:39.334Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Ghost",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-08-21T04:06:32.189Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Статья",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-08-21T13:31:19.437Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Статья, newsportal.Category.None, AT",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-08-21T13:31:19.437Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Ghost, newsportal.Category.None, NS",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-08-21T13:31:19.437Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Ван пис, newsportal.Category.None, NS",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-08-21T13:31:27.575Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Name",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-08-21T13:31:45.731Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "Ivan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-08-21T13:31:59.269Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Konstantin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-08-21T13:32:08.375Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Alex",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-08-21T13:32:22.071Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Alex",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-08-21T13:32:29.161Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Ivan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-08-21T13:32:36.547Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Konstantin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-08-21T13:33:32.144Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "One_Piece, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-08-21T13:33:53.547Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "Geolog, newsportal.Category.None, AT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-08-21T13:36:02.416Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "Class News, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-08-21T13:36:22.730Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "Minerals, newsportal.Category.None, AT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-08-21T13:36:41.521Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "Title cool News, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-08-22T12:23:37.495Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "«Моя геройская академия: Ты следующий» — первые успехи нового аниме-фильма серии, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-08-22T12:32:56.610Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "«Моя геройская академия: Ты следующий» — первые успехи нового аниме-фильма серии, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-08-22T12:47:55.523Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "«Моя геройская академия: Ты следующий» — первые успехи нового аниме-фильма серии, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-08-22T13:06:09.923Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "«Моя геройская академия: Ты следующий» — первые успехи нового аниме-фильма серии, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-08-22T13:07:03.699Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "8",
+    "object_repr": "«Моя геройская академия: Ты следующий» — первые успехи нового аниме-фильма серии, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-08-22T13:21:29.857Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "4",
+    "object_repr": "«С тобой и дождём» — анонс аниме про деву и тануки, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-08-22T13:22:58.112Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "7",
+    "object_repr": "«Малодушный хочет в отставку» — аниме о парне, который хочет свалить из отряда авантюристов, newsportal.Category.None, AT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-08-22T13:28:41.089Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "5",
+    "object_repr": "Вышел специальный ролик к 10-летию аниме «Волейбол», newsportal.Category.None, AT",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-08-22T13:31:19.066Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "После «Моей геройской академии» в журнале Weekly Shonen Jump закончится манга «Магическая битва», newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Title\", \"Content\", \"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-08-23T12:18:04.456Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "9",
+    "object_repr": "В издательстве «Комильфо» выйдет VERSUS — исекай по сценарию автора манги «Ванпанчмен» и «Моб Психо, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-08-23T12:19:06.869Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "10",
+    "object_repr": "Фантастическое аниме «Дoктop Cтoyн» вернётся с последним сезоном в 2025 году, newsportal.Category.None, AT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-08-23T12:20:03.472Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "11",
+    "object_repr": "Подтверждено: показ исекая и киберпанка «Повелитель демонов 2099» начнётся в октябре, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-08-23T12:28:04.172Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "12",
+    "object_repr": "Манга «Провожающая в последний путь Фрирен» вернулась с новой главой и снова ушла на перерыв, newsportal.Category.None, AT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-08-23T12:29:22.119Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "13",
+    "object_repr": "«Кайдзю №8» вернётся в 2025 году с тремя аниме, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-08-24T10:20:38.997Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "«С тобой и дождём» — анонс аниме про деву и тануки, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-08-24T10:20:50.294Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Вышел специальный ролик к 10-летию аниме «Волейбол», newsportal.Category.None, AT",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-08-24T10:21:01.215Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "«С тобой и дождём» — анонс аниме про деву и тануки, newsportal.Category.None, NS",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-08-24T10:21:16.486Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "После «Моей геройской академии» в журнале Weekly Shonen Jump закончится манга «Магическая битва», newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-08-24T11:03:38.261Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Боевик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-08-24T11:03:47.302Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Приключение",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-08-24T11:04:02.175Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Драма",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-08-24T11:04:13.197Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Комедия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-08-25T04:05:27.297Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Апокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-08-25T04:05:37.070Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Идолы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-08-25T04:05:43.500Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Киберпанк",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-08-25T04:05:48.912Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Моэ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-08-25T04:05:54.157Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Ме́ха",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-08-25T04:05:59.924Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Мистика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-08-25T04:06:06.681Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Научная фантастика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-08-25T04:06:12.825Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Космическая опера",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-08-25T04:06:18.376Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "Отаку",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-08-25T04:06:23.870Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Повседневность",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-08-25T04:06:30.153Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Постапокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-08-25T04:06:36.216Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Романтика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-08-25T04:06:47.033Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Сказка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-08-30T13:05:13.819Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "127.0.0.1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Domain name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-08-30T13:12:14.882Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Yandex",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-08-30T13:15:54.200Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Provider ID\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-09-01T04:08:25.124Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Key\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-09-01T04:21:23.866Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "1",
+    "object_repr": "Yandex",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-09-01T04:24:09.469Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Yandex",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2024-09-01T04:25:38.743Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Provider ID\", \"Client id\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2024-09-01T04:30:17.354Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Provider ID\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2024-09-01T04:41:03.201Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Key\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2024-09-01T04:44:02.085Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Provider ID\", \"Client id\", \"Secret key\", \"Key\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2024-09-01T04:54:41.992Z",
+    "user": 1,
+    "content_type": 19,
+    "object_id": "2",
+    "object_repr": "Yandex",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Provider ID\", \"Client id\", \"Secret key\", \"Key\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2024-09-02T04:16:45.562Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "common users",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2024-09-02T04:16:47.580Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "common users",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2024-09-02T04:17:07.526Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "managers",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2024-09-03T04:54:24.940Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Апокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2024-09-03T04:54:32.198Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "«С тобой и дождём» — анонс аниме про деву и тануки, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2024-09-04T11:54:58.723Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "author",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2024-09-04T11:55:47.007Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "author",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2024-09-04T11:56:09.225Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "user",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2024-09-05T04:25:40.164Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "test_user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2024-09-05T04:33:23.075Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "12",
+    "object_repr": "test_user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2024-09-05T11:45:18.431Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2024-09-05T12:50:48.248Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "2user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2024-09-05T12:50:48.248Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "test_user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2024-09-05T12:50:48.248Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2024-09-05T12:50:48.248Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "usercreate",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2024-09-06T04:19:31.452Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Admin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2024-09-06T12:22:14.420Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Comment object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2024-09-08T11:58:38.373Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "Класс! => «С тобой и дождём» — анонс аниме про деву и тануки, newsportal.Category.None, NS",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2024-09-18T13:06:30.907Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "17",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2024-09-20T04:28:23.497Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "anim.news",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2024-09-20T04:29:45.339Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "anim.news",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2024-09-20T04:29:45.339Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "18",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2024-09-20T04:38:13.403Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "21",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2024-09-20T04:40:01.495Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2024-09-20T04:42:28.592Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2024-09-23T04:06:02.227Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2024-09-23T04:10:21.088Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "26",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2024-09-23T04:11:44.530Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "27",
+    "object_repr": "kostyan_sandanov",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2024-10-26T10:32:07.138Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Апокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2024-10-26T10:32:16.261Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Боевик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2024-10-26T10:32:48.183Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Боевые искусства",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2024-10-26T10:32:56.520Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Детектив",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2024-10-26T10:33:12.282Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Добуцу",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2024-10-26T10:33:19.513Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Драма",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2024-10-26T10:33:26.944Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Идолы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2024-10-26T10:33:32.538Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Икудзи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2024-10-26T10:33:45.827Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Исторические произведения",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2024-10-26T10:39:00.260Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Апокалиптика",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2024-10-26T10:39:21.596Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Боевик",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2024-10-26T10:39:29.723Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Боевые искусства",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2024-10-26T10:39:38.642Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Детектив",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2024-10-26T10:39:48.109Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Добуцу",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2024-10-26T10:39:55.980Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Драма",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2024-10-26T10:40:03.686Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Идолы",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2024-10-26T10:40:10.786Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Икудзи",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2024-10-26T10:40:16.490Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Исторические произведения",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Descriptions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2024-10-26T10:40:33.376Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Кайто",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2024-10-26T10:40:48.752Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Киберпанк",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2024-10-26T10:41:11.679Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Комедия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2024-10-26T10:41:34.314Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Махо-сёдзё",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2024-10-26T10:41:53.776Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Моэ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2024-10-26T10:42:06.789Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "Ме́ха",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2024-10-26T10:42:59.709Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Мистика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2024-10-26T10:43:13.307Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Отаку",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2024-10-26T10:43:31.535Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Парапсихология",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2024-10-26T10:43:48.337Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Повседневность",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2024-10-26T10:44:13.571Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Постапокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2024-10-26T10:44:28.095Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "Психологический триллер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2024-10-26T10:44:48.088Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "Путешествие между мирами (или исэкай)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2024-10-26T10:45:06.955Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Романтика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2024-10-26T10:45:21.713Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "Сказка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2024-10-26T10:45:36.061Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Фэнтези",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2024-10-28T08:15:32.607Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Апокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2024-10-28T08:51:08.275Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2024-10-28T08:52:18.815Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "1",
+    "object_repr": "Subscription object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2024-10-28T12:55:20.298Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Боевик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2024-10-28T12:55:49.604Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Боевик",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2024-10-28T13:05:41.300Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Боевик",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2024-10-28T13:05:59.458Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Боевик",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2024-10-28T13:06:22.216Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Апокалиптика",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2024-10-28T13:09:14.722Z",
+    "user": 1,
+    "content_type": 21,
+    "object_id": "2",
+    "object_repr": "Admin(Боевик)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2024-10-28T13:11:57.927Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Боевые искусства",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2024-10-28T13:15:19.285Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Детектив",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2024-10-28T13:15:36.500Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Драма",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2024-10-29T12:58:00.837Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Идолы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2024-10-29T12:58:21.045Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "8",
+    "object_repr": "Икудзи",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2024-10-29T12:58:36.288Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "9",
+    "object_repr": "Исторические произведения",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2024-10-29T12:59:03.455Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "10",
+    "object_repr": "Кайто",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2024-10-29T12:59:35.252Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "11",
+    "object_repr": "Киберпанк",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2024-10-29T12:59:57.025Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "12",
+    "object_repr": "Комедия",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2024-10-29T13:00:13.281Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "13",
+    "object_repr": "Моэ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2024-10-29T13:00:32.223Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "14",
+    "object_repr": "Ме́ха",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2024-10-29T13:00:55.354Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "15",
+    "object_repr": "Мистика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2024-10-29T13:01:11.321Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "16",
+    "object_repr": "Научная фантастика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2024-10-29T13:01:27.604Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "17",
+    "object_repr": "Отаку",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2024-10-29T13:01:44.982Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "18",
+    "object_repr": "Парапсихология",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2024-10-29T13:02:02.709Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "19",
+    "object_repr": "Паропанк/Стимпанк",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2024-10-29T13:02:17.871Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "20",
+    "object_repr": "Повседневность",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2024-10-29T13:02:31.811Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "21",
+    "object_repr": "Постапокалиптика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2024-10-29T13:02:54.759Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "22",
+    "object_repr": "Психологический триллер",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2024-10-29T13:03:14.397Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "23",
+    "object_repr": "Путешествие между мирами (или исэкай)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2024-10-29T13:03:30.142Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "24",
+    "object_repr": "Романтика",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2024-10-29T13:03:43.251Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "25",
+    "object_repr": "Рыболовная манга",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2024-10-29T13:04:03.530Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "26",
+    "object_repr": "Семейная манга",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2024-10-29T13:04:26.199Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "27",
+    "object_repr": "Сказка",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2024-10-29T13:04:43.225Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "28",
+    "object_repr": "Фэнтези",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2024-10-30T11:02:40.657Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "Джон Уик отправится на «невыполнимое задание» ради любви в аниме-приквеле фильмов с Киану Ривзом, newsportal.Category.None, NS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add site",
+    "content_type": 7,
+    "codename": "add_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change site",
+    "content_type": 7,
+    "codename": "change_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete site",
+    "content_type": 7,
+    "codename": "delete_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view site",
+    "content_type": 7,
+    "codename": "view_site"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add flat page",
+    "content_type": 8,
+    "codename": "add_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change flat page",
+    "content_type": 8,
+    "codename": "change_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete flat page",
+    "content_type": 8,
+    "codename": "delete_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view flat page",
+    "content_type": 8,
+    "codename": "view_flatpage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Категория",
+    "content_type": 9,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Категория",
+    "content_type": 9,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Категория",
+    "content_type": 9,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Категория",
+    "content_type": 9,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 10,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 10,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 10,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 10,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Автор",
+    "content_type": 11,
+    "codename": "add_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Автор",
+    "content_type": 11,
+    "codename": "change_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Автор",
+    "content_type": 11,
+    "codename": "delete_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Автор",
+    "content_type": 11,
+    "codename": "view_author"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add Пост",
+    "content_type": 12,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change Пост",
+    "content_type": 12,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete Пост",
+    "content_type": 12,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view Пост",
+    "content_type": 12,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add post category",
+    "content_type": 13,
+    "codename": "add_postcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change post category",
+    "content_type": 13,
+    "codename": "change_postcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete post category",
+    "content_type": 13,
+    "codename": "delete_postcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view post category",
+    "content_type": 13,
+    "codename": "view_postcategory"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Комментарий",
+    "content_type": 14,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Комментарий",
+    "content_type": 14,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Комментарий",
+    "content_type": 14,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Комментарий",
+    "content_type": 14,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add kv store",
+    "content_type": 15,
+    "codename": "add_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change kv store",
+    "content_type": 15,
+    "codename": "change_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete kv store",
+    "content_type": 15,
+    "codename": "delete_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view kv store",
+    "content_type": 15,
+    "codename": "view_kvstore"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add email address",
+    "content_type": 16,
+    "codename": "add_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change email address",
+    "content_type": 16,
+    "codename": "change_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete email address",
+    "content_type": 16,
+    "codename": "delete_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view email address",
+    "content_type": 16,
+    "codename": "view_emailaddress"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add email confirmation",
+    "content_type": 17,
+    "codename": "add_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change email confirmation",
+    "content_type": 17,
+    "codename": "change_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete email confirmation",
+    "content_type": 17,
+    "codename": "delete_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view email confirmation",
+    "content_type": 17,
+    "codename": "view_emailconfirmation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add social account",
+    "content_type": 18,
+    "codename": "add_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change social account",
+    "content_type": 18,
+    "codename": "change_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete social account",
+    "content_type": 18,
+    "codename": "delete_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view social account",
+    "content_type": 18,
+    "codename": "view_socialaccount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 73,
+  "fields": {
+    "name": "Can add social application",
+    "content_type": 19,
+    "codename": "add_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 74,
+  "fields": {
+    "name": "Can change social application",
+    "content_type": 19,
+    "codename": "change_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 75,
+  "fields": {
+    "name": "Can delete social application",
+    "content_type": 19,
+    "codename": "delete_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 76,
+  "fields": {
+    "name": "Can view social application",
+    "content_type": 19,
+    "codename": "view_socialapp"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 77,
+  "fields": {
+    "name": "Can add social application token",
+    "content_type": 20,
+    "codename": "add_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 78,
+  "fields": {
+    "name": "Can change social application token",
+    "content_type": 20,
+    "codename": "change_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 79,
+  "fields": {
+    "name": "Can delete social application token",
+    "content_type": 20,
+    "codename": "delete_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 80,
+  "fields": {
+    "name": "Can view social application token",
+    "content_type": 20,
+    "codename": "view_socialtoken"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 81,
+  "fields": {
+    "name": "Can add subscription",
+    "content_type": 21,
+    "codename": "add_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 82,
+  "fields": {
+    "name": "Can change subscription",
+    "content_type": 21,
+    "codename": "change_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 83,
+  "fields": {
+    "name": "Can delete subscription",
+    "content_type": 21,
+    "codename": "delete_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 84,
+  "fields": {
+    "name": "Can view subscription",
+    "content_type": 21,
+    "codename": "view_subscription"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 85,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 22,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 86,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 22,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 87,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 22,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 88,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 22,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 89,
+  "fields": {
+    "name": "Can add django job",
+    "content_type": 23,
+    "codename": "add_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 90,
+  "fields": {
+    "name": "Can change django job",
+    "content_type": 23,
+    "codename": "change_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 91,
+  "fields": {
+    "name": "Can delete django job",
+    "content_type": 23,
+    "codename": "delete_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 92,
+  "fields": {
+    "name": "Can view django job",
+    "content_type": 23,
+    "codename": "view_djangojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 93,
+  "fields": {
+    "name": "Can add django job execution",
+    "content_type": 24,
+    "codename": "add_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 94,
+  "fields": {
+    "name": "Can change django job execution",
+    "content_type": 24,
+    "codename": "change_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 95,
+  "fields": {
+    "name": "Can delete django job execution",
+    "content_type": 24,
+    "codename": "delete_djangojobexecution"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 96,
+  "fields": {
+    "name": "Can view django job execution",
+    "content_type": 24,
+    "codename": "view_djangojobexecution"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "common users",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "managers",
+    "permissions": []
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "author",
+    "permissions": [
+      41
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$t5C3TojerSum5LuhuOQKqP$9N1yrea9qTbsLk+9lt07GQFvFSvSDeBicIpZA0i7DYw=",
+    "last_login": "2024-11-05T09:59:02.190Z",
+    "is_superuser": true,
+    "username": "Admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "kostyansandanov@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-19T04:28:40.350Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$R7bxOda5vmYFhVnM5Sp62N$aQMMkiewz45nW1LIh1eGeNDtvrXSIu1wwXVaYmD1X8g=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Ivan",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-21T13:31:45.270Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$g1pnyq9TVQAv3C3mEvQEEx$Ao9yLjw4fr4j81do3bqH6v2E0vuLVgE30sCe3KaLuzQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Konstantin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-21T13:31:58.807Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$fjuaUEm422sPJH0gyaDLrV$WUqAaVrDdI4Jrhj/N90iLPrwSJWx4XfYXFhHgi3PBxw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Alex",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-21T13:32:07.888Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$pjOEbMLxdyeolYlDde90LX$metsoApXqbgXQLsSIG8kpvLtKsAC3ea+AxLF7afkAhQ=",
+    "last_login": "2024-08-31T04:02:47.992Z",
+    "is_superuser": false,
+    "username": "anton",
+    "first_name": "",
+    "last_name": "",
+    "email": "anton@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-31T04:02:47.678Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$fAswLudtING7iGtBKXsiDX$ZAY3buaOPbUEl7EXWzCkQNxXVNsVRefgwVj7JULRH98=",
+    "last_login": "2024-09-01T03:57:02.453Z",
+    "is_superuser": false,
+    "username": "Super_User",
+    "first_name": "User",
+    "last_name": "User",
+    "email": "user@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-01T03:56:45.603Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "!8yzATlAE72ARxW2UHckpdQSskrBkJnXqHRAKLSQq",
+    "last_login": "2024-09-01T04:55:37.338Z",
+    "is_superuser": false,
+    "username": "kostyan",
+    "first_name": "Константин",
+    "last_name": "Санданов",
+    "email": "kostyan@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-01T04:55:04.438Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$PjNKcDmZZvMjjFq7KWIPaQ$SvgVn7wEr7X3qedX4aOTWpseQ7Kg42I9HIYAREJwPtU=",
+    "last_login": "2024-11-03T17:00:38.052Z",
+    "is_superuser": false,
+    "username": "aleks",
+    "first_name": "",
+    "last_name": "",
+    "email": "aleks@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-03T03:49:58.200Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$e9MQRUiNC4MLiW5HAB09iG$CqKRXPMgjFq9Gbq8Y2ndtqess1UMkJctyNRnVxnta2Y=",
+    "last_login": "2024-09-06T04:21:05.578Z",
+    "is_superuser": false,
+    "username": "test_user",
+    "first_name": "",
+    "last_name": "",
+    "email": "test_user@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-06T04:21:05.137Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$MaRgjNX6v1u0SfOoXN5GSU$ZV604qY9zsaCJbfA4M3+WyiISTaf+cUXwMrYHA712Pg=",
+    "last_login": "2024-09-20T04:44:11.140Z",
+    "is_superuser": false,
+    "username": "anim.news",
+    "first_name": "",
+    "last_name": "",
+    "email": "anim.news@yandex.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-20T04:44:08.652Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$bZPSvHyDCA1C04jH3vb5mV$mifghTG9VDumWG2wGllUYqwcSDv8rSp8nOvn0Rqm5fA=",
+    "last_login": "2024-10-26T10:20:19.348Z",
+    "is_superuser": false,
+    "username": "kostyan_sandanov",
+    "first_name": "",
+    "last_name": "",
+    "email": "kostyan_sandanov@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-09-23T04:13:08.727Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "sites",
+    "model": "site"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "flatpages",
+    "model": "flatpage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "author"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "postcategory"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "thumbnail",
+    "model": "kvstore"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "account",
+    "model": "emailaddress"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "account",
+    "model": "emailconfirmation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialaccount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 19,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialapp"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 20,
+  "fields": {
+    "app_label": "socialaccount",
+    "model": "socialtoken"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 21,
+  "fields": {
+    "app_label": "newsportal",
+    "model": "subscription"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 22,
+  "fields": {
+    "app_label": "profile_user",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 23,
+  "fields": {
+    "app_label": "django_apscheduler",
+    "model": "djangojob"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 24,
+  "fields": {
+    "app_label": "django_apscheduler",
+    "model": "djangojobexecution"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4v8sb0pada41hxyjyf56qwrmmbfmjwpy",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAOCIwu3fcMzTBDpWogKe3KeHdD0oVu_3vvv9VE-5anvaV1WkRdFajT7xaJn6l0IA8q96q5lm1dou6KPmjTY5X0uh3u30Gmlns9AHhLEiKhYfEhuRQoDhcLc2SHhpidRYPmbBMRRW-RZWbjgYEQ1OcL9lw4dQ:1t8GL0:D9aKVrbatJs0YG5Sh2YYgudUcsrfZc4Cyk83wV0swP8",
+    "expire_date": "2024-11-19T09:59:02.193Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9bi3dc1h478czfnhifl6h24j33x8lsuh",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAOCIwu3fcMzTBDpWogKe3KeHdD0oVu_3vvv9VE-5anvaV1WkRdFajT7xaJn6l0IA8q96q5lm1dou6KPmjTY5X0uh3u30Gmlns9AHhLEiKhYfEhuRQoDhcLc2SHhpidRYPmbBMRRW-RZWbjgYEQ1OcL9lw4dQ:1ssxbM:6KqmpqvorcpaJnykLJeMuIaFfZUQmasiQMAGpPBNIJo",
+    "expire_date": "2024-10-08T04:56:40.562Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z0mrcfnfr39u4yxgafjuc2bxojl7l0ja",
+  "fields": {
+    "session_data": ".eJxVkE1ugzAQhe8ya2QZG4Nh1fQaVYTG9lCsAI6wUVpFuXtjyobd_Lz3zdM8Aa0N25J63NJIS_IWkw9LP1Mag4vQfT3hv4YO7hjjI6wOCsAEXdlIXisppGZctpKrAmhGP72VONEtfnznjtkww-tawH6i3yKtvc-0Fk4zg_ZGi9vNUx6zIxrbNcc6sssp6OfhOqFGjOObY1xbWxISRSOHFqtSlFYLVQ1cO65Iu9poV6K2CmspqXEDx0pZa4wYuCGRoZFizP-gn7tff6Hjrz9TYWds:1t7dxu:W1eoseY_ZVYP0m0VBsNlXqKnFfcdwenUysEpDO6Y0_Y",
+    "expire_date": "2024-11-17T17:00:38.060Z"
+  }
+},
+{
+  "model": "sites.site",
+  "pk": 1,
+  "fields": {
+    "domain": "example.com",
+    "name": "example.com"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 2,
+  "fields": {
+    "author": 1,
+    "type": "NS",
+    "title": "Тираж «Кайдзю №8» превысил 16 млн копий — это одна из самых популярных современных серий манги",
+    "date": "2024-10-29T12:46:14.729Z",
+    "content": "Одна из самых популярных современных серий манги в очередной раз обновила тираж. А именно, «Кайдзю №8» (Kaiju No. 8). Общий тираж всего лишь 14 томов работы, включая цифровые продажи, превысил 16 млн копий. Это делает «Кайдзю №8» одной из самых хитовых серий манги, выходящих в настоящее время. Нужно отметить, что 14-й том поступит в продажу только 1 ноября.\r\n\r\nРабота, автором которой является Наоя Мацумото, публикуется в приложении и нa сайте Shonen Jump+ c 3 июля 2020 года. Ha русском языке главы «Kaйдзю №8» выходят нa сервисе MANGA Plus.\r\n\r\nУ произведения есть спин-оффы: ранобэ и две серии манги. Также в разработке находится игра по «Kaйдзю №8».\r\n\r\nВ этом году студия Production I.G выпустила аниме-адаптацию манги из 12 эпизодов. В следующем году выйдут ещё три аниме во франчайзе: второй сезон сериала, фильм-компиляция первого сезона и оригинальный эпизод «Выходной Хосины». Фильм и эпизод будут показывать в кинотеатрах Японии одновременно.\r\n\r\nMoнcтpы, нaзывaeмыe «кaйдзю», пoявлялиcь в Япoнии мнoгo лeт нaзaд. Для бopьбы c ними coздaнo элитнoe вoeннoe пoдpaздeлeниe «Kopпyc oбopoны». Eгo члeны eжeднeвнo pиcкyют жизнью, зaщищaя миpныx житeлeй. Koгдa мoнcтp yбит, в дeлo вcтyпaют «yбopщики», избaвляющиecя oт ocтaнкoв. 32-лeтний Kaфкa Xибинo нeдoвoлeн paбoтoй yбopщикa. Xибинo cтpeмилcя вcтyпить в «Kopпyc oбopoны» и зapaбaтывaть нa жизнь, зaщищaя людeй oт кaйдзю, oднaкo пocлe нecкoлькиx нeyдaчныx пoпытoк oн oткaзaлcя oт cвoeй мeчты. Ho кoгдa aмбициoзный Лeнo Ичикaвa пpиcoeдиняeтcя к eгo кoмaндe пo yбopкe, Kaфкa cнoвa вcпoминaeт o cвoeй мeчтe. Пocлe чepeды coбытий нa Kaфкy нaпaдaeт кaйдзю-пapaзит, пpeвpaщaя eгo в гyмaнoиднoгo мoнcтpa («Kaйдзю №8»). Oбpeтя нoвыe cпocoбнocти, Kaфкa пытaeтcя в пocлeдний paз ocyщecтвить мeчтy вceй жизни.\r\n\r\nДля сравнения, тираж 19 томов манги «Дни Caкaмoтo» превышает лишь 6 млн копий. А тираж манги «Дoктop Cтoyн» с ещё большим количеством сборников превышает 18 млн копий.",
+    "rating": 0,
+    "image": "images/7_IzT1xh1.webp",
+    "slug": "tirazh-kaidziu-no8-prevysil-16-mln-kopii-eto-odna-iz-samykh-populiarnykh-sovremennykh-serii-mangi"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 3,
+  "fields": {
+    "author": 1,
+    "type": "AT",
+    "title": "В импринте «Бумажный фонарик» выйдет манхва I Raised a Black Dragon",
+    "date": "2024-10-29T12:54:59.886Z",
+    "content": "В импринте «Бумажный фонарик» издательства АСТ выйдет манхва I Raised a Black Dragon от Сотхан и Тальсыль. Новость об этом появилась на странице импринта во «ВКонтакте».\r\n\r\nОригинальная манхва закончена. В ней 74 главы, собранных в пять томов. «Бумажный фонарик» также выпустит манхву в пяти томах. Сейчас идёт работа над первой книгой. Ориентировочно она выйдет зимой.\r\n\r\nМанхва основана на одноимённой новелле Тальсыль.",
+    "rating": 0,
+    "image": "images/10_GnCnYkG.webp",
+    "slug": "v-imprinte-bumazhnyi-fonarik-vyidet-mankhva-i-raised-a-black-dragon-1730206499"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 4,
+  "fields": {
+    "author": 1,
+    "type": "NS",
+    "title": "Третий сезон аниме по мобильной игре Arknights получил новый тизер-трейлер",
+    "date": "2024-10-29T13:09:49.765Z",
+    "content": "Экранизация мобильной игры Arknights не ограничится двумя сезонами аниме, выходившими под названиями «Apкнaйтc: Прелюдия рассвета» и «Apкнaйтc: Зимнее уединение». У сериала будет третий сезон с подзаголовком «Восстание из пепла» (Rise from Ember). Он продолжает находиться в производстве, о чём сообщает новый тизер-трейлер грядущего сезона.\r\n\r\nНад сериалом работает студия Yostar Pictures. Дата выхода продолжения пока не объявлена.\r\n\r\nДeйcтвиe игpы-пepвoиcтoчникa пpoиcxoдит в aнтиyтoпичecкoм миpe пoд нaзвaниeм Teppa, пoxoжeм нa Зeмлю, тoлькo мecтныe oблaдaют чepтaми живoтныx или мифичecкиx pac (кeмoнoмими) и мaгичecкими cпocoбнocтями, извecтными кaк Иcкyccтвo Opигиниyмa. Mиp Teppы пocтoяннo paзpyшaeтcя Kaтacтpoфaми, вынyждaя eгo житeлeй пocтoяннo пepeceлятьcя. Kaтacтpoфы пpинecли c coбoй пaндeмию: вoзниклo cмepтeльнoe зaбoлeвaниe Opипaтия, вызвaннoe вoздeйcтвиeм Opгиниyмa, ocoбoгo минepaлa, ocтaющeгocя пocлe Kaтacтpoф. Из-зa cтoпpoцeнтнoй cмepтнocти и выcoкoй зapaзнocти бoлeзни вpaждeбнocть пo oтнoшeнию к инфициpoвaнным cтaлa pacпpocтpaнённым явлeниeм, чтo пpивeлo к иx мaccoвoмy кapaнтинy и изгнaнию пpaвитeльcтвaми вceгo миpa, a тaкжe к вoзникнoвeнию нaпpяжeннocти мeждy инфициpoвaнными и нeинфициpoвaнными житeлями. Oднaкo Opгиниyм тaкжe иcпoльзyeтcя кaк иcтoчник энepгии и пpoчный мaтepиaл для cтpoитeльcтвa, a eщё минepaл являeтcя иcтoчникoм мaгичecкиx cпocoбнocтeй. Игpoк бepёт нa ceбя poль cтpaдaющeгo aмнeзиeй «Дoктopa», кoтopый кoмaндyeт «oпepaтopaми» фapмaцeвтичecкoй, мeдицинcкoй и oбopoнитeльнoй opгaнизaции «Ocтpoв Poдoc». Пo мepe pacпpocтpaнeния Opипaтии «oпepaтopы» лeчaт инфициpoвaнныx и зaщищaютcя oт Движeния Boccoeдинeния, нeгocyдapcтвeннoй вoeннoй opгaнизaции зapaжённыx, цeль кoтopoй oтoмcтить пpaвитeльcтвaм Teppы зa пpecлeдoвaниe жepтв Opипaтии.\r\n\r\nKoмпaния Hypergryph выпycтилa opигинaльнyю игpy нa iOS и Android в мae 2019 гoдa.",
+    "rating": 0,
+    "image": "images/12_EYs3nZo.webp",
+    "slug": "tretii-sezon-anime-po-mobilnoi-igre-arknights-poluchil-novyi-tizer-treiler-1730207389"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 5,
+  "fields": {
+    "author": 1,
+    "type": "NS",
+    "title": "Результаты нового опроса популярности персонажей фэнтези «Да благословят боги сей расчудесный мир!»",
+    "date": "2024-10-29T13:11:13.892Z",
+    "content": "Япoнcкий caйт NetLab oпyбликoвaл новый рейтинг популярности персонажей «Дa блaгocлoвят бoги ceй pacчyдecный миp!» (Kono Subarashii Sekai ni Shukufuku o!). Опрос проводился среди пользователей сайта с 18 по 25 августа. Выбирая своих любимых персонажей фэнтези, пользователи отдали 1 945 голосов.\r\n\r\nРезультаты опроса представили 7 октября. В получившемся топе больше 40 персонажей, между которыми распределились голоса пользователей. А первые 10 мест в рейтинге заняли:\r\n\r\n    Мегумин — 383 голоса\r\n    Даркнесс — 248\r\n    Аква — 233\r\n    Юн-юн — 164\r\n    Виз — 144\r\n    Кадзума Сато — 138\r\n    Эрис — 106\r\n    Ванир — 100\r\n    Айрис — 95\r\n    Крис — 93\r\n\r\nТакже на NetLab публиковались результаты нового опроса полулярности персонажей фэнтези «Провожающая в последний путь Фрирен».\r\n\r\nВ этом году показали третий сезон аниме «Дa блaгocлoвят бoги ceй pacчyдecный миp!» и объявили о выходе новой OVA. 11-серийный сезон транслировали с апреля по июнь. В нём экранизировали шестой и седьмой тома оригинального цикла ранобэ. Над сезоном работала студия Drive.\r\n\r\nЗаключительный том paнoбэ Haцyмe Aкaцки вышел в мaе 2020 гoдa. Bceгo в книжнoм цикле 17 тoмoв.\r\n\r\nФpaнчaйз включaeт в ceбя paзныe серии paнoбэ и мaнги, видeoигpы, aнимe и нe тoлькo.\r\n\r\nKaдзyмa Caтo — xикикoмopи, кoтopый жить нe мoжeт бeз игp, aнимe и мaнги. Oднaжды зaтвopник вcё-тaки выxoдит нa yлицy — и пoпaдaeт в ДTП c лeтaльным иcxoдoм. Пocлe cмepти Kaдзyмa вcтpeчaeт бoгиню пo имeни Aквa, кoтopaя пpeдлaгaeт eмy oтпpaвитьcя в дpyгoй миp, нo пpи этoм гepoй мoжeт взять c coбoй тoлькo oднy aбcoлютнo любyю вeщь. Kaдзyмa выбиpaeт caмy бoгиню и тyт жe oкaзывaeтcя в пapaллeльнoм миpe, гдe eгo ждёт вeликoe пpeднaзнaчeниe: гepoю нyжнo oдoлeть мecтнoгo кopoля дeмoнoв.",
+    "rating": 0,
+    "image": "images/13_xtybT49.webp",
+    "slug": "rezultaty-novogo-oprosa-populiarnosti-personazhei-fentezi-da-blagosloviat-bogi-sei-raschudesnyi-mir-1730207473"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 6,
+  "fields": {
+    "author": 1,
+    "type": "NS",
+    "title": "Джон Уик отправится на «невыполнимое задание» ради любви в аниме-приквеле фильмов с Киану Ривзом",
+    "date": "2024-10-30T11:02:40.654Z",
+    "content": "Аниме-проектами, связанными с известными франчайзами, уже никого не удивишь. В конце августа на Netflix вышел сериал «Терминатор Ноль», в декабре в прокате появится фильм «Властелин колец: Война рохирримов», в следующем году состоится релиз сиквела полнометражки «Бэтмен-ниндзя». По «Джону Уику» тоже сделают аниме. Ещё прошлой осенью режиссёр Чад Стахелски рассказал о работе над аниме по франчайзу, но без каких-либо деталей. А вот из недавнего интервью с постановщиком стало чуть больше известно об анимационном проекте.\r\n\r\nЭто будет полнометражный приквел ко всем частям серии. Именно в формате аниме-фильма зрителям будет рассказана одна важная история из жизни Джона. История о «невыполнимом задании», которое позволило герою Киану Ривза уйти на покой ради любви.\r\n\r\nСтахелски сказал, что исследовать разные аспекты мира и разные аспекты самого главного героя до фильмов и через разные медиумы, будь то аниме или телевидение, это весело. Также постановщик заявил, что в аниме авторы могут быть немного более безумными и чокнутыми.\r\n\r\nКроме аниме в разработке у авторов сериал «Джон Уик: Под „Высоким столом“» и фильм про Каина из «Джона Уика 4». К роли героя в новом полнометражном спин-оффе вернётся Донни Йен.\r\n\r\nПервым полнометражным спин-оффом во франчайзе станет боевик «Балерина» с Аной де Армас в главной роли. Премьера картины намечена на 6 июня 2025-го.\r\n\r\nПредстоящее аниме будет не единственным, в котором зрители увидят героя с внешностью известного актёра. В планах Netflix выпустить фильм и аниме-сериала по комиксу «БРСРК» Ривза. Он же сыграет главную роль в картине и озвучит своего героя в аниме.\r\n\r\nА ещё герой с внешностью и голосом Ривза появится в короткометражке по игре Armored Core из предстоящей анимационной антологии «Секретный уровень».",
+    "rating": 0,
+    "image": "images/14_HOQK1dx.webp",
+    "slug": "dzhon-uik-otpravitsia-na-nevypolnimoe-zadanie-radi-liubvi-v-anime-prikvele-filmov-s-kianu-rivzom-1730286160"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 10,
+  "fields": {
+    "author": 1,
+    "type": "AT",
+    "title": "В издательстве «Комильфо» выйдет манхва «Наваждение»",
+    "date": "2024-10-30T17:59:08.556Z",
+    "content": "Издательство «Комильфо» объявило на своей странице во «ВКонтакте», что выпустит манхву «Наваждение» от Хон Чжакка. Также издательство опубликовало подробности издания. Скоро должен открыться предзаказ на первый из трёх томов манхвы.\r\n\r\n«Наваждение» планируют экранизировать в виде игрового сериала. Адаптацию снимет Хан Джэ-рим, режиссёр вышедшего в мае на Netflix сериала «The 8 Show: Выживи и разбогатей». Проект снят по двум сериям веб-манхвы (Money Game и Pie Game).",
+    "rating": 0,
+    "image": "images/15_EmINSIf_xcMrdLF.webp",
+    "slug": "v-izdatelstve-komilfo-vyidet-mankhva-navazhdenie-1730311148"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 11,
+  "fields": {
+    "author": 1,
+    "type": "AT",
+    "title": "Test«Этот монстр хочет меня съесть» — анонс гастрономическо-романтического хоррора про русалку и школьницу",
+    "date": "2024-10-30T18:01:26.069Z",
+    "content": "В следующем году свет увидит экранизация юрийной хоррор-манги «Этот монстр хочет меня съесть» (Watashi o Tabetai, Hito de nashi).\r\n\r\nСтаршеклассница Хинако живёт одна в приморском городке и обладает уникальной особенностью: невероятно аппетитным (в буквальном смысле) телом, которое так и манит местных монстров-людоедов. Но у Хинако есть защитница — русалка Щиори, которая однажды вышла к ней из моря. Впрочем, Щиори оберегает школьницу отнюдь не из благородных побуждений: она просто ждёт, когда та повзрослеет и войдёт в оптимальную кондицию, поле чего русалка собирается самолично полакомиться нежной девичьей плотью, не оставив ни кусочка. А Хинако только и остаётся, что разбираться в своих расцветающих чувствах в преддверии неизбежной смерти.",
+    "rating": 0,
+    "image": "images/9_QAHMgOD_ArxDjAq.webp",
+    "slug": "test-etot-monstr-khochet-menia-sest-anons-gastronomichesko-romanticheskogo-khorrora-pro-rusalku-i-shkolnitsu-1730802295"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 12,
+  "fields": {
+    "author": 1,
+    "type": "AT",
+    "title": "Test В 2025 году выйдет аниме-адаптация американского вебтуна «Начало после конца»1123",
+    "date": "2024-10-30T18:08:13.765Z",
+    "content": "Американский вебтун «Начало после конца» (The Beginning After the End) экранизируют. У адаптации появился сайт, где опубликованы первые подробности и тизер-трейлер проекта.\r\n\r\nВеб-комикс в жанрах исекай и приключенческое фэнтези адаптируют в виде телевизионного аниме. Премьера первого сезона состоится в 2025 году. Вероятно, у проекта будет и второй сезон.\r\n\r\nСериал снимает режиссёр Кейтаро Мотонага («Королевство руин», «Высокоскоростная этуаль») при студии studio A-CAT («Высокоскоростная этуаль», «Сильнейший маг армии Короля Демонов оказался человеком»).\r\n\r\nВебтун за авторстом TurtleMe и Fuyuki23 основан на веб-новелле. Вебтун издаётся на русском языке.\r\n\r\nИстория следует за самым сильным королём в истории, Греем. Хотя он обладает непревзойденной силой, богатством и славой, он никому не доверяет и одинок. Однажды Грей встречает свою смерть и перевоплощается в бессильного младенца по имени Артур в мире магии. Окружённый любящей семьей и друзьями, Артур начинает испытывать радости новой жизни, которых он никогда не знал в предыдущей. Однако во время путешествия на его семью нападают бандиты...\r\n\r\nТак начинается его вторая жизнь, наполненная приключениями!\r\ntest",
+    "rating": 0,
+    "image": "images/5_CEF9wrS.webp",
+    "slug": "test-v-2025-godu-vyidet-anime-adaptatsiia-amerikanskogo-vebtuna-nachalo-posle-kontsa-1123-1730804277"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 63,
+  "fields": {
+    "author": 2,
+    "type": "AT",
+    "title": "Boevoq post",
+    "date": "2024-11-04T18:20:34.614Z",
+    "content": "Boevoq postBoevoq postBoevoq postBoevoq postBoevoq postBoevoq postBoevoq postBoevoq post",
+    "rating": 0,
+    "image": "",
+    "slug": "boevoq-post-1730744434"
+  }
+},
+{
+  "model": "newsportal.post",
+  "pk": 68,
+  "fields": {
+    "author": 2,
+    "type": "NS",
+    "title": "Boevoq post-test",
+    "date": "2024-11-04T18:38:25.259Z",
+    "content": "Boevoq post-testBoevoq post-testBoevoq post-testBoevoq post-testBoevoq post-test",
+    "rating": 0,
+    "image": "",
+    "slug": "boevoq-post-test-1730745505"
+  }
+},
+{
+  "model": "newsportal.author",
+  "pk": 1,
+  "fields": {
+    "name": 1,
+    "rating": 0
+  }
+},
+{
+  "model": "newsportal.author",
+  "pk": 2,
+  "fields": {
+    "name": 9,
+    "rating": 0
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 3,
+  "fields": {
+    "name": "Боевик",
+    "rating": 0,
+    "descriptions": "жанр, изобилующий сценами боевого противостояния",
+    "slug": "boevik-1730120759",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 4,
+  "fields": {
+    "name": "Боевые искусства",
+    "rating": 0,
+    "descriptions": "(какуто манга) — жанр аниме, сюжет которого связан с противостоянием мастеров различных боевых искусств[7]. Изначально поджанр спортивных историй[8].",
+    "slug": "boevye-iskusstva-1730121117",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 5,
+  "fields": {
+    "name": "Детектив",
+    "rating": 0,
+    "descriptions": "(суири манга) — жанр, описывающий исследование и раскрытие загадочного происшествия (обычно преступления) или серии необычных происшествий[9]. Манга в этом жанре начала появляться в 1950-е годы[9].",
+    "slug": "detektiv-1730121319",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 6,
+  "fields": {
+    "name": "Драма",
+    "rating": 0,
+    "descriptions": "жанр драматико-трагического повествования. Встречается в аниме редко[7]. Один из основных признаков — отсутствие ярко выраженного «счастливого конца»[7].",
+    "slug": "drama-1730121336",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 7,
+  "fields": {
+    "name": "Идолы",
+    "rating": 0,
+    "descriptions": "аниме, действие которого связано с поп-звездами и музыкальным бизнесом",
+    "slug": "idoly-1730206680",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 8,
+  "fields": {
+    "name": "Икудзи",
+    "rating": 0,
+    "descriptions": "жанр аниме и манги, в котором повествование строится вокруг необходимости заботиться о ребёнке",
+    "slug": "ikudzi-1730206701",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 9,
+  "fields": {
+    "name": "Исторические произведения",
+    "rating": 0,
+    "descriptions": "(рэкиси манга) — жанр произведений, характеризующийся тем, что их действия разворачиваются на фоне реальных исторических событий[7]. Популярным сеттингом являются Западная Европа и Британия, но большинство таких произведений разворачивается в Японии[11].",
+    "slug": "istoricheskie-proizvedeniia-1730206716",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 10,
+  "fields": {
+    "name": "Кайто",
+    "rating": 0,
+    "descriptions": "(также phantom thieves — «таинственные/призрачные воры») — жанр произведений, в котором основными действующими лицами являются мастерские воры[13]. Появление жанра вдохновлено работами западных авторов, таких, как Морис Леблан и Уильям Хорнунг, а также легендами о таких героях, как Робин Гуд или Исикава Гоэмон[13]. Герои произведений жанра обычно мастера иллюзий и маскировки, объявляют о своих преступлениях заранее и избегают насилия[13]. Возбуждение от проведённых операций, переодевание персонажей, умные гаджеты, сложные ловушки и противостояние между вором и преследующим его детективом, всегда отстающим лишь на полшага, — главные элементы жанра[13].",
+    "slug": "kaito-1730206743",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 11,
+  "fields": {
+    "name": "Киберпанк",
+    "rating": 0,
+    "descriptions": "жанр, рассказывающий о мире будущего, в котором жизнь определяют компьютерные технологии[7]. Часто картины такого будущего представлены мрачными и антиутопическими[7].",
+    "slug": "kiberpank-1730206775",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 12,
+  "fields": {
+    "name": "Комедия",
+    "rating": 0,
+    "descriptions": "жанр, характеризующийся наличием юмористических сцен, в том числе пародий, комедии положений, словесных и прикладных шуток[7].\r\nМахо-сёдзё — жанр сёдзё, рассказывающий о приключениях девочки, обладающей магическими способностями, «девочки-волшебницы»[7]. Основы жанра были заложены двумя произведениями — «Ведьма Салли» и Himitsu no Akko-chan, и позже расширены при совмещении с жанром сэнтай в «Сейлор Мун»[14]. Со временем, кроме магических способностей главной героини, к описанию жанра добавились и другие заметные элементы — перевоплощения, специальные костюмы, сокрытие настоящей личности и наличие животного-маскота[14]. Первые из них делают жанр схожим с историями супергероев[14]. Произведения этого жанра концентрируются на проблемах женского взросления[7]. В то же время несмотря на то, что жанр относится к сёдзё, некоторые произведения в этом жанре создаются с ориентацией на мужскую аудиторию[14].",
+    "slug": "komediia-1730206797",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 13,
+  "fields": {
+    "name": "Моэ",
+    "rating": 0,
+    "descriptions": "сленговое обозначение, появившееся в 1990-х годах, для жанра произведений, в которых центральными персонажами являются юные и милые героини[12]. В отличие от лоликона моэ фокусируется на платонических отношениях и повседневных ситуациях и часто описывается как «милое, просто чтобы быть милым» (англ. cuteness for cuteness’ sake)[12].",
+    "slug": "moe-1730206813",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 14,
+  "fields": {
+    "name": "Ме́ха",
+    "rating": 0,
+    "descriptions": "жанр, характеризующийся активным использованием «гигантских боевых человекоподобных роботов», как правило, самодвижущихся, не имеющих реальных прототипов, обозначаемых этим же словом[7].",
+    "slug": "mekha-1730206832",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 15,
+  "fields": {
+    "name": "Мистика",
+    "rating": 0,
+    "descriptions": "жанр, рассказывающий о взаимодействии людей с сверхъестественными силами, не поддающимся логичному описанию, в отличие от магии в фэнтези[7]. Часто подобное взаимодействие влечет различные моральные проблемы[7].",
+    "slug": "mistika-1730206855",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 16,
+  "fields": {
+    "name": "Научная фантастика",
+    "rating": 0,
+    "descriptions": "(НФ) — произведение, действие которого связано с существованием и использованием техники, не существовавшей на момент создания этого аниме (межзвёздных космических кораблей, бластеров и т. д.) Обычно произведения в этом жанре излагают возможную историю будущего человечества, часто сюжеты связаны с контактами с пришельцами[7].",
+    "slug": "nauchnaia-fantastika-1730206871",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 17,
+  "fields": {
+    "name": "Отаку",
+    "rating": 0,
+    "descriptions": "разновидность аниме, содержащая ссылки на жизнь и деятельность отаку[7].",
+    "slug": "otaku-1730206887",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 18,
+  "fields": {
+    "name": "Парапсихология",
+    "rating": 0,
+    "descriptions": "жанр аниме, действие которого связано с парапсихическими силами (телепатия, телекинез, гипноз)[7].",
+    "slug": "parapsikhologiia-1730206904",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 19,
+  "fields": {
+    "name": "Паропанк/Стимпанк",
+    "rating": 0,
+    "descriptions": "(от англ. steampunk) — жанр аниме и манги, рассказывающий об альтернативных нашему мирах, находящихся на уровне технического развития Европы конца XIX века[7]. Этот период характеризуется началом революции технических средств передвижения — появление дирижаблей, аэропланов, паровозов, пароходов, паровых автомобилей и всего, что может работать за счет паровых технологий[7]. Паропанк возник как альтернатива киберпанку. Если киберпанк обычно основывается на футуристической эстетике, то паропанк — на эстетике ретро[7].",
+    "slug": "paropank-stimpank-1730206922",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 20,
+  "fields": {
+    "name": "Повседневность",
+    "rating": 0,
+    "descriptions": "жанр, повествующий о жизни обычных людей, чаще всего японцев среднего класса[7].",
+    "slug": "povsednevnost-1730206937",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 21,
+  "fields": {
+    "name": "Постапокалиптика",
+    "rating": 0,
+    "descriptions": "разновидность аниме и манги, повествующая о жизни после конца света[7].",
+    "slug": "postapokaliptika-1730206951",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 22,
+  "fields": {
+    "name": "Психологический триллер",
+    "rating": 0,
+    "descriptions": "жанр аниме, описывающий «злоключения человеческой души». Попадая в тяжелые ситуации, герои таких аниме переживают сложные и непредсказуемые психологические изменения[7].",
+    "slug": "psikhologicheskii-triller-1730206974",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 23,
+  "fields": {
+    "name": "Путешествие между мирами (или исэкай)",
+    "rating": 0,
+    "descriptions": "жанр, в котором главный герой или герои перемещаются между параллельными мирами, обычно между современной Японией и фэнтези-миром[7]. Одними из первых классических представителей жанра, появившихся до начала 1990-х годов, обозревателем Anime News Network Майком Тулом выделяются Fire Tripper, Aura Battler Dunbine и Genmu Senki Leda[15].",
+    "slug": "puteshestvie-mezhdu-mirami-ili-isekai-1730206994",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 24,
+  "fields": {
+    "name": "Романтика",
+    "rating": 0,
+    "descriptions": "жанр, повествующий о любовных переживаниях[7].",
+    "slug": "romantika-1730207010",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 25,
+  "fields": {
+    "name": "Рыболовная манга",
+    "rating": 0,
+    "descriptions": "(цури манга) — жанр произведений, связанных с рыбной ловлей. Классическим примером может служить Tsuru-Baka Nisshi[16].",
+    "slug": "rybolovnaia-manga-1730207023",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 26,
+  "fields": {
+    "name": "Семейная манга",
+    "rating": 0,
+    "descriptions": "(кадзоку манга) — жанр манги, рассказывающий о жизни семьи и детей в ней[10]. Некоторые из самых продолжительных произведений относятся к этому жанру, например, Sazae-san[10].",
+    "slug": "semeinaia-manga-1730207043",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 27,
+  "fields": {
+    "name": "Сказка",
+    "rating": 0,
+    "descriptions": "жанр аниме, чаще всего кодомо, экранизация классических сказок[7].",
+    "slug": "skazka-1730207066",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 28,
+  "fields": {
+    "name": "Фэнтези",
+    "rating": 0,
+    "descriptions": "жанр произведений, рассказывающий о мирах, которыми правит «меч и магия» в противовес технологии в научной фантастике. Кроме людей, персонажами часто являются разнообразные мифологические существа — эльфы, гномы, драконы, а также боги и демоны[7].",
+    "slug": "fentezi-1730207083",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.category",
+  "pk": 29,
+  "fields": {
+    "name": "РќРѕРІРѕСЃС‚Рё",
+    "rating": 0,
+    "descriptions": "Описание пока нету",
+    "slug": "rkrdzrirdzsgs-re-1730539680",
+    "subscribers": []
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "category": 4
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 5,
+  "fields": {
+    "user": 1,
+    "category": 17
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 6,
+  "fields": {
+    "user": 9,
+    "category": 11
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 7,
+  "fields": {
+    "user": 9,
+    "category": 10
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 8,
+  "fields": {
+    "user": 9,
+    "category": 9
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 9,
+  "fields": {
+    "user": 9,
+    "category": 8
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 10,
+  "fields": {
+    "user": 9,
+    "category": 7
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 11,
+  "fields": {
+    "user": 9,
+    "category": 6
+  }
+},
+{
+  "model": "newsportal.subscription",
+  "pk": 12,
+  "fields": {
+    "user": 9,
+    "category": 14
+  }
+},
+{
+  "model": "newsportal.comment",
+  "pk": 1,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "text": "Привет",
+    "rating": 0,
+    "time": "2024-10-29T14:02:13.869Z"
+  }
+},
+{
+  "model": "newsportal.comment",
+  "pk": 2,
+  "fields": {
+    "post": 2,
+    "user": 1,
+    "text": "Хороший пост!",
+    "rating": 0,
+    "time": "2024-10-30T10:25:44.269Z"
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 3,
+  "fields": {
+    "post": 2,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 4,
+  "fields": {
+    "post": 2,
+    "category": 6
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 5,
+  "fields": {
+    "post": 3,
+    "category": 6
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 6,
+  "fields": {
+    "post": 4,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 7,
+  "fields": {
+    "post": 4,
+    "category": 4
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 8,
+  "fields": {
+    "post": 4,
+    "category": 6
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 9,
+  "fields": {
+    "post": 5,
+    "category": 17
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 10,
+  "fields": {
+    "post": 5,
+    "category": 12
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 11,
+  "fields": {
+    "post": 5,
+    "category": 28
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 13,
+  "fields": {
+    "post": 10,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 14,
+  "fields": {
+    "post": 11,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 15,
+  "fields": {
+    "post": 11,
+    "category": 4
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 16,
+  "fields": {
+    "post": 12,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 48,
+  "fields": {
+    "post": 63,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 53,
+  "fields": {
+    "post": 68,
+    "category": 3
+  }
+},
+{
+  "model": "newsportal.postcategory",
+  "pk": 54,
+  "fields": {
+    "post": 12,
+    "category": 14
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||0da038ac4941224909735418c1b5b2fe",
+  "fields": {
+    "value": "{\"name\": \"cache/8c/b9/8cb9a50a75e6c141d47748fea463964b.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||104630bf964153f16656569da8c36a6b",
+  "fields": {
+    "value": "{\"name\": \"images/15_EmINSIf_xcMrdLF.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||11fa777d9a915fe9aafeb38c0bcd1a40",
+  "fields": {
+    "value": "{\"name\": \"images/15_EmINSIf_3L32GDq.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||13a957bde7938870c89fe76c7a5cc043",
+  "fields": {
+    "value": "{\"name\": \"cache/93/2d/932d4f6baa9c30be8f9f895e30781134.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||1a8444cec399da56e342fe7251798f24",
+  "fields": {
+    "value": "{\"name\": \"cache/11/97/1197d671930a1913c1e59b5a90fb6833.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||245e633ae2bab147f9167954f26f76dd",
+  "fields": {
+    "value": "{\"name\": \"images/13_xtybT49.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||2f2d1be0ce8b9958ee71f116e0415069",
+  "fields": {
+    "value": "{\"name\": \"cache/42/d7/42d7cc94123d250f7d9ccb4d4fd20e9f.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||47849d95679c6d685d274a1cf1a4550f",
+  "fields": {
+    "value": "{\"name\": \"cache/c8/8f/c88fdae0fb373c2f4406b34aa62c3bd6.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||48cfbcd304b5265ed588de4662d2fdb9",
+  "fields": {
+    "value": "{\"name\": \"cache/dc/8a/dc8a336afb10c586a4ee4243dea70e26.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4c75931b0acf582de90680363cc8679f",
+  "fields": {
+    "value": "{\"name\": \"images/7_IzT1xh1.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||4fe43fe0cbc47ea4f1beb98c4db743cf",
+  "fields": {
+    "value": "{\"name\": \"images/2_wbz9IFO.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||51141fcbbd0dec7f7d9a049ee31d4718",
+  "fields": {
+    "value": "{\"name\": \"cache/84/8f/848ff953af5014c7931ec4d92b7ce256.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||553c986964d1053344b000e129671a93",
+  "fields": {
+    "value": "{\"name\": \"cache/c9/8e/c98ebe499e0c9d4f73ac8fd04921f2c4.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||569f5b1413a333f4be71d794c18df59c",
+  "fields": {
+    "value": "{\"name\": \"cache/43/f9/43f9fdd15fab43aa3bc0938e7654cf99.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||5b68730855f498a82b2b479e0f052a9a",
+  "fields": {
+    "value": "{\"name\": \"images/9_QAHMgOD_ArxDjAq.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||5c04187870f42d3510de5c5fcc851c76",
+  "fields": {
+    "value": "{\"name\": \"images/5_CEF9wrS.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||6f0dc496a35ce3b681b82def12d93fc3",
+  "fields": {
+    "value": "{\"name\": \"cache/5b/05/5b0551023010aaa01be3577893f536a1.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||860f6806348d49e93aa52f90c5f2d4a3",
+  "fields": {
+    "value": "{\"name\": \"cache/d6/59/d65968a457e62beb3ec91f3961f8daf2.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||884ca3dcf5d659b9a8885dda0da223e2",
+  "fields": {
+    "value": "{\"name\": \"cache/35/ba/35bafbb8c5dcde6413d99eec9a8706ea.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||8c6fe3b28367d409917357145c73f41c",
+  "fields": {
+    "value": "{\"name\": \"cache/36/05/36050affe1f67913e498616b78ef37b6.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||92346cc8c8558e83b4083858edf3677b",
+  "fields": {
+    "value": "{\"name\": \"cache/a3/27/a3274343edc54616e234ca226ab2cc42.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||980008a942651f0f115001b9585e9d91",
+  "fields": {
+    "value": "{\"name\": \"cache/50/49/5049ea7a58d8bdb098b9061a953dddb4.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||9b31b57e1878969e10aa5511b216f967",
+  "fields": {
+    "value": "{\"name\": \"cache/92/e9/92e98541c2106f30a85940df3b5095d1.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||9d425a432b3f7182dd577a73183d0ea3",
+  "fields": {
+    "value": "{\"name\": \"images/15_iqJkadc.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||aa3e87443f71178adddb06d85a0cc072",
+  "fields": {
+    "value": "{\"name\": \"images/2_T46LyUq.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||b40e1cb864e6f9b9f81a98739768779a",
+  "fields": {
+    "value": "{\"name\": \"cache/58/49/58493613e7965924655fb421a18d20db.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||bc51e223d21d86d1104fd3a2095e79d4",
+  "fields": {
+    "value": "{\"name\": \"cache/cd/ba/cdbaa5006123744576f62cfd6860f08a.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||bcb873270dc61d07c37124e1d1641a29",
+  "fields": {
+    "value": "{\"name\": \"cache/55/45/55455d1ff37f648fd4f93fd3e1d1b470.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||c3b86fb2d0caa208d6d99aa69cb48a5b",
+  "fields": {
+    "value": "{\"name\": \"images/7_UfJZd4F.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||c6e05d76127d6549397cd8985772e380",
+  "fields": {
+    "value": "{\"name\": \"cache/e6/e1/e6e1ee48896ed3a7aacb15e2536a4d59.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||d9b7e7a170046dc42740da0bd96084d3",
+  "fields": {
+    "value": "{\"name\": \"images/12_EYs3nZo.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||dc18a181f445e2d04ed1cc3da0c1d659",
+  "fields": {
+    "value": "{\"name\": \"cache/dc/e1/dce149048cda551671bab567ce1c3e1b.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||e3bcc18901cfd4a85a4408c6f748fd3e",
+  "fields": {
+    "value": "{\"name\": \"images/15_EmINSIf.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||e61f783788f88923b2cdd9339cc2bb47",
+  "fields": {
+    "value": "{\"name\": \"cache/69/de/69de7c0fc977563bd474371fbaec4629.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||e81eca9fa1ea1938825b759ebea4447e",
+  "fields": {
+    "value": "{\"name\": \"cache/60/ca/60ca664fc86a9fb2f9ebb1a219522199.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||ee1b893029f715b03d54ea481dc4a95c",
+  "fields": {
+    "value": "{\"name\": \"cache/66/18/66181952fa765f3ef65963f9b8048845.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||eef054376239fac6ac25df571e355b07",
+  "fields": {
+    "value": "{\"name\": \"cache/67/cd/67cdbd92276ed0145a8ee7adadf81910.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||f0b738d2b6a215cb787c625c1a9976ca",
+  "fields": {
+    "value": "{\"name\": \"cache/c0/91/c091a7c9054a86774b0cefb0fd50fde6.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [820, 300]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||f10e9ffe275d5182407e154460780b11",
+  "fields": {
+    "value": "{\"name\": \"images/10_GnCnYkG.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||f476c844db357d1433c774befff5a6c0",
+  "fields": {
+    "value": "{\"name\": \"cache/e1/3f/e13fba21b13c47c1c48d88e1a56a9ed7.jpg\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [1000, 500]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||image||f4e6023f5acda5bf7955abdef1e321b5",
+  "fields": {
+    "value": "{\"name\": \"images/14_HOQK1dx.webp\", \"storage\": \"django.core.files.storage.filesystem.FileSystemStorage\", \"size\": [740, 416]}"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||104630bf964153f16656569da8c36a6b",
+  "fields": {
+    "value": "[\"0da038ac4941224909735418c1b5b2fe\", \"8c6fe3b28367d409917357145c73f41c\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||11fa777d9a915fe9aafeb38c0bcd1a40",
+  "fields": {
+    "value": "[\"e61f783788f88923b2cdd9339cc2bb47\", \"569f5b1413a333f4be71d794c18df59c\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||245e633ae2bab147f9167954f26f76dd",
+  "fields": {
+    "value": "[\"1a8444cec399da56e342fe7251798f24\", \"bcb873270dc61d07c37124e1d1641a29\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||4c75931b0acf582de90680363cc8679f",
+  "fields": {
+    "value": "[\"13a957bde7938870c89fe76c7a5cc043\", \"92346cc8c8558e83b4083858edf3677b\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||4fe43fe0cbc47ea4f1beb98c4db743cf",
+  "fields": {
+    "value": "[\"ee1b893029f715b03d54ea481dc4a95c\", \"e81eca9fa1ea1938825b759ebea4447e\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||5b68730855f498a82b2b479e0f052a9a",
+  "fields": {
+    "value": "[\"bc51e223d21d86d1104fd3a2095e79d4\", \"553c986964d1053344b000e129671a93\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||5c04187870f42d3510de5c5fcc851c76",
+  "fields": {
+    "value": "[\"6f0dc496a35ce3b681b82def12d93fc3\", \"c6e05d76127d6549397cd8985772e380\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||9d425a432b3f7182dd577a73183d0ea3",
+  "fields": {
+    "value": "[\"f0b738d2b6a215cb787c625c1a9976ca\", \"47849d95679c6d685d274a1cf1a4550f\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||aa3e87443f71178adddb06d85a0cc072",
+  "fields": {
+    "value": "[\"980008a942651f0f115001b9585e9d91\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||c3b86fb2d0caa208d6d99aa69cb48a5b",
+  "fields": {
+    "value": "[\"9b31b57e1878969e10aa5511b216f967\", \"eef054376239fac6ac25df571e355b07\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||d9b7e7a170046dc42740da0bd96084d3",
+  "fields": {
+    "value": "[\"48cfbcd304b5265ed588de4662d2fdb9\", \"b40e1cb864e6f9b9f81a98739768779a\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||e3bcc18901cfd4a85a4408c6f748fd3e",
+  "fields": {
+    "value": "[\"dc18a181f445e2d04ed1cc3da0c1d659\", \"f476c844db357d1433c774befff5a6c0\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||f10e9ffe275d5182407e154460780b11",
+  "fields": {
+    "value": "[\"2f2d1be0ce8b9958ee71f116e0415069\", \"51141fcbbd0dec7f7d9a049ee31d4718\"]"
+  }
+},
+{
+  "model": "thumbnail.kvstore",
+  "pk": "sorl-thumbnail||thumbnails||f4e6023f5acda5bf7955abdef1e321b5",
+  "fields": {
+    "value": "[\"860f6806348d49e93aa52f90c5f2d4a3\", \"884ca3dcf5d659b9a8885dda0da223e2\"]"
+  }
+},
+{
+  "model": "account.emailaddress",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "email": "kostyansandanov@gmail.com",
+    "verified": false,
+    "primary": false
+  }
+},
+{
+  "model": "django_apscheduler.djangojob",
+  "pk": "delete_old_job_executions",
+  "fields": {
+    "next_run_time": "2024-11-10T16:00:00Z",
+    "job_state": "gAWVXgQAAAAAAAB9lCiMB3ZlcnNpb26USwGMAmlklIwZZGVsZXRlX29sZF9qb2JfZXhlY3V0aW9uc5SMBGZ1bmOUjEduZXdzcG9ydGFsLm1hbmFnZW1lbnQuY29tbWFuZHMucnVuYXBzY2hlZHVsZXI6ZGVsZXRlX29sZF9qb2JfZXhlY3V0aW9uc5SMB3RyaWdnZXKUjBlhcHNjaGVkdWxlci50cmlnZ2Vycy5jcm9ulIwLQ3JvblRyaWdnZXKUk5QpgZR9lChoAUsCjAh0aW1lem9uZZSMCGJ1aWx0aW5zlIwHZ2V0YXR0cpSTlIwIem9uZWluZm+UjAhab25lSW5mb5STlIwJX3VucGlja2xllIaUUpSMDEFzaWEvSXJrdXRza5RLAYaUUpSMCnN0YXJ0X2RhdGWUTowIZW5kX2RhdGWUTowGZmllbGRzlF2UKIwgYXBzY2hlZHVsZXIudHJpZ2dlcnMuY3Jvbi5maWVsZHOUjAlCYXNlRmllbGSUk5QpgZR9lCiMBG5hbWWUjAR5ZWFylIwKaXNfZGVmYXVsdJSIjAtleHByZXNzaW9uc5RdlIwlYXBzY2hlZHVsZXIudHJpZ2dlcnMuY3Jvbi5leHByZXNzaW9uc5SMDUFsbEV4cHJlc3Npb26Uk5QpgZR9lIwEc3RlcJROc2JhdWJoHYwKTW9udGhGaWVsZJSTlCmBlH2UKGgijAVtb250aJRoJIhoJV2UaCkpgZR9lGgsTnNiYXViaB2MD0RheU9mTW9udGhGaWVsZJSTlCmBlH2UKGgijANkYXmUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgdjAlXZWVrRmllbGSUk5QpgZR9lChoIowEd2Vla5RoJIhoJV2UaCkpgZR9lGgsTnNiYXViaB2MDkRheU9mV2Vla0ZpZWxklJOUKYGUfZQoaCKMC2RheV9vZl93ZWVrlGgkiWglXZRoJ4wWV2Vla2RheVJhbmdlRXhwcmVzc2lvbpSTlCmBlH2UKGgsTowFZmlyc3SUSwCMBGxhc3SUSwB1YmF1YmgfKYGUfZQoaCKMBGhvdXKUaCSJaCVdlGgnjA9SYW5nZUV4cHJlc3Npb26Uk5QpgZR9lChoLE5oT0sAaFBLAHViYXViaB8pgZR9lChoIowGbWludXRllGgkiWglXZRoVimBlH2UKGgsTmhPSwBoUEsAdWJhdWJoHymBlH2UKGgijAZzZWNvbmSUaCSIaCVdlGhWKYGUfZQoaCxOaE9LAGhQSwB1YmF1YmWMBmppdHRlcpROdWKMCGV4ZWN1dG9ylIwHZGVmYXVsdJSMBGFyZ3OUKYwGa3dhcmdzlH2UaCJoA4wSbWlzZmlyZV9ncmFjZV90aW1llEsBjAhjb2FsZXNjZZSIjA1tYXhfaW5zdGFuY2VzlEsBjA1uZXh0X3J1bl90aW1llIwIZGF0ZXRpbWWUjAhkYXRldGltZZSTlEMKB+gLCwAAAAAAAJRoGIaUUpR1Lg=="
+  }
+},
+{
+  "model": "django_apscheduler.djangojob",
+  "pk": "send_week_posts",
+  "fields": {
+    "next_run_time": "2024-11-10T17:02:00Z",
+    "job_state": "gAWVSgQAAAAAAAB9lCiMB3ZlcnNpb26USwGMAmlklIwPc2VuZF93ZWVrX3Bvc3RzlIwEZnVuY5SMPW5ld3Nwb3J0YWwubWFuYWdlbWVudC5jb21tYW5kcy5ydW5hcHNjaGVkdWxlcjpzZW5kX3dlZWtfcG9zdHOUjAd0cmlnZ2VylIwZYXBzY2hlZHVsZXIudHJpZ2dlcnMuY3JvbpSMC0Nyb25UcmlnZ2VylJOUKYGUfZQoaAFLAowIdGltZXpvbmWUjAhidWlsdGluc5SMB2dldGF0dHKUk5SMCHpvbmVpbmZvlIwIWm9uZUluZm+Uk5SMCV91bnBpY2tsZZSGlFKUjAxBc2lhL0lya3V0c2uUSwGGlFKUjApzdGFydF9kYXRllE6MCGVuZF9kYXRllE6MBmZpZWxkc5RdlCiMIGFwc2NoZWR1bGVyLnRyaWdnZXJzLmNyb24uZmllbGRzlIwJQmFzZUZpZWxklJOUKYGUfZQojARuYW1llIwEeWVhcpSMCmlzX2RlZmF1bHSUiIwLZXhwcmVzc2lvbnOUXZSMJWFwc2NoZWR1bGVyLnRyaWdnZXJzLmNyb24uZXhwcmVzc2lvbnOUjA1BbGxFeHByZXNzaW9ulJOUKYGUfZSMBHN0ZXCUTnNiYXViaB2MCk1vbnRoRmllbGSUk5QpgZR9lChoIowFbW9udGiUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgdjA9EYXlPZk1vbnRoRmllbGSUk5QpgZR9lChoIowDZGF5lGgkiGglXZRoKSmBlH2UaCxOc2JhdWJoHYwJV2Vla0ZpZWxklJOUKYGUfZQoaCKMBHdlZWuUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgdjA5EYXlPZldlZWtGaWVsZJSTlCmBlH2UKGgijAtkYXlfb2Zfd2Vla5RoJIloJV2UaCeMFldlZWtkYXlSYW5nZUV4cHJlc3Npb26Uk5QpgZR9lChoLE6MBWZpcnN0lEsAjARsYXN0lEsAdWJhdWJoHymBlH2UKGgijARob3VylGgkiWglXZRoJ4wPUmFuZ2VFeHByZXNzaW9ulJOUKYGUfZQoaCxOaE9LAWhQSwF1YmF1YmgfKYGUfZQoaCKMBm1pbnV0ZZRoJIloJV2UaFYpgZR9lChoLE5oT0sCaFBLAnViYXViaB8pgZR9lChoIowGc2Vjb25klGgkiGglXZRoVimBlH2UKGgsTmhPSwBoUEsAdWJhdWJljAZqaXR0ZXKUTnVijAhleGVjdXRvcpSMB2RlZmF1bHSUjARhcmdzlCmMBmt3YXJnc5R9lGgiaAOMEm1pc2ZpcmVfZ3JhY2VfdGltZZRLAYwIY29hbGVzY2WUiIwNbWF4X2luc3RhbmNlc5RLAYwNbmV4dF9ydW5fdGltZZSMCGRhdGV0aW1llIwIZGF0ZXRpbWWUk5RDCgfoCwsBAgAAAACUaBiGlFKUdS4="
+  }
+},
+{
+  "model": "django_apscheduler.djangojob",
+  "pk": "week_posts",
+  "fields": {
+    "next_run_time": "2024-11-10T15:59:00Z",
+    "job_state": "gAWVQAQAAAAAAAB9lCiMB3ZlcnNpb26USwGMAmlklIwKd2Vla19wb3N0c5SMBGZ1bmOUjDhuZXdzcG9ydGFsLm1hbmFnZW1lbnQuY29tbWFuZHMucnVuYXBzY2hlZHVsZXI6d2Vla19wb3N0c5SMB3RyaWdnZXKUjBlhcHNjaGVkdWxlci50cmlnZ2Vycy5jcm9ulIwLQ3JvblRyaWdnZXKUk5QpgZR9lChoAUsCjAh0aW1lem9uZZSMCGJ1aWx0aW5zlIwHZ2V0YXR0cpSTlIwIem9uZWluZm+UjAhab25lSW5mb5STlIwJX3VucGlja2xllIaUUpSMDEFzaWEvSXJrdXRza5RLAYaUUpSMCnN0YXJ0X2RhdGWUTowIZW5kX2RhdGWUTowGZmllbGRzlF2UKIwgYXBzY2hlZHVsZXIudHJpZ2dlcnMuY3Jvbi5maWVsZHOUjAlCYXNlRmllbGSUk5QpgZR9lCiMBG5hbWWUjAR5ZWFylIwKaXNfZGVmYXVsdJSIjAtleHByZXNzaW9uc5RdlIwlYXBzY2hlZHVsZXIudHJpZ2dlcnMuY3Jvbi5leHByZXNzaW9uc5SMDUFsbEV4cHJlc3Npb26Uk5QpgZR9lIwEc3RlcJROc2JhdWJoHYwKTW9udGhGaWVsZJSTlCmBlH2UKGgijAVtb250aJRoJIhoJV2UaCkpgZR9lGgsTnNiYXViaB2MD0RheU9mTW9udGhGaWVsZJSTlCmBlH2UKGgijANkYXmUaCSIaCVdlGgpKYGUfZRoLE5zYmF1YmgdjAlXZWVrRmllbGSUk5QpgZR9lChoIowEd2Vla5RoJIhoJV2UaCkpgZR9lGgsTnNiYXViaB2MDkRheU9mV2Vla0ZpZWxklJOUKYGUfZQoaCKMC2RheV9vZl93ZWVrlGgkiWglXZRoJ4wWV2Vla2RheVJhbmdlRXhwcmVzc2lvbpSTlCmBlH2UKGgsTowFZmlyc3SUSwaMBGxhc3SUSwZ1YmF1YmgfKYGUfZQoaCKMBGhvdXKUaCSJaCVdlGgnjA9SYW5nZUV4cHJlc3Npb26Uk5QpgZR9lChoLE5oT0sXaFBLF3ViYXViaB8pgZR9lChoIowGbWludXRllGgkiWglXZRoVimBlH2UKGgsTmhPSztoUEs7dWJhdWJoHymBlH2UKGgijAZzZWNvbmSUaCSIaCVdlGhWKYGUfZQoaCxOaE9LAGhQSwB1YmF1YmWMBmppdHRlcpROdWKMCGV4ZWN1dG9ylIwHZGVmYXVsdJSMBGFyZ3OUKYwGa3dhcmdzlH2UaCJoA4wSbWlzZmlyZV9ncmFjZV90aW1llEsBjAhjb2FsZXNjZZSIjA1tYXhfaW5zdGFuY2VzlEsBjA1uZXh0X3J1bl90aW1llIwIZGF0ZXRpbWWUjAhkYXRldGltZZSTlEMKB+gLChc7AAAAAJRoGIaUUpR1Lg=="
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 1,
+  "fields": {
+    "job": "week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-02T14:10:00Z",
+    "duration": "0.05",
+    "finished": "1730556600.05",
+    "exception": "Cannot use QuerySet for \"PostCategory\": Use a QuerySet for \"Category\".",
+    "traceback": "  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 30, in week_posts\n    emails = User.objects.filter(\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1609, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1641, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1528, in build_filter\n    self.check_related_objects(join_info.final_field, value, join_info.opts)\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1337, in check_related_objects\n    raise ValueError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 2,
+  "fields": {
+    "job": "week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T14:56:00Z",
+    "duration": "0.03",
+    "finished": "1730645760.03",
+    "exception": "Cannot use QuerySet for \"PostCategory\": Use a QuerySet for \"Category\".",
+    "traceback": "  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 31, in week_posts\n    emails = User.objects.filter(\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1609, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1641, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1528, in build_filter\n    self.check_related_objects(join_info.final_field, value, join_info.opts)\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\.venv\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1337, in check_related_objects\n    raise ValueError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 3,
+  "fields": {
+    "job": "week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T15:46:00Z",
+    "duration": "0.06",
+    "finished": "1730648760.06",
+    "exception": "Cannot use QuerySet for \"Post\": Use a QuerySet for \"Category\".",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 27, in week_posts\n    emails = User.objects.filter(\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1609, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1641, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1528, in build_filter\n    self.check_related_objects(join_info.final_field, value, join_info.opts)\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1337, in check_related_objects\n    raise ValueError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 4,
+  "fields": {
+    "job": "week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T15:53:00Z",
+    "duration": "0.01",
+    "finished": "1730649180.01",
+    "exception": "'QuerySet' object has no attribute 'category'",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 28, in week_posts\n    subscriptions__category__in=recent_posts.category\n                                ^^^^^^^^^^^^^^^^^^^^^\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 5,
+  "fields": {
+    "job": "week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T15:57:00Z",
+    "duration": "0.06",
+    "finished": "1730649420.06",
+    "exception": "'ManyRelatedManager' object is not iterable",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 29, in week_posts\n    emails.append(email = User.objects.filter(\n                          ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1609, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1641, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1555, in build_filter\n    condition = self.build_lookup(lookups, col, value)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1385, in build_lookup\n    lookup = lookup_class(lhs, rhs)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\lookups.py\", line 30, in __init__\n    self.rhs = self.get_prep_lookup()\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\fields\\related_lookups.py\", line 70, in get_prep_lookup\n    self.rhs = [get_normalized_value(val, self.lhs)[0] for val in self.rhs]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 6,
+  "fields": {
+    "job": "week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T15:59:00Z",
+    "duration": "0.06",
+    "finished": "1730649540.06",
+    "exception": "'ManyRelatedManager' object is not iterable",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 29, in week_posts\n    emails.append(User.objects.filter(\n                  ^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\manager.py\", line 87, in manager_method\n    return getattr(self.get_queryset(), name)(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1476, in filter\n    return self._filter_or_exclude(False, args, kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1494, in _filter_or_exclude\n    clone._filter_or_exclude_inplace(negate, args, kwargs)\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\query.py\", line 1501, in _filter_or_exclude_inplace\n    self._query.add_q(Q(*args, **kwargs))\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1609, in add_q\n    clause, _ = self._add_q(q_object, self.used_aliases)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1641, in _add_q\n    child_clause, needed_inner = self.build_filter(\n                                 ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1555, in build_filter\n    condition = self.build_lookup(lookups, col, value)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\sql\\query.py\", line 1385, in build_lookup\n    lookup = lookup_class(lhs, rhs)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\lookups.py\", line 30, in __init__\n    self.rhs = self.get_prep_lookup()\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\db\\models\\fields\\related_lookups.py\", line 70, in get_prep_lookup\n    self.rhs = [get_normalized_value(val, self.lhs)[0] for val in self.rhs]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 7,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T16:35:00Z",
+    "duration": "0.01",
+    "finished": "1730651700.01",
+    "exception": "'QuerySet' object has no attribute 'category'",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 29, in send_week_posts\n    subscriptions__category__in=recent_posts.category.all()\n                                ^^^^^^^^^^^^^^^^^^^^^\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 8,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:38:00Z",
+    "duration": "0.91",
+    "finished": "1730651880.91",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 9,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T16:40:00Z",
+    "duration": "1.42",
+    "finished": "1730652001.42",
+    "exception": "Invalid address; only <QuerySet > could be parsed from \"<QuerySet ['kostyansandanov@gmail.com']>\"",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 47, in send_week_posts\n    msg.send()\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\message.py\", line 301, in send\n    return self.get_connection(fail_silently).send_messages([self])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\backends\\smtp.py\", line 136, in send_messages\n    sent = self._send(message)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\backends\\smtp.py\", line 151, in _send\n    sanitize_address(addr, encoding) for addr in email_message.recipients()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\message.py\", line 92, in sanitize_address\n    raise ValueError(\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 10,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Error!",
+    "run_time": "2024-11-03T16:43:00Z",
+    "duration": "1.44",
+    "finished": "1730652181.44",
+    "exception": "Invalid address \"['kostyansandanov@gmail.com']\"",
+    "traceback": "  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\apscheduler\\executors\\base.py\", line 125, in run_job\n    retval = job.func(*job.args, **job.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\PycharmProjects\\Project\\NP\\newsportal\\management\\commands\\runapscheduler.py\", line 47, in send_week_posts\n    msg.send()\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\message.py\", line 301, in send\n    return self.get_connection(fail_silently).send_messages([self])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\backends\\smtp.py\", line 136, in send_messages\n    sent = self._send(message)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\backends\\smtp.py\", line 151, in _send\n    sanitize_address(addr, encoding) for addr in email_message.recipients()\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Константин\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\mail\\message.py\", line 88, in sanitize_address\n    raise ValueError('Invalid address \"%s\"' % addr)\n"
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 11,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:45:00Z",
+    "duration": "9.72",
+    "finished": "1730652309.72",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 12,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:46:00Z",
+    "duration": "8.99",
+    "finished": "1730652368.99",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 13,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:49:00Z",
+    "duration": "8.84",
+    "finished": "1730652548.84",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 14,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:52:00Z",
+    "duration": "0.92",
+    "finished": "1730652720.92",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 15,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:54:00Z",
+    "duration": "0.93",
+    "finished": "1730652840.93",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 16,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T16:55:00Z",
+    "duration": "0.92",
+    "finished": "1730652900.92",
+    "exception": null,
+    "traceback": null
+  }
+},
+{
+  "model": "django_apscheduler.djangojobexecution",
+  "pk": 17,
+  "fields": {
+    "job": "send_week_posts",
+    "status": "Executed",
+    "run_time": "2024-11-03T17:02:00Z",
+    "duration": "0.96",
+    "finished": "1730653320.96",
+    "exception": null,
+    "traceback": null
+  }
+}
+]

@@ -18,18 +18,18 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.post_list, name='HomePage'),
-    path('<int:pk>/<slug:slug>/', views.post_detail, name='PostDetail'),
+    path('<int:pk>/<slug:slug>', views.post_detail, name='PostDetail'),
     path('news/', views.news_list, name='NewsList'),
-    path('news/<slug:slug>', views.post_detail, name='NewsDetail'),
+    path('news/<int:pk>/<slug:slug>', views.post_detail, name='NewsDetail'),
     path('articles/', views.article_list, name='ArticlesList'),
-    path('articles/<slug:slug>', views.post_detail, name='ArticlesDetail'),
+    path('articles/<int:pk>/<slug:slug>', views.post_detail, name='ArticlesDetail'),
     path('create/', PostCreate.as_view(), name='PostCreate'),
-    path('<int:pk>/<slug:slug>/update/', PostUpdate.as_view(),
+    path('<int:pk>/<slug:slug>/update', PostUpdate.as_view(),
          name='PostUpdate'),
-    path('<slug:slug>/delete/', PostDelete.as_view(), name='PostDelete'),
+    path('<int:pk>/<slug:slug>/delete', PostDelete.as_view(), name='PostDelete'),
     # кэширование классов через urls.py
     path('categories/', CategoryList.as_view(), name='CategoryList'),
-    path('accounts/login/profile/', ProfileList.as_view(), name='profile'),
+    path('accounts/login/profile', ProfileList.as_view(), name='profile'),
     path('subscriptions/', views.subscriptions, name='subscriptions'),
     path('categories/<slug:slug>', views.category_detail,
          name='CategoryDetail')

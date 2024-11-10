@@ -14,7 +14,7 @@ from django.core.cache import cache
 
 
 # кэширование постов на 60 сек на index.html
-@cache_page(60)
+# @cache_page(60)
 def post_list(request):
     '''метод для вывода списка постов, категорий фильтр ация и пагинация их'''
     # queryset модели Post, выводит все имеющие посты в БД
@@ -78,7 +78,7 @@ def post_detail(request, slug, pk):
     return render(request, 'post_detail.html', context)
 
 
-@cache_page(60*5)  # кэширование новостей на 5 мин на news.html
+# @cache_page(60*5)  # кэширование новостей на 5 мин на news.html
 def news_list(request):
     '''метод для вывода постов с типом NS'''
     # отфильтрованные queryset по типу NS
@@ -96,7 +96,7 @@ def news_list(request):
     return render(request, 'news.html', context)
 
 
-@cache_page(60*5)  # кэширование новостей на 5 мин на articles.html
+# @cache_page(60*5)  # кэширование новостей на 5 мин на articles.html
 def article_list(request):
     '''метод для вывода постов по типу AT'''
     # отфильтрованные queryset по типу AT
@@ -161,7 +161,7 @@ class PostDelete(LoginRequiredMixin, DeleteView):
 class CategoryList(ListView):
     """Вывод категорий"""
     model = Category
-    template_name = 'categories/theme.html'
+    template_name = 'categories.html'
     context_object_name = 'categories'
 
     def get_context_data(self, **kwargs):

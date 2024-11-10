@@ -78,6 +78,9 @@ class Post(models.Model):
     def __str__(self):
         return f'{self.title}, {self.category.all()}, {self.type}'
 
+    def get_category(self):
+        return ",".join([str(p) for p in self.сategory.all()])
+
 
 class Author(models.Model):
     """Авторы"""

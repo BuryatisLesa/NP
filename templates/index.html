@@ -12,7 +12,7 @@
 <!--   </form>-->
     {% if posts  %}
         {% for post in posts %}
-            <div class="title_post"><a class="title_text" href="/{{post.pk}}/{{post.slug}}">{{ post.title }}</a></div>
+            <div class="title_post"><a class="title_text" href="{% url 'PostDetail' post.pk post.slug %}">{{ post.title }}</a></div>
             {% thumbnail post.image "820x300" crop="center" as im %}
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
@@ -24,7 +24,6 @@
                      </a>
             <hr>
         {% endfor %}
-
     {% else %}
         <h2> Постов нету </h2>
     {% endif %}
@@ -57,7 +56,7 @@
         <div class="title-category">Жанры</div>
         {% for category in list_categories %}
         <ul class="ul-category">
-            <li><a class="url-category" href="#">{{ category.name }}<br></a>
+            <li><a class="url-category" href="{% url 'CategoryDetail' category.slug %}">{{ category.name }}<br></a>
             </li>
         </ul>
         {% endfor %}

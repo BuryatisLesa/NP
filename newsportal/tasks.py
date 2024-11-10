@@ -50,7 +50,6 @@ def weekly_send_posts():
     now_time = timezone.now()
     # Дата 7 дней назад
     week_ago = now_time - timedelta(days=7)
-
     # Отфильтрованный queryset с постами за последние 7 дней
     recent_posts = Post.objects.filter(date__range=(
         week_ago, now_time)).prefetch_related('category')

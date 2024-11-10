@@ -55,7 +55,7 @@
         <div class="title-category">Жанры</div>
         {% for category in list_categories %}
         <ul class="ul-category">
-            <li>{{ category.name }}<br>
+            <li><a class="url-category" href="{% url 'CategoryDetail' category.slug %}">{{ category.name }}<br></a>
             </li>
         </ul>
         {% endfor %}

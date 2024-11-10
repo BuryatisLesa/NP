@@ -9,7 +9,7 @@ NewsPortal - Новости
 {% block content %}
     {% if NEWS  %}
         {% for NS in NEWS %}
-            <div class="title_post"><a class="title_text" href="/{{ NS.slug }}">{{ NS.title }}</a></div>
+            <div class="title_post"><a class="title_text" href="{% url 'NewsDetail' NS.pk NS.slug %}">{{ NS.title }}</a></div>
             {% thumbnail NS.image "820x300" crop="center" as im %}
                 <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
             {% endthumbnail %}
@@ -52,7 +52,7 @@ NewsPortal - Новости
         <div class="title-category">Жанры</div>
         {% for category in list_categories %}
         <ul class="ul-category">
-            <li>{{ category.name }}<br>
+            <li><a class="url-category" href="{% url 'CategoryDetail' category.slug %}">{{ category.name }}<br></a>
             </li>
         </ul>
         {% endfor %}

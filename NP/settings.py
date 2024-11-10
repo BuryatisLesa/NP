@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+import logging
+from django.conf import settings
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -103,11 +105,23 @@ WSGI_APPLICATION = 'NP.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+#postgreSQL
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
 }
 
 
@@ -183,6 +197,7 @@ EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = "anim.news@yandex.ru"
 SERVER_EMAIL = "anim.news@yandex.ru"
 MANAGERS = (('AnimeNews', 'anim.news.@yandex.ru'), ('example', 'example@yandex.ru'))
+ADMINS = [('AnimeNews', 'anim.news.@yandex.ru')]  # Адреса для получения уведомлений
 
 # redis/celery
 
@@ -213,3 +228,132 @@ CACHES = {
 #     }
 # }
 
+# логгирование
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'debug_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda record: settings.DEBUG,  # Отправка в консоль только если DEBUG = True
+        },
+        'non_debug_filter': {
+            '()': 'django.utils.log.CallbackFilter',
+            'callback': lambda record: not settings.DEBUG,  # Отправка в почту и файл только если DEBUG = False
+        },
+    },
+    'formatters': {
+        'detailed_debug': {
+            'format': '{asctime} - {levelname} - {message}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
+        },
+        'detailed_warning': {
+            'format': '{asctime} - {levelname} - {pathname} - {message}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S.%f',  # формат даты с миллисекундами
+        },
+        'recording_info': {
+            'format': '{asctime} - {levelname} - {module} - {message}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
+        },
+        'recording_errors': {
+            'format': '{asctime} - {levelname} - {message} - Path: {pathname}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
+        },
+        'recording_security': {
+            'format': '{asctime} - {levelname} - {module} - {message}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
+        },
+        'email_formatter': {
+            'format': '{asctime} - {levelname} - {message} - Path: {pathname}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+    },
+    'handlers': {
+        'console_debug': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'detailed_debug',
+            'filters': ['debug_filter'],
+        },
+        'console_warning': {
+            'level': 'WARNING',
+            'class': 'logging.StreamHandler',
+            'formatter': 'detailed_warning',
+        },
+        'general_log': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'general.log',  # файл, куда записываются ошибки
+            'formatter': 'recording_info',
+            'filters': ['non_debug_filter'],    
+        },
+        'errors_log': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': 'errors.log',  # файл, куда записываются ошибки
+            'formatter': 'recording_errors',
+        },
+        'security_log': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': 'security.log',
+            'formatter': 'recording_security',
+        },
+        'mail_handler': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'email_formatter',
+            'filters': ['non_debug_filter'],
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console_debug', 'console_warning', 'general_log', 'errors_log', 'security_log', 'mail_handler'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['errors_log', 'mail_handler'],
+            'level': 'ERROR',
+            'filters': ['non_debug_filter'],
+            'propagate': False,
+        },
+        'django.server': {
+            'handlers': ['errors_log', 'mail_handler'],
+            'level': 'ERROR',
+            'filters': ['non_debug_filter'],
+            'propagate': False,
+        },
+        'django.template': {
+            'handlers': ['errors_log'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'django.db.backends': {
+            'handlers': ['errors_log'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'django.security': {
+            'handlers': ['security_log'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    }
+}
+
+
+# Логгер для основных приложений
+app_logger = logging.getLogger('django')
+app_logger.error("Произошла ошибка в основном приложении", exc_info=True)
+app_logger.info("Информационное сообщение в основном приложении")
+
+# Логгер для безопасности
+security_logger = logging.getLogger('django.security')
+security_logger.info("Аутентификация пользователя не удалась из-за недействительного токена.")
