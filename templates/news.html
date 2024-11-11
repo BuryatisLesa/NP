@@ -44,9 +44,6 @@ NewsPortal - Новости
      {% endif %}
 {% endif %}
 {% endblock content %}
-{# Кэширование side #}
-{% load cache %}
-{% cache 600 side %}
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
@@ -58,4 +55,3 @@ NewsPortal - Новости
         {% endfor %}
     </div>
 {% endblock side %}
-{% endcache %}

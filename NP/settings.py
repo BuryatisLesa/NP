@@ -69,9 +69,11 @@ MIDDLEWARE = [
         # allauth
     "allauth.account.middleware.AccountMiddleware",
     # кэширование сайта
-    'django.middleware.cache.UpdateCacheMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
+    # 'django.middleware.cache.UpdateCacheMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.cache.FetchFromCacheMiddleware',
+    # локализация
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'NP.urls'
@@ -148,12 +150,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
 LANGUAGE_CODE = 'ru'
+LANGUAGES = [('ru', 'Русский'), ('en-us', 'English')]
 
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
 USE_TZ = True
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 
 # Static files (CSS, JavaScript, Images)
@@ -357,3 +364,8 @@ app_logger.info("Информационное сообщение в основн
 # Логгер для безопасности
 security_logger = logging.getLogger('django.security')
 security_logger.info("Аутентификация пользователя не удалась из-за недействительного токена.")
+
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]

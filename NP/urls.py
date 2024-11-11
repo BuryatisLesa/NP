@@ -48,5 +48,6 @@ urlpatterns = [
     path('',include('newsportal.urls')),
     path('board/',include('board.urls')),
     # path('accounts/', include('accounts.urls'))
+    path('i18n/', include('django.conf.urls.i18n')), # локализация
 
 ]

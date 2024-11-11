@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .filters import PostFilter
@@ -11,6 +11,8 @@ from django.db.models import Exists, OuterRef
 from django.core.paginator import Paginator
 from django.views.decorators.cache import cache_page
 from django.core.cache import cache
+from django.utils.translation import gettext as _ # импортируем функцию для перевода
+from django.views import View
 
 
 # кэширование постов на 60 сек на index.html
@@ -212,3 +214,9 @@ def category_detail(request, slug):
         'category': category
     }
     return render(request, 'category_detail.html', context)
+
+
+class Index(View):
+    def get(self, request):
+        string = _('Hello world') 
+        return HttpResponse(string)

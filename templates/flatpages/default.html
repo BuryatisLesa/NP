@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 {% load static %}
 <html lang="en">
     <head>
@@ -7,7 +8,7 @@
         <link rel="icon" href="{% static 'favicon.png' %}">
         <title>
             {% block title %}
-                AnimeNews 
+            {% trans "AnimeNews" %}
             {% endblock title %}    
         </title>
         <link href="{% static 'css/styles.css'%}" rel="stylesheet" />
@@ -15,24 +16,41 @@
     <body>
         <div class="container-nav">
             <div class="logo">
-                <a class="text-logo" href="{% url 'HomePage' %}">AnimeNews</a>
+                <a class="text-logo" href="{% url 'HomePage' %}">{% trans "AnimeNews" %}</a>
             </div>
             <div class="navigation">
                 <ul>
-                    <li><a class="text-navigation" href="{% url 'CategoryList' %}">Жанр</a></li>
-                    <li><a class="text-navigation" href="{% url 'ArticlesList'%}">Статья</a></li>
-                    <li><a class="text-navigation" href="{% url 'NewsList'%}">Новость</a></li>
+                    <li><a class="text-navigation" href="{% url 'CategoryList' %}">{% trans "Categories" %}</a></li>
+                    <li><a class="text-navigation" href="{% url 'ArticlesList'%}">{% trans "Articles" %}</a></li>
+                    <li><a class="text-navigation" href="{% url 'NewsList'%}">{% trans "News" %}</a></li>
                 </ul>
             </div>
+                            <div class="language">
+                    <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %} <!-- Не забываем по csrf_token для POST запросов -->
+                        <input type="hidden" name="next" value="{{ redirect_to }}">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <select name="language" id="">
+                            {% get_available_languages as LANGUAGES %} <!-- получаем языки -->
+                            {% get_language_info_list for LANGUAGES as languages %} <!-- Помещаем их в список languages -->
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% for language in languages %} <!-- Итерируясь по списку, выводим их название на языке пользователя и код -->
+                                <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                    {{ language.name_local }} - {{ language.code }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="set">
+                    </form>
+                </div>
             {% block nav %}
                 <div class="user-container">
                     <ul>
                         {% if request.user.is_authenticated %}
-                        <li><a class="user" href="{% url 'profile' %}">Профиль</a></li>
-                        <li><a class="user" href="{% url 'account_logout' %}">Выйти</a></li>
+                        <li><a class="user" href="{% url 'profile' %}">{% trans "Profile" %}</a></li>
+                        <li><a class="user" href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
                         {% else %}
-                        <li><a class="user" href="{% url 'account_login' %}">Авторизация</a></li>
-                        <li><a class="user" href="{% url 'account_signup' %}">Регистрация</a></li>
+                        <li><a class="user" href="{% url 'account_login' %}">{% trans "Login" %}</a></li>
+                        <li><a class="user" href="{% url 'account_signup' %}">{% trans "SingUp" %}</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -51,7 +69,7 @@
         </div>
         <div class="footer-container">
             <div class="footer">
-                <h1>© AnimeNews</h1>
+                <h1>© {% trans "AnimeNews" %}</h1>
             </div>
         </div>
     </body>

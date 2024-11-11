@@ -6,10 +6,10 @@
 Главная страница
 {% endblock title %}
 {% block content %}
-<!--   <form  action="" method="get">-->
-<!--       <label class="text-field__label">{{ filterset.form.as_p }}</label>-->
-<!--       <input class="text-field__input" type="submit" value="Найти" />-->
-<!--   </form>-->
+  <form  action="" method="get">
+      <label class="text-field__label">{{ filterset.form.as_p }}</label>
+      <input class="text-field__input" type="submit" value="Найти" />
+  </form>
     {% if posts  %}
         {% for post in posts %}
             <div class="title_post"><a class="title_text" href="{% url 'PostDetail' post.pk post.slug %}">{{ post.title }}</a></div>
@@ -48,9 +48,6 @@
 {% endif %}
 </h3>
 {% endblock content %}
-{# Кэширование side #}
-{% load cache %}
-{% cache 600 side %}
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
@@ -62,4 +59,3 @@
         {% endfor %}
     </div>
 {% endblock side %}
-{% endcache %}
