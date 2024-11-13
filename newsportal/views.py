@@ -13,36 +13,75 @@ from django.views.decorators.cache import cache_page
 from django.core.cache import cache
 from django.utils.translation import gettext as _ # импортируем функцию для перевода
 from django.views import View
+import pytz
+from django.utils import timezone
 
+
+class PostList(View):
+    def get(self, request):
+        '''метод для вывода списка постов, категорий фильтр ация и пагинация их'''
+        # queryset модели Post, выводит все имеющие посты в БД
+        posts = Post.objects.all().order_by('-date')
+        filterset = PostFilter(request.GET, queryset=posts)
+        # queryset отфильтрованные данные
+        filtered_posts = filterset.qs
+        # использование встроенного класса django
+        #  - Paginator, для разделение постов по странично
+        paginator = Paginator(filtered_posts, 10)
+        # переменная для получение номера страницы
+        page_number = request.GET.get('page')
+        # добавление в экземпляр номер страницы для вывода данных
+        page_obj = paginator.get_page(page_number)
+        # queryset модели Category, выводит все имеющие категории   
+        categories = Category.objects.all()
+        context = {
+            'posts': page_obj,  # вывод постов
+            'list_categories': categories,
+            'filterset': filterset,  # отображение фильтрации
+            'page_obj': page_obj,  # отображение пагинации
+            'current_time': timezone.localtime(timezone.now()),
+            'timezones': pytz.common_timezones  #  добавляем в контекст все доступные часовые пояса
+            }
+        return render(request, 'index.html', context)
+        
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('HomePage')
 
 # кэширование постов на 60 сек на index.html
 # @cache_page(60)
-def post_list(request):
-    '''метод для вывода списка постов, категорий фильтр ация и пагинация их'''
-    # queryset модели Post, выводит все имеющие посты в БД
-    posts = Post.objects.all().order_by('-date')
-    # queryset модели Category, выводит все имеющие категории
-    categories = Category.objects.all()
-    # экземпляр класса PostFilter,
-    # получает данные для фильтрации queryset = posts
-    filterset = PostFilter(request.GET, queryset=posts)
-    # queryset отфильтрованные данные
-    filtered_posts = filterset.qs
-    # использование встроенного класса django
-    #  - Paginator, для разделение постов по странично
-    paginator = Paginator(filtered_posts, 10)
-    # переменная для получение номера страницы
-    page_number = request.GET.get('page')
-    # добавление в экземпляр номер страницы для вывода данных
-    page_obj = paginator.get_page(page_number)
+# def post_list(request):
+#     '''метод для вывода списка постов, категорий фильтр ация и пагинация их'''
+#     # queryset модели Post, выводит все имеющие посты в БД
+#     posts = Post.objects.all().order_by('-date')
+#     # queryset модели Category, выводит все имеющие категории
+#     categories = Category.objects.all()
+#     # экземпляр класса PostFilter,
+#     # получает данные для фильтрации queryset = posts
+#     filterset = PostFilter(request.GET, queryset=posts)
+#     # queryset отфильтрованные данные
+#     filtered_posts = filterset.qs
+#     # использование встроенного класса django
+#     #  - Paginator, для разделение постов по странично
+#     paginator = Paginator(filtered_posts, 10)
+#     # переменная для получение номера страницы
+#     page_number = request.GET.get('page')
+#     # добавление в экземпляр номер страницы для вывода данных
+#     page_obj = paginator.get_page(page_number)
 
-    context = {
-        'posts': page_obj,  # вывод постов
-        'list_categories': categories,  # вывод списка имеющих категорий
-        'filterset': filterset,  # отображение фильтрации
-        'page_obj': page_obj,  # отображение пагинации
-    }
-    return render(request, 'index.html', context)
+#     if request:
+#         request.session['django_timezone'] = request.POST['timezone']
+#         return redirect('PostList')
+
+#     context = {
+#         'posts': page_obj,  # вывод постов
+#         'list_categories': categories,  # вывод списка имеющих категорий
+#         'filterset': filterset,  # отображение фильтрации
+#         'page_obj': page_obj,  # отображение пагинации
+#         'current_time': timezone.localtime(timezone.now()),
+#         'timezones': pytz.common_timezones  #  добавляем в контекст все доступные часовые пояса
+#     }
+#     return render(request, 'index.html', context)
 
 
 def post_detail(request, slug, pk):
@@ -214,9 +253,3 @@ def category_detail(request, slug):
         'category': category
     }
     return render(request, 'category_detail.html', context)
-
-
-class Index(View):
-    def get(self, request):
-        string = _('Hello world') 
-        return HttpResponse(string)

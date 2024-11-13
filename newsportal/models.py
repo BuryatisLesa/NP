@@ -4,6 +4,14 @@ from django.urls import reverse
 from slugify import slugify
 from time import time
 from django.core.cache import cache
+from translate import Translator
+
+
+def translate_text(string):
+    '''метод для перевода текста'''
+    translator = Translator(from_lang='russian', to_lang='english')
+    translation = translator.translate(string)
+    return translation
 
 
 def gen_slug(string):
@@ -31,7 +39,7 @@ class Post(models.Model):
     type = models.CharField(
         max_length=2, choices=POST_TYPE_CHOICES, default='NS')
     # столбец заголовка поста
-    title = models.CharField(max_length=150)
+    title = models.CharField(max_length=200)
     # столбец для даты создания поста
     date = models.DateTimeField(auto_now_add=True)
     # столбец содержащий контент для поста
@@ -51,6 +59,7 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         # сохранение слага в БД
         self.slug = gen_slug(self.title)
+        # self.title_en_us = translate_text(self.title)
         super().save(*args, **kwargs)
         # удаление старого ключа кэша
         cache.delete(f'post-{self.pk}')
@@ -147,6 +156,7 @@ class Category(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = gen_slug(self.name)
+        # self.name_en_us = translate_text(self.name)
         super().save(*args, **kwargs)
 
 

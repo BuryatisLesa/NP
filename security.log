@@ -164,3 +164,402 @@
 2024-11-11 21:33:33 - INFO - autoreload - Watching for file changes with StatReloader
 2024-11-11 23:02:39 - INFO - autoreload - Watching for file changes with StatReloader
 2024-11-12 00:03:47 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:29:20 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:31:43 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:34:39 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 00:34:40 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:34:42 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 00:34:43 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:36:35 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 00:36:36 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:36:38 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 00:36:39 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:36:46 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 00:36:47 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 00:39:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:41:39 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 07:41:40 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:41:42 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 07:41:43 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:41:44 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 07:41:45 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:41:55 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 07:41:56 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:41:58 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 07:41:59 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:42:03 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 07:42:04 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:42:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\admin.py changed, reloading.
+2024-11-12 07:42:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:47:38 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 07:47:39 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:51:04 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 07:51:05 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:56:08 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:57:20 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:57:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 07:57:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 07:57:52 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\migrations\0005_category_name_en_us_category_name_ru_and_more.py changed, reloading.
+2024-11-12 07:57:53 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:01:36 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:01:37 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:16 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:17 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:26 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:27 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:29 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:30 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:32 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:33 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:45 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:46 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:48 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:49 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:50 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:51 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:04:53 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:04:53 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:05:09 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:05:10 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:05:13 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:05:14 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:05:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:05:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:13:28 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:15:05 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:19:40 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:19:40 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:19:45 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:19:45 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:19:48 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:19:49 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:19:53 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:19:53 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:19:58 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:19:59 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:20:01 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:20:02 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:20:06 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:20:06 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:20:08 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:20:09 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:20:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:20:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:21:31 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:21:32 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:21:34 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:21:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:22:43 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 08:22:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:22:45 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 08:22:46 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:22:48 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 08:22:49 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:22:50 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\translation.py changed, reloading.
+2024-11-12 08:22:51 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:23:13 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:23:14 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:23:15 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:23:16 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:36:31 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:36:32 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:36:51 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\models.py changed, reloading.
+2024-11-12 08:36:51 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:44:54 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 08:44:55 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:44:59 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 08:45:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:46:43 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:46:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:46:57 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:46:58 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:47:57 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:47:58 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:48:02 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:48:03 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:48:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:48:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:48:15 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:48:16 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:48:37 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:48:38 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:48:43 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:48:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:49:26 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:49:27 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:50:01 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:50:02 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:50:03 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:50:04 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:51:50 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:51:51 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:52:27 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:52:28 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:52:37 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:52:38 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:54:33 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:54:34 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:55:11 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:55:12 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:55:14 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:55:15 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:55:16 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:55:17 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:55:18 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:55:19 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:55:22 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:55:23 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:55:30 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:55:31 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:56:04 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:56:05 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:56:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:56:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:56:13 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:56:14 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:56:19 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:56:19 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:56:28 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:56:29 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:56:33 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:56:34 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:05 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:06 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:09 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:10 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:32 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:33 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:38 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:39 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:43 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:49 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:50 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 08:59:53 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 08:59:53 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:00:06 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:00:07 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:34 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:36 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:37 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:38 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:39 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:47 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:48 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:49 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:50 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:54 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:55 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:01:57 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:01:58 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:02:17 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:02:18 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:02:27 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:02:28 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:02:29 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:02:30 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:02:33 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:02:34 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:02:43 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:02:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:02:48 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:02:49 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:03:18 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:03:19 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:03:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:03:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:03:34 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:03:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:04:29 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:04:30 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:04:33 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:04:34 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:04:36 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:04:37 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:04:52 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:04:53 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:04:55 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:04:56 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:04:58 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:04:59 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:35 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:36 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:38 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:39 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:45 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:45 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:47 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:48 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:49 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:50 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:54 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:55 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:56 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:57 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:05:58 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:05:59 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:08 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:09 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:12 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:13 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:22 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:22 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:24 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:25 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:31 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:32 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:36 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:37 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:39 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:40 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:06:45 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:06:45 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:02 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:03 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:04 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:05 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:08 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:08 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:13 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:14 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:21 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:22 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:27 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:28 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:32 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:07:33 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:07:59 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:08:00 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:08:01 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:08:02 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:08:21 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:08:22 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:08:34 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:08:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:08:40 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:08:41 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:09:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:10:40 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:10:41 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:11:18 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:11:19 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:11:25 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:11:26 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:16:13 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:16:14 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:16:16 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:16:16 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:16:21 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:16:22 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:16:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\urls.py changed, reloading.
+2024-11-12 09:16:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:18:42 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:18:42 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:22:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:22:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:22:40 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:22:41 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:23:01 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:23:02 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:23:03 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:23:04 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:23:08 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:23:09 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:23:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:23:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:23:26 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:23:27 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:23:44 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:23:45 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:29:38 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:31:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:31:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:31:21 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:31:22 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:31:26 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:31:27 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:31:29 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:31:30 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:32:19 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:32:20 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:32:54 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:32:55 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:32:59 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:32:59 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:03 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:04 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:06 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:07 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:11 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:12 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:14 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:15 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:16 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:17 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:21 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:22 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:32 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:33 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:33:37 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\newsportal\views.py changed, reloading.
+2024-11-12 09:33:38 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:41:23 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 09:41:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:41:42 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 09:41:52 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:42:59 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 09:43:03 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:43:10 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 09:43:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 09:43:55 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 09:43:56 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:43:29 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:43:30 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:43:35 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:43:36 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:43:38 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:43:39 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:43:40 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:43:41 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:43:43 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:43:44 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:50:03 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:50:04 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:50:12 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:50:13 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:50:19 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:51:03 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:51:16 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:51:17 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:52:47 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:52:48 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:52:50 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:52:51 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:52:56 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:52:56 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:53:42 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:55:50 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:56:11 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:56:11 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:56:17 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:56:35 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:57:37 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:57:38 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:58:24 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:58:24 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:58:26 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:58:27 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:58:29 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:58:29 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 10:58:36 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 10:58:37 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 11:02:31 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 11:02:32 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 11:02:52 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 11:02:53 - INFO - autoreload - Watching for file changes with StatReloader
+2024-11-12 11:03:14 - INFO - autoreload - C:\Users\Константин\PycharmProjects\Project\NP\NP\settings.py changed, reloading.
+2024-11-12 11:03:21 - INFO - autoreload - Watching for file changes with StatReloader

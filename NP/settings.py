@@ -14,6 +14,8 @@ from pathlib import Path
 import logging
 from django.conf import settings
 
+logger = logging.getLogger('django')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,18 +35,23 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'modeltranslation',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     # add apps
     'django.contrib.sites',
     'django.contrib.flatpages', # Пакет плоских страничек
     'newsportal', # Приложение NewsPortal/AnimeNews
     'sorl.thumbnail', # Пакет для редактирование картинок
     'django_filters', # Пакет для фильтрации данных в джанго
+    
     #Пакет - allauth
     'allauth', # работа с регистрацией/авторизацией
     'allauth.account',
@@ -74,6 +81,7 @@ MIDDLEWARE = [
     # 'django.middleware.cache.FetchFromCacheMiddleware',
     # локализация
     'django.middleware.locale.LocaleMiddleware',
+    'newsportal.middlewares.TimezoneMiddleware'
 ]
 
 ROOT_URLCONF = 'NP.urls'
@@ -251,12 +259,17 @@ LOGGING = {
     },
     'formatters': {
         'detailed_debug': {
-            'format': '{asctime} - {levelname} - {message}',
+            'format': '|{asctime}| - |{levelname}| - |{message}|',
             'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
         },
         'detailed_warning': {
-            'format': '{asctime} - {levelname} - {pathname} - {message}',
+            'format': '{asctime} - {levelname} - {pathname} - {message} - {exc_info}',
+            'style': '{',
+            'datefmt': '%Y-%m-%d %H:%M:%S.%f',  # формат даты с миллисекундами
+        },
+        'detailed_errors': {
+            'format': '{asctime} - {levelname} - {pathname} - {message} - {exc_info}',
             'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S.%f',  # формат даты с миллисекундами
         },
@@ -266,7 +279,8 @@ LOGGING = {
             'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
         },
         'recording_errors': {
-            'format': '{asctime} - {levelname} - {message} - Path: {pathname}',
+            'format':
+            '{asctime} - {levelname} - {message} - Path: {pathname} - {exc_info}',
             'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
         },
@@ -276,7 +290,7 @@ LOGGING = {
             'datefmt': '%Y-%m-%d %H:%M:%S',  # формат даты и времени
         },
         'email_formatter': {
-            'format': '{asctime} - {levelname} - {message} - Path: {pathname}',
+            'format': '{asctime} - {levelname} - {message} - Path: {pathname} - {exc_info}',
             'style': '{',
             'datefmt': '%Y-%m-%d %H:%M:%S',
         },
@@ -293,23 +307,28 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'detailed_warning',
         },
+        'console_errors': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
+            'formatter': 'detailed_errors',
+        },
         'general_log': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'general.log',  # файл, куда записываются ошибки
+            'filename': 'logs/general.log',  # файл, куда записываются ошибки
             'formatter': 'recording_info',
             'filters': ['non_debug_filter'],    
         },
         'errors_log': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': 'errors.log',  # файл, куда записываются ошибки
+            'filename': 'logs/errors.log',  # файл, куда записываются ошибки
             'formatter': 'recording_errors',
         },
         'security_log': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': 'security.log',
+            'filename': 'logs/security.log',
             'formatter': 'recording_security',
         },
         'mail_handler': {
@@ -321,7 +340,8 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['console_debug', 'console_warning', 'general_log', 'errors_log', 'security_log', 'mail_handler'],
+            'handlers': ['console_debug','console_errors', 'console_warning',
+                         'general_log'],
             'level': 'DEBUG',
             'propagate': True,
         },
@@ -329,42 +349,31 @@ LOGGING = {
             'handlers': ['errors_log', 'mail_handler'],
             'level': 'ERROR',
             'filters': ['non_debug_filter'],
-            'propagate': False,
+            'propagate': True,
         },
         'django.server': {
             'handlers': ['errors_log', 'mail_handler'],
             'level': 'ERROR',
             'filters': ['non_debug_filter'],
-            'propagate': False,
+            'propagate': True,
         },
         'django.template': {
             'handlers': ['errors_log'],
             'level': 'ERROR',
-            'propagate': False,
+            'propagate': True,
         },
         'django.db.backends': {
             'handlers': ['errors_log'],
             'level': 'ERROR',
-            'propagate': False,
+            'propagate': True,
         },
         'django.security': {
             'handlers': ['security_log'],
             'level': 'INFO',
-            'propagate': False,
+            'propagate': True,
         },
     }
 }
-
-
-# Логгер для основных приложений
-app_logger = logging.getLogger('django')
-app_logger.error("Произошла ошибка в основном приложении", exc_info=True)
-app_logger.info("Информационное сообщение в основном приложении")
-
-# Логгер для безопасности
-security_logger = logging.getLogger('django.security')
-security_logger.info("Аутентификация пользователя не удалась из-за недействительного токена.")
-
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
