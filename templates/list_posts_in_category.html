@@ -1,0 +1,65 @@
+{% extends 'flatpages/default.html' %}
+{% load thumbnail %}
+{%block title%}
+{%endblock title%}
+{% block text %}
+<a href="{% url 'CategoryList' %}">
+    Категории
+</a>=>{{category.name}}
+{% endblock text %}
+{%block content%}
+{% if filtered_posts_category  %}
+    {% for post in filtered_posts_category %}
+    <article class="post">
+        <!--Начало картинки поста-->
+        {% thumbnail post.image "820x300" crop="center" as im %}
+        <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+        {% endthumbnail %}
+        <!--Конец картинки поста-->
+        <!--Начало заголовка поста-->
+        <div class="title_post">
+            <a class="title_text" href="{% url 'PostDetail' post.pk post.slug %}">
+                <h1>{{ post.title|truncatechars:40 }}</h1>
+            </a>
+        </div>
+        <!--Конец заголовка поста-->
+        <!--Начало описание поста-->
+        <div class="content_post">
+            <p>
+                {{ post.content|truncatechars:250 }}
+            </p>
+            <p>
+                Дата публикации: {{post.date}}
+            </p>
+        </div>
+        <!--Конец описание поста-->
+        <!--Начала категории поста-->
+        <div class="categories_post">
+            <a>Жанр:
+        {% for category in post.category.all %}
+            |{{ category.name }}
+        {% endfor %}
+        </div></a>
+        <!--Конец категории поста-->
+    </article>
+{% endfor %}
+{% else %}
+        <h2> Постов нету </h2>
+{% endif %}
+{%endblock content%}
+{% block side %}
+    <!--Начало списка категорий-->
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in list_categories %}
+        <ul class="ul-category">
+            <li>
+                <a class="url-category" href="{% url 'ListPostsInCategory' category.pk category.slug %}">
+                    {{ category.name }}<br>
+                </a>
+            </li>
+        </ul>
+        {% endfor %}
+    <!--Конец списка категорий-->
+    </div>
+{% endblock side %}

@@ -61,6 +61,7 @@ class Post(models.Model):
         self.slug = gen_slug(self.title)
         # self.title_en_us = translate_text(self.title)
         super().save(*args, **kwargs)
+        self.title_ru = self.title
         # удаление старого ключа кэша
         cache.delete(f'post-{self.pk}')
 
@@ -147,6 +148,8 @@ class Category(models.Model):
         max_length=255, unique=True, db_index=True, verbose_name="UR")
     subscribers = models.ManyToManyField(
         User, blank=True, related_name="categories")
+    image = models.ImageField(
+        upload_to='images/categories/', null=True, blank=True)
 
     def __str__(self):
         return f'{self.name}'

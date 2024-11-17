@@ -27,7 +27,7 @@ class PostList(View):
         filtered_posts = filterset.qs
         # использование встроенного класса django
         #  - Paginator, для разделение постов по странично
-        paginator = Paginator(filtered_posts, 10)
+        paginator = Paginator(filtered_posts, 12)
         # переменная для получение номера страницы
         page_number = request.GET.get('page')
         # добавление в экземпляр номер страницы для вывода данных
@@ -47,41 +47,6 @@ class PostList(View):
     def post(self, request):
         request.session['django_timezone'] = request.POST['timezone']
         return redirect('HomePage')
-
-# кэширование постов на 60 сек на index.html
-# @cache_page(60)
-# def post_list(request):
-#     '''метод для вывода списка постов, категорий фильтр ация и пагинация их'''
-#     # queryset модели Post, выводит все имеющие посты в БД
-#     posts = Post.objects.all().order_by('-date')
-#     # queryset модели Category, выводит все имеющие категории
-#     categories = Category.objects.all()
-#     # экземпляр класса PostFilter,
-#     # получает данные для фильтрации queryset = posts
-#     filterset = PostFilter(request.GET, queryset=posts)
-#     # queryset отфильтрованные данные
-#     filtered_posts = filterset.qs
-#     # использование встроенного класса django
-#     #  - Paginator, для разделение постов по странично
-#     paginator = Paginator(filtered_posts, 10)
-#     # переменная для получение номера страницы
-#     page_number = request.GET.get('page')
-#     # добавление в экземпляр номер страницы для вывода данных
-#     page_obj = paginator.get_page(page_number)
-
-#     if request:
-#         request.session['django_timezone'] = request.POST['timezone']
-#         return redirect('PostList')
-
-#     context = {
-#         'posts': page_obj,  # вывод постов
-#         'list_categories': categories,  # вывод списка имеющих категорий
-#         'filterset': filterset,  # отображение фильтрации
-#         'page_obj': page_obj,  # отображение пагинации
-#         'current_time': timezone.localtime(timezone.now()),
-#         'timezones': pytz.common_timezones  #  добавляем в контекст все доступные часовые пояса
-#     }
-#     return render(request, 'index.html', context)
 
 
 def post_detail(request, slug, pk):
@@ -124,15 +89,20 @@ def news_list(request):
     '''метод для вывода постов с типом NS'''
     # отфильтрованные queryset по типу NS
     news = Post.objects.filter(type='NS').order_by('-date')
+    filterset = PostFilter(request.GET, queryset=news)
+    # использование встроенного класса django
+    # queryset отфильтрованные данные
+    filtered_news = filterset.qs
     categories = Category.objects.all()  # queryset модели Category
-    paginator = Paginator(news, 10)  # пагинация
+    paginator = Paginator(filtered_news, 12)  # пагинация
     page_number = request.GET.get('page')  # получение номера страницы
     # добавление в пагинацию номер страницы
     page_obj = paginator.get_page(page_number)
     context = {
         'NEWS': page_obj,  # вывод постов
         'list_categories': categories,  # вывод списка имеющих категорий в БД
-        'page_obj': page_obj  # вывод пагинации
+        'page_obj': page_obj,  # вывод пагинации
+        'filterset': filterset,
     }
     return render(request, 'news.html', context)
 
@@ -142,12 +112,16 @@ def article_list(request):
     '''метод для вывода постов по типу AT'''
     # отфильтрованные queryset по типу AT
     article = Post.objects.filter(type='AT').order_by('-date')
+    filterset = PostFilter(request.GET, queryset=article)
+    # queryset отфильтрованные данные
+    filtered_art = filterset.qs
     list_categories = Category.objects.all()  # queryset модели Category
-    paginator = Paginator(article, 10)  # пагинация
+    paginator = Paginator(filtered_art, 10)  # пагинация
     page_number = request.GET.get('page')  # получение номера страницы
     # добавление номера страницы в пагинацию для отфильтровки данных
     page_obj = paginator.get_page(page_number)
     context = {
+        'filterset': filterset,
         'ARTS': page_obj,  # вывод постов по типу AT
         'page_obj': page_obj,  # вывод пагинации
         'list_categories': list_categories  # вывод имеющих категорий в БД
@@ -245,11 +219,22 @@ def subscriptions(request):
                   {'categories': categories_with_subscriprions})
 
 
-def category_detail(request, slug):
-    category = Category.objects.get(slug=slug)
+def view_list_posts_in_category(request, slug, pk):
+    category = Category.objects.get(slug=slug, pk=pk)
     category_posts = Post.objects.filter(category=category)
+    list_categories = Category.objects.all()  # queryset модели Category
     context = {
         'filtered_posts_category': category_posts,
-        'category': category
+        'category': category,
+        'list_categories': list_categories,
     }
-    return render(request, 'category_detail.html', context)
+    return render(request, 'list_posts_in_category.html', context)
+
+
+class CategoryDetail(View):
+    def get(self, request, pk, slug):
+        list_categories = Category.objects.all()
+        category = Category.objects.get(pk=pk, slug=slug)
+        context = {'category_detail': category,
+                   'list_categories': list_categories}
+        return render(request, 'category_detail.html', context)

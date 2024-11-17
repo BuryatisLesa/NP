@@ -1,56 +1,74 @@
 {% extends 'flatpages/default.html' %}
 {% load custom_filters %}
+{% load i18n %}
 {% load custom_tags %}
 {% load thumbnail %}
 {% block title %}
-NewsPortal - Статья
+    {% trans "Articles" %}
 {% endblock title %}
-
+{% block search %}
+<!--Начало фильтра для постов-->
+<div class="filter-post">
+    <form  action="" method="get">
+        {{ filterset.form.title }}
+        <input class="filter-button" type="submit" value="Найти" />
+    </form>
+</div>
+<!--Конец фильтра для постов-->
+{% endblock search %}
 {% block content %}
     {% if ARTS  %}
         {% for ART in ARTS %}
-            <div class="title_post"><a class="title_text" href="{% url 'ArticlesDetail' ART.pk ART.slug %}">{{ ART.title }}</a></div>
-            {% thumbnail ART.image "820x300" crop="center" as im %}
-                <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
-            {% endthumbnail %}
-            <div class="content_post">{{ ART.content|truncatewords:10 }}</div>
-            <div class="categories_post"><a>Жанр:
-                {% for category in ART.category.all %}
-                     |{{ category.name }}
-                {% endfor %}</div>
-            <hr>
-
+            <article class="post">
+                <!--Начало картинки поста-->
+                {% thumbnail ART.image "820x300" crop="center" as im %}
+                    <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+                {% endthumbnail %}
+                <!--Конец картинки поста-->
+                <!--Начало заголовка поста-->
+                <div class="title_post">
+                    <a class="title_text" href="{% url 'ArticlesDetail' ART.pk ART.slug %}">
+                        <h1>{{ ART.title|truncatechars:40  }}</h1>
+                    </a>
+                </div>
+                <!--Конец заголовка поста-->
+                <!--Начало описание поста-->
+                <div class="content_post">
+                    <p>
+                        {{ ART.content|truncatechars:250 }}
+                    </p>
+                </div>
+                <!--Конец описание поста-->
+                <!--Начала категории поста-->
+                <div class="categories_post">
+                    <a>
+                        Жанр:
+                    {% for category in ART.category.all %}
+                         |{{ category.name }}
+                    {% endfor %}
+                    </a>
+                </div>
+                <!--Конец категории поста-->
+            </article>
         {% endfor %}
     {% else %}
         <h2> Статей нету </h2>
     {% endif %}
-    {# Пагинация #}
-    {% if page_obj.has_previous %}
-        <a href="?page=1">1</a>
-        {% if page_obj.previous_page_number != 1 %}
-            ...
-            <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
-        {% endif %}
-    {% endif %}
-{# Текущая страница #}
-    {{ page_obj.number }}
-{# Следущая страница #}
-    {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
-        {% if paginator.num_pages != page_obj.next_page_number %}
-            ...
-            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
-     {% endif %}
-{% endif %}
+
 {% endblock content %}
 {% block side %}
+    <!--Начало списка категорий-->
     <div class="list-category">
         <div class="title-category">Жанры</div>
         {% for category in list_categories %}
         <ul class="ul-category">
-            <li><a class="url-category" href="{% url 'CategoryDetail' category.slug %}">{{ category.name }}<br></a>
+            <li>
+                <a class="url-category" href="{% url 'ListPostsInCategory' category.pk category.slug %}">
+                    {{ category.name }}<br>
+                </a>
             </li>
         </ul>
         {% endfor %}
+        <!--Конец списка категорий-->
     </div>
 {% endblock side %}

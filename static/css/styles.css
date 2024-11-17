@@ -1,210 +1,312 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  height: auto;
-  margin: 0;
-  width: 100%;
-  background: white url('/media/images/devushka_trava_gorod_213102_3840x2160.jpg');
-  background-size: auto ;
-  background-repeat: repeat;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
 }
 
-.container-nav {
+.header {
   display: flex;
-  height: 50px;
-  width: auto;
-  background-color: rgb(40, 12, 104);
-  align-items: center;
-}
-
-.logo {
-  background: yellow;
-  font-size: 30px;
-  margin-left: 50px;
-}
-
-.text-logo {
-  text-decoration: none;
+  flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку на узких экранах */
+  justify-content: space-between; /* Расположение элементов по горизонтале в начале и в конце flexbox */
+  align-items: center; /* элементы flexbox в центре по вертикали */
+  padding: 1rem;
+  background-color: rgb(83, 88, 191);
+  color: #000;
+  position: sticky; /* Прикрепляет шапку к верхней части окна при прокрутке */
+  top: 0;
+  z-index: 1000; /* Обеспечивает видимость шапки поверх других элементов */
+  width: 100%; /* Устанавливает ширину на весь экран */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Легкая тень для отделения шапки */
+  border: 4px solid #000;
 }
 
 .navigation {
-  padding-left: 20px;
-}
-li {
-  list-style-type: none;
-  display: inline;
-  padding-right: 20px;
-  font-size: 20px;
+  display: flex; /* элементы flexbox в центре */
+  align-items: center; /* элементы flexbox в центре по вертикали */
+  gap: 1rem; /* Пространство между элементами */
 }
 
-.text-navigation {
+.navigation ul li a, .user-container ul li a {
+  color: #000;
   text-decoration: none;
-  color: yellow;
+  font-size: 1rem;
+  border-radius: 4px;   /* Закругленные углы */
 }
 
-.user-container {
-  margin-left: auto
+.navigation li {
+  display: inline; /* элементы списка в одну линию */
 }
 
-.user {
+.user-container li {
+  display: inline; /* элементы списка в одну линию */
+}
+
+.navigation a:hover, .user-container a:hover {
+  background-color: #bb9cf8 ;      /* Фон при наведении */
+}
+
+.logo a {
+  color: #000;
+  font-weight: bold;
   text-decoration: none;
-  color: yellow;
+  font-size: 1.5rem;
 }
 
-.container {
-  display: flex;
-  height: auto;
+.language, .timezone, .user-container {
+  margin-left: 1rem;
+}
+
+.main {
+    display: flex;  
+    padding: 1rem;
+    background-image: url('devushka_trava_gorod_213102_3840x2160.jpg');
+    background-size: cover;          /* Изображение охватывает весь экран */
+    background-repeat: no-repeat;    /* Отключает повторение */
+    background-position: center;     /* Центрирует изображение */
+}
+.filter-post {
+  background-color: rgb(83, 88, 191);
+}
+
+/* Стиль для поля ввода */
+.filter-input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+/* подсвечивание при наборе текста */
+.filter-input:focus {
+  border-color: #5b9bd5;
+  outline: none;
+}
+
+/* Стиль для кнопки */
+.filter-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+/* изменение цвета при наведение на кнопку */
+.filter-button:hover {
+  background-color: #45a049;
+}
+/* смена цвета при нажатие */
+.filter-button:active {
+  background-color: #388e3c;
+}
+/* боковая панель */
+.side-left {
+  flex: 1;
+  margin-right: 0.3rem;
+  background-color: rgb(83, 88, 191);
+  padding: 1rem;
+  border: 2px solid #000;
+  border-radius: 10px;
   width: auto;
+  max-width: 200px;
+}
+/* убрано подчеркивание и изменён цвет */
+.url-category {
+  text-decoration: none;
+  color: #000;
+}
+/* при наведение курсора подсвечивание лиловым цветом */
+.side-left a:hover {
+  background-color: #bb9cf8;
+}
+
+.filter-post {
+  text-align: center;  /* Выровнять элементы по горизонтали */
+}
+/* панель с контентом */
+.side-right {
+  display: flex;
+  padding: 1rem;
+  padding-top: 0px;
+  padding-left: 150px;
+  text-align: center;  /* Выровнять элементы по горизонтали */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+/* карточка поста */
+.post {
+  background-color: #bb9cf8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  box-sizing: border-box;
+  height: auto;
+  max-height: 500px;
+  padding: 10px 10px;
+  text-align: justify;
+}
+/* детальная карточка */
+.post-detail {
+  background-color: #bb9cf8;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px 20px;
+  text-align: justify;
+}
+
+.post-detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.title_post {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  flex-wrap: nowrap;
-  justify-content: center;
+}
+
+.created_date_author p {
+  background-color: rgb(24, 211, 248);
+}
+
+.categories_post {
+  background-color: yellow;
+  border-radius: 50px;
+}
+/* Стиль для изображения карточки */
+.post img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.post button:hover {
+  background-color: #b30000; /* Цвет фона при наведении */
+}
+
+.paginator {
+  margin-top: auto; /* Располагает paginator внизу */
+  text-align: center; /* Выравнивание paginator по центру */
+  padding: 1rem;
+  background-color: rgb(83, 88, 191);
+}
+.footer-container {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Легкая тень для отделения шапки */
+  background-color: rgb(83, 88, 191);
+}
+
+/* Адаптивные стили */
+
+/* Для планшетов */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+  }
+
+  .header h1 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+  }
+
+  .navigation {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navigation ul {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  .user-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.5rem;
+  }
+  
+
+  .main {
+      flex-direction: column;
+  }
+
+  .side-left {
+    display: none;
+  }
+
+.side-right {
+    justify-content: center; /* Выравнивание карточек по центру на маленьких экранах */
+    margin: 0;
+    padding: 0.5rem;
+}
+
+.post {
+    max-width: 100%; /* Карточки занимают 100% ширины */
+}
+
+  .footer-container {
+      font-size: 0.9rem;
+  }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 480px) {
+  .header h1 {
+      font-size: 1.2rem;
+  }
+
+  .navigation ul {
+      padding: 0;
+      gap: 0.3rem;
+  }
+
+  .navigation ul li a, .user-container ul li a {
+      font-size: 0.9rem;
+  }
+
+  .language select, .timezone select, .user-container {
+      width: 100%;
+      margin-top: 0.5rem;
+  }
+
+  .main {
+      padding: 0.5rem;
+  }
+
+  img {
+    max-width: 100%; /* Изображение не будет шире контейнера */
+    height: auto; /* Автоматически сохраняет пропорции */
+    display: block; /* Убирает нижний отступ, если изображение находится в блоке */
 }
 
 .side-left {
-  background-color: rgb(40, 12, 104, 0.5);
-  border-radius: 20px;
-  text-decoration: none;
-  width: 20%;
-  margin-left: 20px;
-  margin-right: 50px
-}
-
-
-.list-category {
-  text-decoration: none;
-  color: yellow;
-  margin-bottom: 10px;
-  
-}
-
-.title-category {
-  font-size: 30px;
-  color: chocolate;
-  margin-bottom: 50px;
-  margin-top: 20px;
-}
-.category-descriptions {
-  margin-bottom: 20px;
-  margin-left: 100px;
-  margin-right: 100px;
-  color: white;
-
-}
-.url-category {
-  text-decoration: none;
-  color: yellow;
+  display: none;
 }
 .side-right {
-  background-color: rgb(40, 12, 104, 0.5);
-  border-radius: 20px;
-  text-decoration: none;
-  width: 70%;
-}
+      padding: 0.3rem;
+  }
 
-.ul-category {
-  margin: auto;
-  padding-left: 0px;
-}
-
-.title_post {
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 50px;
-}
-
-.title_text {
-  text-decoration: none;
-  font-size: 30px;
-  color: yellow;
-}
-
-.content_post {
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-}
-.categories_post {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  font-size: 20px;
-  color: chocolate;
-}
-.footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(40, 12, 104);
-  color: yellow;
-}
-
-.footer {
-  font-size: 10px;
-  text-align: center;
-}
-
-hr {  
-  height: 10px;
-  background: rgb(7, 221, 157);
-  border-radius: 20px;
-} 
-
-.post-content {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.title_detail {
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 50px;
-  text-decoration: none;
-  font-size: 30px;
-  color: yellow;
-}
-
-.content_detail {
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 50px;
-  color: white;
-}
-
-.created_date_author {
-  color: orange;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-around;
-}
-.created_date {
-  margin-bottom: 20px;
-  float: left;
-}
-
-.block_comment {
-  display: flex;
-  flex-direction: column;
-}
-.comment_user {
-  background-color: rgb(40, 12, 104, 0.8);
-  padding-top: 20px;
-}
-.text_user {
-  text-decoration: none;
-  color:orange;
-  font-size: 20px;
-  font-weight: 600;
-}
-.comment_text {
-  background-color: rgb(40, 12, 104, 0.8);
-}
-.text_comment {
-  text-decoration: none;
-  color:rgb(0, 255, 149);
-  font-size: 20px;
-  font-weight: 600;
-}
-.comment_time {
-  background-color: rgb(40, 12, 104, 0.8);
+  .footer-container {
+      padding: 0.5rem;
+  }
 }

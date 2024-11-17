@@ -15,18 +15,23 @@
         <link href="{% static 'css/styles.css'%}" rel="stylesheet" />
     </head>
     <body>
-        <div class="container-nav">
-            <div class="logo">
-                <a class="text-logo" href="{% url 'HomePage' %}">{% trans "AnimeNews" %}</a>
-            </div>
-            <div class="navigation">
+        <header class="header">
+            {% block header %}
+            {% endblock header %}
+            <!--Начало панели навигации-->
+            <nav class="navigation">
+                <!--Начало логотипа-->
+                <div class="logo">
+                    <a class="text-logo" href="{% url 'HomePage' %}">{% trans "AnimeNews" %}</a>
+                </div>
+                <!--Конец логотипа-->
                 <ul>
                     <li><a class="text-navigation" href="{% url 'CategoryList' %}">{% trans "Categories" %}</a></li>
                     <li><a class="text-navigation" href="{% url 'ArticlesList'%}">{% trans "Articles" %}</a></li>
                     <li><a class="text-navigation" href="{% url 'NewsList'%}">{% trans "News" %}</a></li>
                 </ul>
-            </div>
-                            <div class="language">
+                <!--Начало блока локализации-->
+                <span class="language">
                     <form action="{% url 'set_language' %}" method="POST"> {% csrf_token %} <!-- Не забываем по csrf_token для POST запросов -->
                         <input type="hidden" name="next" value="{{ redirect_to }}">
                         {% get_current_language as LANGUAGE_CODE %}
@@ -42,20 +47,26 @@
                         </select>
                         <input type="submit" value="set">
                     </form>
-                </div>
-                {% get_current_timezone as TIME_ZONE %}
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    <label for="timezone">Time zone:</label>
-                    <select name="timezone">
-                        {% for tz in timezones %}
-                        <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}>{{ tz }}</option>
-                        {% endfor %}
-                    </select>
-                    <input type="submit" value="Set">
-                </form>
-                {{ TIME_ZONE }}
-                {{ current_time|timezone:TIME_ZONE }} <!-- Отображаем время в выбранном часовом поясе  -->
+                </span>
+                <span class="timezone">
+                    {% get_current_timezone as TIME_ZONE %}
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <label for="timezone">Time zone:</label>
+                        <select name="timezone">
+                            {% for tz in timezones %}
+                            <option value="{{ tz }}"{% if tz == TIME_ZONE %} selected{% endif %}>{{ tz }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Set">
+                    </form>
+                    {{ TIME_ZONE }}
+                    {{ current_time|timezone:TIME_ZONE }} <!-- Отображаем время в выбранном часовом поясе  -->
+                </span>
+                <!--Конец блока локализации-->
+            </nav>
+            <!--Конец панели навигации-->
+            <!--Начала пользовательской навигации-->
             {% block nav %}
                 <div class="user-container">
                     <ul>
@@ -64,27 +75,65 @@
                         <li><a class="user" href="{% url 'account_logout' %}">{% trans "Logout" %}</a></li>
                         {% else %}
                         <li><a class="user" href="{% url 'account_login' %}">{% trans "Login" %}</a></li>
-                        <li><a class="user" href="{% url 'account_signup' %}">{% trans "SingUp" %}</a></li>
+                        <li><a class="user" href="{% url 'account_signup' %}">{% trans "SignUp" %}</a></li>
                         {% endif %}
                     </ul>
                 </div>
             {% endblock nav %}
+            <!--Конец пользовательской навигации-->
+        </header>
+        <div class="search">
+            {% block search %}
+            {% endblock search %}
         </div>
-        <div class="container">
-                <div class="side-left">
+        <div class="text">
+            {% block text %}
+            {% endblock text %}
+        </div>
+        <!--Начало основного контента-->
+        <main class="main">
+                <!--Начало боковой панели-->
+                <aside class="side-left">
                     {% block side %}
                     {% endblock side %}
-                </div>
-                <div class="side-right">
+                </aside>
+                <!--Конец боковой панели-->
+                <!--Начало блока с контентом-->
+                <section class="side-right">
                     {% block content %}
                     {% endblock content %}
-                </div>
-            
+                </section>
+                <!--Конец блока с контентом-->
+        </main>
+        <!--Начала пагинации постов-->
+        <div class="paginator">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">1</a>
+                {% if page_obj.previous_page_number != 1 %}
+                    ...
+                    <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+                {% endif %}
+            {% endif %}
+        {# Текущая страница #}
+            {{ page_obj.number }}
+        {# Следущая страница #}
+        {% if page_obj.has_next %}
+             <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+             {% if paginator.num_pages != page_obj.next_page_number %}
+                  ...
+                  <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+             {% endif %}
+        {% endif %}
+        </h3>
         </div>
-        <div class="footer-container">
+        <!--Конец пагинации постов-->
+        <!--Конец основного контента-->
+        <!--Начало цоколя =)-->
+        <footer class="footer-container">
             <div class="footer">
                 <h1>© {% trans "AnimeNews" %}</h1>
             </div>
-        </div>
+        </footer>
+        <!--Конец цоколя-->
     </body>
 </html>

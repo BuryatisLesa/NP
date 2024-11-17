@@ -297,7 +297,7 @@ LOGGING = {
     },
     'handlers': {
         'console_debug': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class': 'logging.StreamHandler',
             'formatter': 'detailed_debug',
             'filters': ['debug_filter'],

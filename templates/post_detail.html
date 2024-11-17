@@ -3,56 +3,75 @@
 {% block title %}
 {{ POST_DETAIL.title }}
 {% endblock title %}
-
 {% block content %}
-<div class='title_detail'>{{ POST_DETAIL.title }}</div>
-<div>
-{% thumbnail POST_DETAIL.image "1000x500" crop="center" as im %}
-<img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
-{% endthumbnail %}
-</div>
-<div class="content_detail">
-    <h3>{{ POST_DETAIL.content }}</h3>
-</div>
-<br>
-<div class="created_date_author">
-    <div class="created_date"><a class="text_created_date">Публикация: {{ POST_DETAIL.date }}</a></div>
-    <div class="author"><a class="url_author">Автор: {{ POST_DETAIL.author }}</a></div>
-</div>
-<div class="comments_post">
-    <h3>Комментария:</h3>
-</div>
-<div class="block_comment">
-    {% if comments %}
-        {% for comment in comments %}
-            {% if comment.post == POST_DETAIL %}
-                <div class="comment_user"><a class="text_user" href="#">{{ comment.user }} написал:</a></div>
-                <div class="comment_text"><p class="text_comment">{{ comment.text }}</p></div>
-                <div class="comment_time"><p class="text_time"> Отправлено: {{ comment.time }}</p></div>
-                <hr>
-            {% endif %}
+<article class="post-detail">
+    <div class='title_detail'>
+        <h1>{{ POST_DETAIL.title }}</h1>
+    </div>
+    <div>
+        {% thumbnail POST_DETAIL.image "1000x500" crop="center" as im %}
+        <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+        {% endthumbnail %}
+    </div>
+    <div class="content_detail">
+        <p>{{ POST_DETAIL.content }}</p>
+    </div>
+    <div class="created_date_author">
+                Публикация: {{ POST_DETAIL.date }}
+        <div class="author">
+            <a class="url_author">
+                Автор: {{ POST_DETAIL.author }}
+            </a>
+        </div>
+    </div>
+    <div class="comments_post">
+        <span>Комментария:</span>
+    </div>
+    <div class="block_comment">
+        {% if comments %}
+            {% for comment in comments %}
+                {% if comment.post == POST_DETAIL %}
+                    <div class="comment_user">
+                        <a class="text_user" href="#">
+                            {{ comment.user }} написал:
+                        </a>
+                    </div>
+                    <div class="comment_text">
+                        <p class="text_comment">
+                            {{ comment.text }}
+                        </p>
+                    </div>
+                    <div class="comment_time">
+                        <p class="text_time">
+                             Отправлено: {{ comment.time }}
+                            </p>
+                        </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <h4>Комментарий нету, стань первым!</h4>
+        {% endif %}
+        <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Сохранить" />
+        </form>
+    </div>
+    <div class="categories_post">
+        <a>Жанр:
+        {% for category in categories %}
+             |{{ category.category }}
         {% endfor %}
-    {% else %}
-        <h4>Комментарий нету, стань первым!</h4>
-    {% endif %}
-    <form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Сохранить" />
-    </form>
-</div>
-<div class="categories_post"><a>Жанр:
-    {% for category in categories %}
-         |{{ category.category }}
-    {% endfor %}
-</a></div>
+        </a>
+    </div>
+</article>
 {% endblock content %}
 {% block side %}
     <div class="list-category">
         <div class="title-category">Жанры</div>
         {% for category in list_categories %}
         <ul class="ul-category">
-            <li><a class="url-category" href="{% url 'CategoryDetail' category.slug %}">{{ category.name }}<br></a>
+            <li><a class="url-category" href="{% url 'ListPostsInCategory' category.pk category.slug %}">{{ category.name }}<br></a>
             </li>
         </ul>
         {% endfor %}

@@ -1,23 +1,56 @@
 {% extends 'flatpages/default.html' %}
-
+{% load thumbnail %}
 {% block title %}
 Категории
 {% endblock title %}
-
+{% block text %} 
+<h1>Всего категорий: {{ categories|length }}</h1>
+{% endblock text %} 
 {% block content %}
 {% for category in categories %}
-<br><div class="title-category"><h2><a href="{{category.slug}}">{{ category.name }} : {{category.rating}}</a></h2></div>
-<div class="category-descriptions">{{category.descriptions}}</div>
+    <article class="post">
+        <ul>
+            <li>Количество постов: {{ category.posts.count }}
+            <li>Рейтинг категории: {{ category.rating }}
+        </ul>
+        <!--Начало картинки категории-->
+        {% thumbnail category.image "820x300" crop="center" as im %}
+        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+        {% endthumbnail %}
+        <!--Конец картинки категории-->
+        <!--Начало заголовка категории-->
+        <div class="title-category">
+            <a href="{% url 'ListPostsInCategory' category.pk category.slug    %}">
+            <h1>{{ category.name }}</h1>
+            </a>
+        </div>
+        <!--Конец заголовка категории-->
+        <!--Начало описание категории-->
+        <div class="category-descriptions">
+            <p>
+                {{category.descriptions|truncatechars:250}}
+                <a href="{% url 'CategoryDetail' category.pk category.slug %}">
+                    читать полностью
+                </a>
+            </p>
+        </div>
+        <!--Конец описания категории-->
+    </article>
 {% endfor %}
 {% endblock content %}
 {% block side %}
+    <!--Начало списка категорий-->
     <div class="list-category">
         <div class="title-category">Жанры</div>
         {% for category in categories %}
         <ul class="ul-category">
-            <li><a class="url-category" href="#">{{ category.name }}<br></a>
+            <li>
+                <a class="url-category" href="{% url 'ListPostsInCategory' category.pk category.slug %}">
+                    {{ category.name }}<br>
+                </a>
             </li>
         </ul>
         {% endfor %}
+    <!--Конец списка категорий-->
     </div>
 {% endblock side %}

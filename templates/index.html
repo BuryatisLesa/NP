@@ -2,60 +2,71 @@
 {% load custom_filters %}
 {% load custom_tags %}
 {% load thumbnail %}
+{% load i18n %}
 {% block title %}
-Главная страница
+    {% trans 'HomePage' %}
 {% endblock title %}
+{% block search %}
+<!--Начало фильтра для постов-->
+<div class="filter-post">
+    <form  action="" method="get">
+        {{ filterset.form.title }}
+        <input class="filter-button" type="submit" value="{% trans 'Найти' %}" />
+    </form>
+</div>
+<!--Конец фильтра для постов-->
+{% endblock search %}
 {% block content %}
-  <form  action="" method="get">
-      <label class="text-field__label">{{ filterset.form.as_p }}</label>
-      <input class="text-field__input" type="submit" value="Найти" />
-  </form>
     {% if posts  %}
         {% for post in posts %}
-            <div class="title_post"><a class="title_text" href="{% url 'PostDetail' post.pk post.slug %}">{{ post.title }}</a></div>
-            {% thumbnail post.image "820x300" crop="center" as im %}
+            <article class="post">
+                <!--Начало картинки поста-->
+                {% thumbnail post.image "820x300" crop="center" as im %}
                 <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
-            {% endthumbnail %}
-            <div class="content_post">{{ post.content|truncatewords:10 }}</div>
-                 <div class="categories_post"><a>Жанр:
+                {% endthumbnail %}
+                <!--Конец картинки поста-->
+                <!--Начало заголовка поста-->
+                <div class="title_post">
+                    <a class="title_text" href="{% url 'PostDetail' post.pk post.slug %}">
+                        <h1>{{ post.title|truncatechars:40 }}</h1>
+                    </a>
+                </div>
+                <!--Конец заголовка поста-->
+                <!--Начало описание поста-->
+                <div class="content_post">
+                    <p>
+                        {{ post.content|truncatechars:250 }}
+                    </p>
+                    <p>
+                        Дата публикации: {{ post.date}}
+                    </p>
+                </div>
+                <!--Конец описание поста-->
+                <!--Начала категории поста-->
+                <div class="categories_post">
+                    <a>Жанр:
                 {% for category in post.category.all %}
-                     |{{ category.name }}
-                {% endfor %}</div>
-                     </a>
-            <hr>
+                    |{{ category.name }}
+                {% endfor %}
+                </div></a>
+                <!--Конец категории поста-->
+            </article>
         {% endfor %}
     {% else %}
         <h2> Постов нету </h2>
-    {% endif %}
-<h3>
-{# Пагинация #}
-    {% if page_obj.has_previous %}
-        <a href="?page=1">1</a>
-        {% if page_obj.previous_page_number != 1 %}
-            ...
-            <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
-        {% endif %}
-    {% endif %}
-{# Текущая страница #}
-    {{ page_obj.number }}
-{# Следущая страница #}
-{% if page_obj.has_next %}
-     <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
-     {% if paginator.num_pages != page_obj.next_page_number %}
-          ...
-          <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
-     {% endif %}
-{% endif %}
-</h3>
+    {% endif %}<h3>
 {% endblock content %}
 {% block side %}
-    <div class="list-category">
-        <div class="title-category">Жанры</div>
+    <!--Начало списка категорий-->
+    <div class="title-category">Жанры</div>
+    <ul class="ul-category">
         {% for category in list_categories %}
-        <ul class="ul-category">
-            <li><a class="url-category" href="{% url 'CategoryDetail' category.slug %}">{{ category.name }}<br></a>
-            </li>
-        </ul>
-        {% endfor %}
-    </div>
+        <li >
+            <a class="url-category" href="{% url 'ListPostsInCategory' category.pk category.slug %}">
+                {{ category.name }}<br>
+            </a>
+        </li>
+    </ul>
+    {% endfor %}
+    <!--Конец списка категорий-->
 {% endblock side %}

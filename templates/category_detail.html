@@ -1,10 +1,30 @@
 {% extends 'flatpages/default.html' %}
-{%block title%}
-{%endblock title%}
-{%block content%}
-Категория
-<h2>{{category.name}}</h2><br>
-{% for post in filtered_posts_category %}
-    <div class="post_title"><a class="title_text">{{post.title}}</a></div><hr>
-{% endfor %}
-{%endblock content%}
+{% load thumbnail %}
+{% block title %}
+{{ category_detail.name }}
+{% endblock title %}
+{% block content %}
+<article class="post-detail">
+    <div class='title_detail'>
+        <h1>{{ category_detail.name }}</h1>
+    </div>
+    <div>
+        {% thumbnail category_detail.image "1000x500" crop="center" as im %}
+        <img class="post-img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" hspace="50" vspace="50">
+        {% endthumbnail %}
+    </div>
+    <div class="content_detail">
+        <p>{{ category_detail.descriptions }}</p>
+</article>
+{% endblock content %}
+{% block side %}
+    <div class="list-category">
+        <div class="title-category">Жанры</div>
+        {% for category in list_categories %}
+        <ul class="ul-category">
+            <li><a class="url-category" href="{% url 'ListPostsInCategory' category.pk category.slug %}">{{ category.name }}<br></a>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+{% endblock side %}
